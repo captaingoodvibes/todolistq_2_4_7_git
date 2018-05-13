@@ -8,5 +8,5 @@ Not available ATM
 
 ### TODO
 
-. Make 5 minute installer zip or tar.gz
-. ~~ Make telephone link button from client cards so that dialing from a mobile screen is possible.~~
+1. Make 5 minute installer zip or tar.gz
+2. ~~Make telephone link button from client cards so that dialing from a mobile screen is possible.~~
