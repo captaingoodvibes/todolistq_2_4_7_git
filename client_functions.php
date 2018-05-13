@@ -1,4 +1,4 @@
-<?PHP 
+<?PHP
 function client_details() {
 		$id = $_POST['id'];
 		$ClientID = $_POST['ClientID'];
@@ -17,15 +17,15 @@ function client_details() {
 
 
 //*********************************************************************** SETUP START TIME - END
-//**********************************************************************************************	
+//**********************************************************************************************
         //echo "<H3>Client Card</H3>";
         $header_size = $_POST['header_size'];
 	echo "<H" . $header_size . ">Client Card</H" . $header_size . ">";
-        ?>                      
+        ?>
         <div class="container">
                 <div class="row">
                         <div class="six columns box" style="margin-top: 5%; text-align: center">
-                                <?PHP 
+                                <?PHP
                                 //**********************************************************************************************
                                 //***************************************************************** DEBUG VARIABLES HERE - START
                                 $turn_this_debug_on = 0;
@@ -56,9 +56,9 @@ function client_details() {
                                         $debugMsg .= "\$user_authenticated = $user_authenticated<BR>";
                                         $debugMsg .= "\$_POST['user_authenticated'] = " . $_POST['user_authenticated'] . "<BR>";
                                         $debugMsg .= "\$tab_cluster = $tab_cluster<BR>";
-                                        $debugMsg .= "\$_POST['login_instance_token'] = " . $_POST['login_instance_token'] . "<BR>"; 
+                                        $debugMsg .= "\$_POST['login_instance_token'] = " . $_POST['login_instance_token'] . "<BR>";
                                         $debugMsg .= "\$login_instance_token = " . $login_instance_token . "<BR>";
-                                        $debugMsg .= "\$_POST['User_db_token'] = " . $_POST['User_db_token'] . "<BR>"; 
+                                        $debugMsg .= "\$_POST['User_db_token'] = " . $_POST['User_db_token'] . "<BR>";
                                         $debugMsg .= "\$User_db_token = " . $User_db_token . "<BR>";
                                         $debugMsg .= "\$login_name = " . $login_name . "<BR>";
                                         $debugMsg .= "********************************************************************<BR>";
@@ -70,20 +70,20 @@ function client_details() {
                                 //**********************************************************************************************
                                 //**************************************************************************** TIME ZONE - START
 	                                // echo "\$callOrder = $callOrder";
-	
+
 	                                $dbst = new dbSession();
 	                                $sqlt = "SELECT * from config WHERE ConfigID = 1 LIMIT 0, 30";
-	
+
 	                                $Resultst = $dbst->getResult($sqlt);
-	
+
 	                                while ($rowt = $dbst->getArray($Resultst)) {
-	
+
 	                                //$config_time_zone = $rowt['config_time_zone'];
 	                                $config_time_zone = $_POST['user_time_zone'];
 	                                $_POST['config_time_zone'] = $config_time_zone;
 	                                }
 	                                //echo "\$config_time_zone = $config_time_zone and " . $_POST['config_time_zone'] . " <BR>";
-	
+
                                 //****************************************************************************** TIME ZONE - END
                                 //**********************************************************************************************
 
@@ -93,11 +93,11 @@ function client_details() {
 
 	                                $dbs = new dbSession();
 	                                $sql = "SELECT * from client WHERE ClientID = \"$ClientID\" LIMIT 0, 30";
-	
+
 	                                $Results = $dbs->getResult($sql);
-	
+
 	                                while ($row = $dbs->getArray($Results)) {
-	
+
 	                                $ActionDateSecs = $row[ClientDate];
 	                                if ($ActionDateSecs == "") {
 	                                $ActionDateTime = "Unknown";
@@ -110,12 +110,12 @@ function client_details() {
 			                                $ActionDateTime = $Ad->format(DATE_RFC1123);
 	                                }
 	                                $_POST['ActionDateTime'] = $ActionDateTime;
-	                                echo "<form method=\"post\" action=\"$PHP_SELF\" >";	
+	                                echo "<form method=\"post\" action=\"$PHP_SELF\" >";
 	                                $name = $row['ClientName'];
-	
+
 	                                echo "
-		                                
-		                                
+
+
 		                                <TABLE>
 		                                <TR>
 			                                <TD>Name</TD>
@@ -158,7 +158,7 @@ function client_details() {
 			                                <TD><input type=\"text\" name=\"ClientCallBack\" tabindex=\"8.5\"  value=\"$row[ClientCallBack]\"></input></TD>
 		                                </TR>
 		                                <TR>
-		
+
 			                                <TD> Notes</TD>
 			                                <TD ><TEXTAREA tabindex=\"24\" rows=\"2\" cols=\"16\" name=\"client_notes\" WRAP=\"virtual\">$row[client_notes]</TEXTAREA></TD>
 		                                </TR>
@@ -183,11 +183,11 @@ function client_details() {
 		                                </TR>
 		                                <TR>
 			                                <TD>Phone1</TD>
-			                                <TD><input type=\"text\" name=\"ClientPhone1\" tabindex=\"13\"  value=\"$row[ClientPhone1]\"></input></TD>
+			                                <TD><input type=\"text\" name=\"ClientPhone1\" tabindex=\"13\"  value=\"$row[ClientPhone1]\"></input><a href=\"tel:$row[ClientPhone1]\"><img src=\"images/phone1.png\" alt=\"Call\"></a></TD>
 		                                </TR>
 		                                <TR>
 			                                <TD>Phone2</TD>
-			                                <TD><input type=\"text\" name=\"ClientPhone2\" tabindex=\"14\"  value=\"$row[ClientPhone2]\"></input></TD>
+			                                <TD><input type=\"text\" name=\"ClientPhone2\" tabindex=\"14\"  value=\"$row[ClientPhone2]\"></input><a href=\"tel:$row[ClientPhone2]\"><img src=\"images/phone1.png\" alt=\"Call\"></a></TD>
 		                                </TR>
 		                                <TR>
 			                                <TD>Fax</TD>
@@ -208,14 +208,14 @@ function client_details() {
 			                                <TD>$ClientID</TD>
 		                                </TR>
 		                                </TABLE>
-	                                ";                        
-                        
+	                                ";
+
                         ?>
                         </div>
                 </div>
         </div>
         <?PHP
-	
+
 	// echo "<form method=\"post\" action=\"$PHP_SELF\">";
 	echo "<div align=\"center\"><input type=\"hidden\" name=\"AddMessageTermination\" value=\"\"></input>";
 	echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"EditDetails\"></input>";
@@ -226,7 +226,7 @@ function client_details() {
 	include ("log_in_authentication_form_vars.php");
 	echo "<input type=\"submit\" tabindex=\"18\" name=\"Submit\" value=\"Apply Changes\"></input>";
 	echo "</form></div>";
-	
+
 	echo "<div align=\"center\"><form method=\"post\" action=\"$PHP_SELF\">";
 	echo "<input type=\"hidden\" name=\"AddMessageTermination\" value=\"1\"></input>";
 	echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"DeleteCardQuestion\"></input>";
@@ -238,12 +238,12 @@ function client_details() {
 	</div>
 	";
 	}
-	
+
 }
 
 function EditDetails() {
 	// Edit the cards details
-	
+
         //**********************************************************************************************
         //********************************************************************** SETUP START TIME - START
         $StartTime = $_GET['StartTime'];
@@ -304,19 +304,19 @@ function EditDetails() {
         //**********************************************************************************************
 
 	echo "<div align=\"center\">";
-		
+
 	$dbs = new dbSession();
-	
-	$sql = "UPDATE client SET ClientName = '$ClientName', ClientType = '$ClientType', 
-			ClientPriority = '$ClientPriority', 
-			ClientContactName = '$ClientContactName', ClientAddress1 = '$ClientAddress1', 
+
+	$sql = "UPDATE client SET ClientName = '$ClientName', ClientType = '$ClientType',
+			ClientPriority = '$ClientPriority',
+			ClientContactName = '$ClientContactName', ClientAddress1 = '$ClientAddress1',
 			ClientAddress2 = '$ClientAddress2', ClientCity = '$ClientCity',
 			ClientCallBack = '$ClientCallBack', client_notes = '$client_notes',
-			ClientState = '$ClientState', ClientPostcode = '$ClientPostcode', 
-			ClientCountry = '$ClientCountry', ClientPhone2 = '$ClientPhone2', 
-			ClientPhone1 = '$ClientPhone1', ClientFax = '$ClientFax', ClientEmail = '$ClientEmail', 
+			ClientState = '$ClientState', ClientPostcode = '$ClientPostcode',
+			ClientCountry = '$ClientCountry', ClientPhone2 = '$ClientPhone2',
+			ClientPhone1 = '$ClientPhone1', ClientFax = '$ClientFax', ClientEmail = '$ClientEmail',
 			ClientUrl = '$ClientUrl' WHERE ClientID = '$ClientID'";
-	
+
 				if ($dbs->getResult($sql)) {
 					$msg = "Card Edited.";
 					echo "<BR><FONT FACE=\"arial\" SIZE=\"4\" COLOR=\"#339900\">$msg</FONT>";
@@ -347,7 +347,7 @@ function EditDetails() {
 
 }
 function DeleteCardQuestion() {
-	
+
 	$ActionID = $_POST['ActionID'];
 	$StartTime = $_POST['StartTime'];
 	$ClientID = $_POST['ClientID'];
@@ -375,8 +375,8 @@ if ($turn_this_debug_on == 1) {
 	echo "<A href=\"editAction.php?ActionID=$ActionID&StartTime=$StartTime&ClientID=$ClientID\">No</A><BR><BR>";
 	echo "<A href=\"editAction.php?OptionCatch=DeleteAction&ActionID=$ActionID&StartTime=$StartTime&ClientID=$ClientID&ActionFkJobID=$ActionFkJobID\">Yes</A><BR><BR>";
 	*/
-	
-	
+
+
 	echo "<form method=\"post\" action=\"$PHP_SELF\">";
 	echo "<input type=\"hidden\" name=\"AddMessageTermination\" value=\"1\">";
 	echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"DeleteCard\">";
@@ -396,7 +396,7 @@ if ($turn_this_debug_on == 1) {
 	include ("log_in_authentication_form_vars.php");
 	echo "<input type=\"submit\" name=\"confirm_delete\" value=\"No\">";
 	echo "</form>";
-	
+
 
 	echo "</DIV>";
 /**
@@ -404,7 +404,7 @@ if ($turn_this_debug_on == 1) {
 			</FONT>
 
 			</div>
-	
+
 		</td>
 	</tr>
 
@@ -422,7 +422,7 @@ include("footer001.php");
 <?PHP
 exit;
 */
-	
+
 }
 function DeleteCard() {
         $confirm_delete = $_POST['confirm_delete'];
@@ -450,24 +450,24 @@ if ($turn_this_debug_on == 1) {
 }
 //********************************************************************** DEBUG VARIABLES HERE - END
 //**********************************************************************************************
-	
+
 	$dbs = new dbSession();
 
 	$sql = "DELETE FROM client WHERE ClientID = '$ClientID'";
-	
+
 				if ($dbs->getResult($sql)) {
 					$msg = "Card Deleted.";
 				} else {
 					$msg = $dbs->printError();
 				}
-	echo "<span><BR>$msg</span>";	
+	echo "<span><BR>$msg</span>";
 	// echo "<A class=\"linkPlainInWhiteAreas\" href=\"index.php\">Home</A>";
 
 	/**	?>
 			</FONT>
 
 			</div>
-	
+
 		</td>
 	</tr>
 
@@ -492,14 +492,14 @@ exit;
                     <div class="row">
                       <div class="one.column column" style="margin-top: 1%;">
                         <?PHP
-                        LocEndCallAddAction();  
+                        LocEndCallAddAction();
                                         // In action_functions.php
                         ?>
                       </div>
                     </div>
                   </div>
                 <?PHP
-                ShowActions();          // In action_functions.php    
+                ShowActions();          // In action_functions.php
         }
 }
 function AddClient() {
@@ -508,8 +508,8 @@ function AddClient() {
 	echo "<H" . $header_size . ">Add Client</H" . $header_size . ">";
 	?>
 	<!-- <H4>Add Client</H4> -->
-	
-	
+
+
 	<TABLE align="center">
 	<TR>
 		<TD style="border-bottom: none;">
@@ -520,7 +520,7 @@ function AddClient() {
 	                $debugMsg .= "\$SearchClientName= $SearchClientName<BR>";
 	                $debugMsg .= "\$fieldName= $fieldName<BR>";
 	                include("config/debug.php");
-	
+
 	                echo "<form method=\"post\" action=\"$PHP_SELF\">";
 	                echo "Name ";
         echo "  </TD>";
@@ -586,9 +586,9 @@ if ($turn_this_debug_on == 1) {
         $debugMsg .= "\$user_authenticated = $user_authenticated<BR>";
         $debugMsg .= "\$_POST['user_authenticated'] = " . $_POST['user_authenticated'] . "<BR>";
         $debugMsg .= "\$tab_cluster = $tab_cluster<BR>";
-        $debugMsg .= "\$_POST['login_instance_token'] = " . $_POST['login_instance_token'] . "<BR>"; 
+        $debugMsg .= "\$_POST['login_instance_token'] = " . $_POST['login_instance_token'] . "<BR>";
         $debugMsg .= "\$login_instance_token = " . $login_instance_token . "<BR>";
-        $debugMsg .= "\$_POST['User_db_token'] = " . $_POST['User_db_token'] . "<BR>"; 
+        $debugMsg .= "\$_POST['User_db_token'] = " . $_POST['User_db_token'] . "<BR>";
         $debugMsg .= "\$User_db_token = " . $User_db_token . "<BR>";
         $debugMsg .= "\$login_name = " . $login_name . "<BR>";
         $debugMsg .= "********************************************************************<BR>";
@@ -596,11 +596,11 @@ if ($turn_this_debug_on == 1) {
 }
 //********************************************************************** DEBUG VARIABLES HERE - END
 //*************************************************************************************************
-                
+
 //**********************************************************************************************
 //***************************************************************** DEBUG VARIABLES HERE - START
 $turn_this_debug_on = 0;
-if ($turn_this_debug_on == 1) {				
+if ($turn_this_debug_on == 1) {
 				$debug = $_POST['debug'];
 				$debugMsg .= "<b>Inside InsertClient()</b><BR>";
 				$debugMsg .= "This " . $_POST['StartTime'] . " is the \$StartTime in index.php<BR><BR>";
@@ -608,7 +608,7 @@ if ($turn_this_debug_on == 1) {
 				}
 //******************************************************************* DEBUG VARIABLES HERE - END
 //**********************************************************************************************
-	
+
 	// echo"Table Data<BR>";
 	echo "<div align=\"center\">";
 	$InsertIntoDatabase = $_POST['InsertIntoDatabase'];
@@ -626,7 +626,7 @@ if ($turn_this_debug_on == 1) {
 //**********************************************************************************************
 //***************************************************************** DEBUG VARIABLES HERE - START
 $turn_this_debug_on = 0;
-if ($turn_this_debug_on == 1) {				
+if ($turn_this_debug_on == 1) {
         $debug = $_POST['debug'];
         $debugMsg .= "<b>Inside InsertClient()</b><BR>";
         $debugMsg .= "This " . $ClientInsertDate . " is the \$ClientInsertDate in index.php<BR><BR>";
@@ -635,12 +635,12 @@ if ($turn_this_debug_on == 1) {
 //******************************************************************* DEBUG VARIABLES HERE - END
 //**********************************************************************************************
 
-	
+
 	$dbs = new dbSession();
 
 		if ($InsertIntoDatabase != "") {
 			$sql = "INSERT INTO client (ClientName, ClientContactName, ClientPhone1, ClientDate) VALUES ('$InsertIntoDatabase', '$ClientContactName', '$ClientPhone1', '$ClientInsertDate')";
-			
+
 				if ($dbs->getResult($sql)) {
 					$msg = "Client Added.";
 					echo "$msg<BR>";
