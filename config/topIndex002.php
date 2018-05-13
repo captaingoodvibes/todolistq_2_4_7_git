@@ -72,7 +72,7 @@ $mybox_width = 280;
             //**********************************************************************************************
             //********************************************************************** LINE ONE - START
             -->			<FONT>
-                <img src="images/spacer.gif" width="<?PHP echo "$leftDistanceForHeaderLinks"; ?>" height="0" alt="">
+                <img src="images/spacer.gif" width="<?PHP echo "$leftDistanceForHeaderLinks"; ?>" height="30" alt="">
                 <span class="<?PHP echo "$titles"; ?>" href="./dc001.php" style="position: absolute; top:<?PHP echo "$line001DistanceFromTop"; ?>px;" >
 	<?PHP
 

@@ -1,12 +1,10 @@
-Last modified by  : Dion Patelis 13th May 2018 10:47
-
-
-# TDLQ (To Do List Q)
+# QuartzTM (Quartz Task Manger)
 A cascading job / task list whereby you can prioritise and collaborate with multi users in different time zones.
 
 # Demo
-Currently not online.
+[Try **live demo** quartztaskmanger.com](http://quartztaskmanager.com/) (At the moment you'll need to create an account.)
 
 ## TODO
 
-1 Build a live todo list using TDLQ.
+Building a live todo list using QuartzTM shortly 
+
