@@ -1,10 +1,11 @@
+Updated : Dion Patelis 13/5/18 31:21
+
 # QuartzTM (Quartz Task Manger)
 A cascading job / task list whereby you can prioritise and collaborate with multi users in different time zones.
 
 # Demo
-[Try **live demo** quartztaskmanger.com](http://quartztaskmanager.com/) (At the moment you'll need to create an account.)
+Not available ATM
 
 ## TODO
 
-Building a live todo list using QuartzTM shortly 
-
+Make telephone link button from client cards so that dialing from a mobile screen is possible.
