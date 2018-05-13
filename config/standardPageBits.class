@@ -1,0 +1,74 @@
+<?php
+/**
+*	file:	standardPageBits.class
+*	desc:	A class with the basicfuctions for the pages
+*	auth:	Dion Patelis
+*	date:	31 Jan 2008
+*	last:	31 Jan 2008
+*
+*/
+
+class standardPageBits {
+
+
+	function LocHtmlPageEnd() {
+		global $ProgramName;
+		global $ProgramTitle;
+		global $StartTime;
+		global $id;
+		global $name;
+		global $message;
+		global $JobID;
+		global $ClientID;
+		
+		if (empty($id)) {
+			$id = $ClientID;
+		}
+			
+		echo "<DIV align=\"center\">";
+		// echo"<html>\n\n";
+		// echo"	<head>\n";
+		// echo"		<title>$ProgramTitle</title>\n";
+		// echo"	</head>\n";
+		// echo"	<body bgcolor=\"White\">\n\n";
+		// echo "$ProgramName";
+			echo " | <A href=\"index.php?OptionCatch=AddClient&AddMessageTermination=1&StartTime=$StartTime\"><FONT TABINDEX=\"100\" FACE=\"arial\" COLOR=\"\">Add Client</FONT></A>";
+		echo " | <a href=\"actionStats.php\" tabindex=\"101\">   Action Statistics</a>";
+		echo " | <a href=\"addJob3.php?OptionCatch=AddJob&StartTime=$StartTime&ClientID=$id&ClientName=$name\" tabindex=\"102\">Add Job</a> ";
+		echo " | <a href=\"addReminder.php?JobID=$JobID&StartTime=$StartTime&ClientID=$id&ClientName=$name\" tabindex=\"103\">Add Reminder</a> ";
+		echo " | <a href=\"calender.php?AddMessageTermination=&JobID=$JobID&StartTime=$StartTime&ClientID=$id&ClientName=$name\" tabindex=\"104\">Calender</a> ";
+		echo " | <a href=\"userSearch.php\" tabindex=\"105\">   User Search</a>";
+		echo " | <a href=\"jobManager.php\" tabindex=\"106\">   Job Manager</a>  ";
+		echo " | <a href=\"whiteBoard.php?AddMessageTermination=\" tabindex=\"107\">   White Board</a>  ";
+		echo " | <a href=\"http://barry.computable.com.au/cod/\" tabindex=\"108\">   COD</a>  ";
+		echo " | <a href=\"http://barry.computable.com.au/sd/\" tabindex=\"109\">   Software Demos</a> | ";
+		/**
+		echo " | <A href=\"index.php\"><FONT TABINDEX=\"80\" FACE=\"arial\" SIZE=\"4\" COLOR=\"\">Home</FONT></A>";
+		echo " | <a href=\"actionStats.php\" tabindex=\"81\">   Action Statistics</a>";
+		echo " | <a href=\"addJob3.php?OptionCatch=AddJob&StartTime=$StartTime&ClientID=$id&ClientName=$name\" tabindex=\"82\">Add Job</a> ";
+		echo " | <a href=\"addReminder.php?JobID=$JobID&StartTime=$StartTime&ClientID=$id&ClientName=$name\" tabindex=\"83\">Add Reminder</a> ";
+		echo " | <a href=\"calender.php?AddMessageTermination=&JobID=$JobID&StartTime=$StartTime&ClientID=$id&ClientName=$name\" tabindex=\"84\">Calender</a> ";
+		echo " | <a href=\"userSearch.php\" tabindex=\"85\">   User Search</a>";
+		echo " | <a href=\"jobManager.php\" tabindex=\"86\">   Job Manager</a>  ";
+		echo " | <a href=\"whiteBoard.php?AddMessageTermination=\" tabindex=\"87\">   White Board</a>  ";
+		echo " | <a href=\"http://barry.computable.com.au/cod/\" tabindex=\"88\">   COD</a>  ";
+		echo " | <a href=\"http://barry.computable.com.au/sd/\" tabindex=\"89\">   Software Demos</a> | ";
+		*/
+		/**
+		switch ($message) {
+			case "EditDetails";
+				EditDetails();
+				break;
+		}
+		*/
+		// echo "$message";
+		echo "</DIV>";
+		echo"	</body>\n";
+		echo"</html>\n";
+	
+	}
+
+  
+}
+//END standardPageBits class
+?>

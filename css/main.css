@@ -1,0 +1,165 @@
+.headerA {font-family: Arial; font-size: 13px;}
+.mainFontA {font-family: Arial; font-size: 12px;}
+.mainFontSubHeaderA {font-weight: bold; font-family: Arial; font-size: 12px;}
+.mainFontLogoutBoxA {font-weight: ; font-family: Arial; font-size: 11px;}
+.generalFontOnWhite {text-decoration: none; font-weight: normal; color: #330000; font-family: Arial; font-size: 11px;}
+
+.error_codes{
+        font-weight: bold; 
+        font-family: Arial; 
+        font-size: 12px; 
+        color: #ff0000;
+        }
+.edit_fail{
+        font-weight: bold; 
+        font-family: Arial; 
+        font-size: 12px; 
+        color: #ff0000;
+        }
+.edit_success_solid{
+        font-weight: bold; 
+        font-family: Arial; 
+        font-size: 12px; 
+        color: #4e9a06;
+        }
+.edit_success {
+        font-weight: bold; 
+        font-family: Arial; 
+        font-size: 12px; 
+        color: #009933;
+        -webkit-animation: fadi 2s 1;
+        -moz-animation: fadi 2s 1;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        }
+        @-webkit-keyframes fadi {
+            1%   { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        @-moz-keyframes fadi {
+            1%   { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+A:visited A:linkt, .linkt {text-decoration: none; color: #FFFFFF; font-family: Arial; font-size: 13px;}
+
+a img { border-width: 0px; }
+
+A:link.topIndexLine001 {text-decoration: none; font-weight: bold; color: #FFFFFF; font-family: Arial; font-size: 13px;}
+A:visited.topIndexLine001 {text-decoration: none; font-weight: bold; color: #FFFFFF; font-family: Arial; font-size: 13px;}
+A:active.topIndexLine001 {text-decoration: none; font-weight: bold; color: #FFFFFF; font-family: Arial; font-size: 13px;}
+A:hover.topIndexLine001 {text-decoration: none; font-weight: bold; color: #FFFF00; font-family: Arial; font-size: 13px;}
+
+A:link {text-decoration: none; color:#660099; font-weight: bold; font-family: Arial; font-size: 13px;}
+A:visited {text-decoration: none; color: #F7FF8C; font-weight: bold; font-family: Arial; font-size: 13px;}
+A:active {text-decoration: none; font-weight: bold; font-family: Arial; font-size: 13px;}
+A:hover {text-decoration: bold ; color: #FFFF33; font-family: Arial; font-size: 13px;}
+
+A:link.linkB {text-decoration: none; font-weight: bold; color: #E0F5FC; font-family: Arial; font-size: 13px;}
+A:visited.linkB {text-decoration: none; font-weight: bold; color: #E0F5FC; font-family: Arial; font-size: 13px;}
+A:active.linkB {text-decoration: none; font-weight: bold; color: #66FF00; font-family: Arial; font-size: 13px;}
+A:hover.linkB {text-decoration: none; font-weight: bold; color: #FFFF00; font-family: Arial; font-size: 13px;}
+
+A:link.linkC {text-decoration: none; font-weight: bold; color: #330000; font-family: Arial; font-size: 13px;}
+A:visited.linkC {text-decoration: none; font-weight: bold; color: #330000; font-family: Arial; font-size: 13px;}
+A:active.linkC {text-decoration: none; font-weight: bold; color: #330000; font-family: Arial; font-size: 13px;}
+A:hover.linkC {text-decoration: none; font-weight: bold; color: #676538; font-family: Arial; font-size: 13px;}
+
+A:link.linkD {text-decoration: none; font-weight: bold; color: #808080; font-family: Arial; font-size: 9px;}
+A:visited.linkD {text-decoration: font-weight: bold; color: #808080; font-family: Arial; font-size: 9px;}
+A:active.linkD {text-decoration: font-weight: bold; color: #808080; font-family: Arial; font-size: 9px;}
+A:hover.linkD {text-decoration: font-weight: bold; color: #616161; font-family: Arial; font-size: 9px;}
+
+A:link.linkPlainInWhiteAreas {text-decoration: none; font-weight: bold; color: #3300FF; font-family: Arial; font-size: 11px;}
+A:visited.linkPlainInWhiteAreas  {text-decoration: none; font-weight: bold; color: #3300FF; font-family: Arial; font-size: 11px;}
+A:active.linkPlainInWhiteAreas  {text-decoration: none; font-weight: bold; color: #330099; font-family: Arial; font-size: 11px;}
+A:hover.linkPlainInWhiteAreas  {text-decoration: none; font-weight: bold; color: #330099; font-family: Arial; font-size: 11px;}
+
+A:link.link_imp_urg {text-decoration: none; font-weight: bold; color: #B5C8ED; font-family: Arial; font-size: 11px;}
+A:visited.link_imp_urg {text-decoration: none; font-weight: bold; color: #B5C8ED; font-family: Arial; font-size: 11px;}
+A:active.link_imp_urg  {text-decoration: none; font-weight: bold; color: #B5C8ED; font-family: Arial; font-size: 11px;}
+A:hover.link_imp_urg  {text-decoration: none; font-weight: bold; color: #B5C8ED; font-family: Arial; font-size: 11px;}
+
+form.formA {text-decoration: none; font-weight: bold; color: #FFFFFF; font-family: Arial; font-size: 9px;}
+
+FONT    {font-size: 13px;"
+        }
+FONT.generalFontOnWhite 
+                {text-decoration: none; 
+                font-weight: normal; 
+                color: #330000; 
+                font-family: Arial; 
+                font-size: 11px;
+                }
+FONT.generalFontOndark 
+                {text-decoration: none; 
+                font-weight: normal; 
+                color: #ffffff; 
+                font-family: Arial; 
+                font-size: 11px;
+                }
+
+
+select {text-decoration: none; font-weight: normal; color: #330000; font-family: Arial; font-size: 11px;}
+
+form {text-decoration: none; font-weight: normal; color: #330000; font-family: Arial; font-size: 11px;}
+
+input   {text-decoration: none; 
+        font-weight: normal; 
+        color: #330000; 
+        font-family: Arial; 
+        font-size: 11px; 
+        }
+input.inputA    {text-decoration: none; 
+                font-weight: bold; 
+                color: #330000; 
+                font-family: Arial; 
+                font-size: 9px;
+                }
+input.inputB    {text-decoration: none; 
+                font-weight: bold; 
+                color: #330000; 
+                font-family: Arial; 
+                font-size: 9px;
+                }               
+input.generalFontOnWhite 
+                {text-decoration: none; 
+                font-weight: normal; 
+                color: #330000; 
+                font-family: Arial; 
+                font-size: 11px;
+                }
+input.text_button {
+                font-size: 11px;
+                border: none;
+                background-color: transparent;
+                padding: 0;
+                } 
+button.link_styled_button {
+                background:none!important;
+                 border:none; 
+                 padding: 0!important;
+                 text-transform: none;
+                 white-space: pre-wrap;
+                 /* text-align: left; */
+            
+                /*optional*/
+                /* font-family:arial,sans-serif; */ /*input has OS specific font-family*/
+                color:#069;
+                text-decoration:underline;
+                cursor:pointer;
+                }
+
+div     {text-decoration: none; font-weight: normal; color: #330000; font-family: Arial; font-size: 11px;}
+div.generalFontOnWhite {text-decoration: none; font-weight: normal; color: #330000; font-family: Arial; font-size: 11px;}
+
+table {text-decoration: none; font-weight: normal; color: #330000; font-family: Arial; font-size: 11px;}
+
+body {text-decoration: none; font-weight: normal; color: #330000; font-family: Arial; font-size: 39px;}
+
+b.generalFontOnWhite {text-decoration: none; font-weight: bold; color: #330000; font-family: Arial; font-size: 11px;}
+
+span.linkB {text-decoration: none; font-weight: bold; color: #E0F5FC; font-family: Arial; font-size: 13px;}
+span.titles {text-decoration: none; font-weight: bold; color: #FFFFFF; font-family: Arial; font-size: 17px;}
+
+textarea {text-decoration: none; font-weight: normal; color: #330000; font-family: Arial; font-size: 13px;}
