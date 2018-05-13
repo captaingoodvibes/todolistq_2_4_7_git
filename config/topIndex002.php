@@ -67,12 +67,12 @@ $mybox_width = 280;
             <p style="padding: 13px;">hwungaroo tml page is a placeholder with the
             CSS, font and favicon. It's just waiting for you to
             add some content! If you need some help hit u.</p> -->
-            <a href="#"><img src="images/201600510_web_logo001_quartz_alpha3.gif" width="30" height="30" style="padding: 5px;" alt=""></a>
+            <a href="#"><img src="./images/201600510_web_logo001_quartz_alpha3.gif" width="30" height="30" style="padding: 5px;" alt=""></a>
             <!--
             //**********************************************************************************************
             //********************************************************************** LINE ONE - START
             -->			<FONT>
-                <img src="images/spacer.gif" width="<?PHP echo "$leftDistanceForHeaderLinks"; ?>" height="0" alt="">
+                <img src="images/spacer.gif" width="<?PHP echo "$leftDistanceForHeaderLinks"; ?>" height="35" alt="">
                 <span class="<?PHP echo "$titles"; ?>" href="./dc001.php" style="position: absolute; top:<?PHP echo "$line001DistanceFromTop"; ?>px;" >
 	<?PHP
 
