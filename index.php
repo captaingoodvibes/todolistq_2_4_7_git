@@ -1,4 +1,4 @@
-<?PHP 
+<?PHP
 //***********************************************************************************************
 //********************************************************************************* TITLE - START
 /**
@@ -15,15 +15,15 @@
 
 //**********************************************************************************************
 //***************************************************************************** INCLUDES - START
-include("config/dbSession.class");      // Test putting this include at the top so that the html 
+include("config/dbSession.class");      // Test putting this include at the top so that the html
                                      // title in the tab shows the dbname. DP
-include("config/headAndBody001_with_db_name_in_tab.php"); 
+include("config/headAndBody001_with_db_name_in_tab.php");
 include("config/config.php");
-include("config/tpl_bodystart.php"); 
+include("config/tpl_bodystart.php");
 // include("config/class_detect.php");
-// include("config/dbSession.class");   // Test putting this include at the top so that the 
+// include("config/dbSession.class");   // Test putting this include at the top so that the
                                         // html title in the tab shows the dbname. DP
-                                        
+
 include("config/standardPageBits.php");
 include("log_in_authentication_check.php");
 include("config/topIndex002.php");
@@ -35,7 +35,7 @@ include("user_functions.php");
 include("JobDetails_functions.php");
 include("create_db_functions.php");
 include("reminder_functions.php");
-include("action_functions.php"); 
+include("action_functions.php");
 include("job_board_functions.php");
 include("history_functions.php");
 include("config/class.child.php");
@@ -48,7 +48,7 @@ include("file_functions.php");
         <?PHP
         include("log_in_authentication_form.php");
         ?>
-        
+
       <!--</div>
     </div>
   </div> -->
@@ -92,18 +92,18 @@ $Job_imp_urg_set = $_POST['Job_imp_urg_set'];
 	/**
 	$dbst = new dbSession();
 	$sqlt = "SELECT * from config WHERE ConfigID = 1 LIMIT 0, 30";
-	
+
 	$Resultst = $dbst->getResult($sqlt);
-	
+
 	while ($rowt = $dbst->getArray($Resultst)) {
-	
+
 	//$config_time_zone = $rowt['config_time_zone'];
 	$config_time_zone = $_POST['user_time_zone'];
 	$_POST['config_time_zone'] = $config_time_zone;
 	}
 	*/
 	//echo "\$config_time_zone = $config_time_zone and " . $_POST['config_time_zone'] . " <BR>";
-	
+
 //****************************************************************************** TIME ZONE - END
 //**********************************************************************************************
 
@@ -122,20 +122,20 @@ if ($turn_this_debug_on == 1) {
 //********************************************************************************* MAIN - START
 
 echo "<DIV align=\"center\">";
-if (empty($AddMessageTermination)) {	
+if (empty($AddMessageTermination)) {
 	echo "<BR>";
 	echo "<LINK rel=stylesheet href=\"css/main.css\" type=\"text/css\">";
-	
+
 	//**********************************************************************************************
         //**************************************************************************** CATCHES 2 - START
         // echo "\$OptionCatch = $OptionCatch<BR>";
         switch ($_POST['OptionCatch']) {
-                case "SearchClient";
+            case "SearchClient";
 		        if($SearchClientName==""){
 			        echo "<BR><BR>";
 			        echo "<H3>You can not have a blank entry! Try again.</H3><BR><BR><BR>";
 		        }else{
-			        SearchClient3(); // In csearchFunctions.php
+			        SearchClient3(); // In searchFunctions.php
 		        }
 		        break;
 	        case "search_client_in_add_reminder";
@@ -147,7 +147,7 @@ if (empty($AddMessageTermination)) {
 	                reminder_card();  // Found in reminder_functions.php
 		        break;
 	        /* case "";
-	                
+
 		        include("whiteBoard.php");  // In index.php --> Doesn't do anything ATM.
 		        break; */
 	        case "client_details";
@@ -157,7 +157,7 @@ if (empty($AddMessageTermination)) {
                             <div class="row">
                               <div class="one.column column" style="margin-top: 1%;">
                                 <?PHP
-                                LocEndCallAddAction();  
+                                LocEndCallAddAction();
                                                 // In action_functions.php
                                 ?>
                               </div>
@@ -183,7 +183,7 @@ if (empty($AddMessageTermination)) {
 		        break;
 		case "choose_db";
 		        choose_db();            // Found in create_db_functions.php
-		        break;   
+		        break;
 	        case "log_into_external_db";
 			log_into_external_db(); // Found in create_db_functions.php
 			break;
@@ -211,14 +211,14 @@ if (empty($AddMessageTermination)) {
 	                postpone_reminder();    // Found in reminder_functions.php
 			break;
 		case "postpone_and_update_reminder";
-	                postpone_and_update_reminder();    
+	                postpone_and_update_reminder();
 	                                        // Found in reminder_functions.php
 			break;
 	        case "StartCall";
 			StartCall2();           // Found in action_functions.php
 			break;
 		case "End Call";
-			insert_action_at_end_of_call();           
+			insert_action_at_end_of_call();
 			                        // Found in action_functions.php
 			break;
 		case "DeleteCardQuestion";
@@ -252,7 +252,7 @@ if (empty($AddMessageTermination)) {
 		        edit_job_card();        // Found in JobDetails_functions.php
 		        break;
 	        case "delete_job_card_question";
-		        delete_job_card_question();        
+		        delete_job_card_question();
 		                                // Found in JobDetails_functions.php
 		        break;
 	        case "delete_job_card";
@@ -267,7 +267,7 @@ if (empty($AddMessageTermination)) {
 	        case "job_board";
                         locReminderCheck();     // Found in reminder_functions.php
                         job_board();            // Found in job_board_functions.php
-		        break;     
+		        break;
 	        case "add_job";
                         add_job();              // Found in jobDetails_functions.php
 		        break;
@@ -305,7 +305,7 @@ if (empty($AddMessageTermination)) {
 		        //**********************************************************************************************
 		        //***************************************************************** DEBUG VARIABLES HERE - START
 		        $turn_this_debug_on = 1;
-                        if ($turn_this_debug_on == 1) {	
+                        if ($turn_this_debug_on == 1) {
 			        $debug = $_POST['debug'];
 			        $debugMsg .= "In the optionCatch the we are in the job_complete section.<BR>";
 			        include("config/debug.php");
@@ -328,20 +328,20 @@ if (empty($AddMessageTermination)) {
 		        include("whiteBoard.php");                // Found in index.php
 		        break; */
         }
-        
+
         switch ($_GET['OptionCatch']) {
 	        case "";
 		        include("whiteBoard.php");  // In index.php --> Doesn't do anything ATM.
 		        break;
 	        case "client_details";
-	                
+
 		        client_details();       // Found in client_functions.php
 		        ?>
                         <div class="container">
                             <div class="row">
                               <div class="one.column column" style="margin-top: 1%;">
                                 <?PHP
-                                LocEndCallAddAction();  
+                                LocEndCallAddAction();
                                                 // In action_functions.php
                                 ?>
                               </div>
@@ -354,13 +354,13 @@ if (empty($AddMessageTermination)) {
 		        include("whiteBoard.php");                // Found in index.php
 		        break;
         }
-        
+
         if ( ! empty($JobPriorityUp)) {
 
 	        $dbs = new dbSession();
-	
+
 	        $sql = "UPDATE job SET JobPriority = '$JobPriorityUp' WHERE JobID = '$JobID'";
-	
+
 		        if ($dbs->getResult($sql)) {
 							        $msg = "Card Edited.";
 							        echo "<BR>";
@@ -370,43 +370,43 @@ if (empty($AddMessageTermination)) {
 	        // echo "msg = $msg";
 	        locReminderCheck();     // Found in reminder_functions.php
                 job_board();            // Found in job_board_functions.php
-	
+
         }
 
         if ( ! empty($Job_imp_urg_set)) {
 
 	        $dbs = new dbSession();
-	
+
 	        $sql = "UPDATE job SET JobImpUrg = '$Job_imp_urg_set' WHERE JobID = '$JobID'";
-	
+
 		        if ($dbs->getResult($sql)) {
 							        $msg = "Importance Urgency Matrix Edited.";
 							        echo "<BR>";
 						        } else {
 							        $msg = $dbs->printError();
-							        
+
 						        }
 	        // echo "msg = $msg";
 	        locReminderCheck();     // Found in reminder_functions.php
                 job_board();            // Found in job_board_functions.php
-	
+
         }
         //****************************************************************************** CATCHES 2 - END
         //**********************************************************************************************
         echo "</DIV>";
-}	
+}
 
 //*********************************************************************************** MAIN - END
 //**********************************************************************************************
-			
+
 include("logged_in_end_of_page.php");
-	
+
 //**********************************************************************************************
 //**************************************************************************** FUNCTIONS - START
 
 
 function Main() {
-        
+
 }
 
 
