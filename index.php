@@ -7,7 +7,7 @@
 *	auth:	Dion Patelis (owner)
 *	desc;	Main Spiros Task Manager page.
 *	date:	10th Feb 2015 - Dion Patelis
-*	last:	13th Feb 2015 - Dion Patelis....&&
+*	last:	13th Feb 2015 - Dion Patelis
 */
 //********************************************************************************** TITLE - END
 //**********************************************************************************************
