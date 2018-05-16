@@ -31,8 +31,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="73" column="50" lean-forward="true" selection-start-line="73" selection-start-column="50" selection-end-line="73" selection-end-column="50" />
+            <state relative-caret-position="135">
+              <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -130,11 +130,6 @@
               <item name="todolistq_2_4_7_git_phpstorm" type="b2602c69:ProjectViewProjectNode" />
               <item name="todolistq_2_4_7_git_phpstorm" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="todolistq_2_4_7_git_phpstorm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="todolistq_2_4_7_git_phpstorm" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -188,12 +183,20 @@
       <workItem from="1526177735830" duration="484000" />
       <workItem from="1526296718081" duration="719000" />
       <workItem from="1526425125218" duration="1271000" />
-      <workItem from="1526465902590" duration="861000" />
+      <workItem from="1526465902590" duration="2277000" />
     </task>
+    <task id="LOCAL-00001" summary="Test commit with 3 dots in top reference.">
+      <created>1526469657653</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1526469657654</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3335000" />
+    <option name="totallyTimeSpent" value="4751000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -206,6 +209,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32988167" />
       <window_info anchor="bottom" id="Messages" weight="0.32988167" />
@@ -343,8 +347,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="73" column="50" lean-forward="true" selection-start-line="73" selection-start-column="50" selection-end-line="73" selection-end-column="50" />
+        <state relative-caret-position="135">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
         </state>
       </provider>
     </entry>
