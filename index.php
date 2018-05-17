@@ -2,13 +2,13 @@
 //***********************************************************************************************
 //********************************************************************************* TITLE - START
 /**
-*	file:	index.php new versioni based on the version from the main
-*               website folder /web_site_1_0_0_fire_up_paypal/
-*	auth:	Dion Patelis (owner)
-*	desc;	Main Spiros Task Manager page.
-*	date:	10th Feb 2015 - Dion Patelis
-*	last:	13th Feb 2015 - Dion Patelis
-*/
+ *	file:	index.php new versioni based on the version from the main
+ *               website folder /web_site_1_0_0_fire_up_paypal/
+ *	auth:	Dion Patelis (owner)
+ *	desc;	Main Spiros Task Manager page.
+ *	date:	10th Feb 2015 - Dion Patelis
+ *	last:	13th Feb 2015 - Dion Patelis
+ */
 //********************************************************************************** TITLE - END
 //**********************************************************************************************
 
