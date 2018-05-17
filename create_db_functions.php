@@ -1,8 +1,6 @@
 <?PHP
 function create_db_form() {
-
     ?>
-
     <TABLE align="center">
         <TR>
             <TD>
