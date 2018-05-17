@@ -50,7 +50,7 @@ include("log_in_authentication_form.php");
 ?>
 
 <!--</div>
-</div>
+</div>...
 </div> -->
 <?PHP
 include("logged_in_start_of_page.php");
