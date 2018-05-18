@@ -2,16 +2,22 @@
 //***********************************************************************************************
 //********************************************************************************* TITLE - START
 /**
- *	file:	index.php new versioni based on the version from the main
+ *	file:	index.php
+ * 	desc;	Main ToDolist page.
+ *  note:   new versioni based on the version from the main
  *               website folder /web_site_1_0_0_fire_up_paypal/
  *	auth:	Dion Patelis (owner)
- *	desc;	Main Spiros Task Manager page.
- *	date:	10th Feb 2015 - Dion Patelis
- *	last:	13th Feb 2015 - Dion Patelis
+ *	date:	10th Feb 2015       - Dion Patelis
+ *	last:	18th May 2018 10:28 - Dion Patelis
  */
 //********************************************************************************** TITLE - END
 //**********************************************************************************************
 
+$new_install = 1;
+if ($new_install == 1) {
+    include ("install.php");
+    exit;
+}
 
 //**********************************************************************************************
 //***************************************************************************** INCLUDES - START
@@ -23,7 +29,6 @@ include("config/tpl_bodystart.php");
 // include("config/class_detect.php");
 // include("config/dbSession.class");   // Test putting this include at the top so that the
 // html title in the tab shows the dbname. DP
-
 include("config/standardPageBits.class");
 include("log_in_authentication_check.php");
 include("config/topIndex002.php");
@@ -41,18 +46,7 @@ include("history_functions.php");
 include("config/class.child.php");
 include("slip_functions.php");
 include("file_functions.php");
-?>
-<!-- <div class="container">
-    <div class="row">
-      <div class="one.column column" style="margin-top: 1%;"> -->
-<?PHP
 include("log_in_authentication_form.php");
-?>
-
-<!--</div>
-</div>...
-</div> -->
-<?PHP
 include("logged_in_start_of_page.php");
 //******************************************************************************* INCLUDES - END
 //**********************************************************************************************
@@ -70,9 +64,9 @@ $dbs = new dbSession();
 if ( ! empty($_POST['JobID']) ){
     $_POST['JobID'] = $_POST['JobID'];
 }
-// echo "\$_POST['JobID'] = " . $_POST['JobID'] . "<BR>";
 //**************************************************************************** GET to POST - END
 //**********************************************************************************************
+
 
 //**********************************************************************************************
 //*************************************************************** START GLOBAL VARIABLES - START
@@ -88,7 +82,6 @@ $Job_imp_urg_set = $_POST['Job_imp_urg_set'];
 
 //**********************************************************************************************
 //**************************************************************************** TIME ZONE - START
-// echo "\$callOrder = $callOrder";
 /**
 $dbst = new dbSession();
 $sqlt = "SELECT * from config WHERE ConfigID = 1 LIMIT 0, 30";
@@ -103,7 +96,6 @@ $_POST['config_time_zone'] = $config_time_zone;
 }
  */
 //echo "\$config_time_zone = $config_time_zone and " . $_POST['config_time_zone'] . " <BR>";
-
 //****************************************************************************** TIME ZONE - END
 //**********************************************************************************************
 
@@ -120,7 +112,6 @@ if ($turn_this_debug_on == 1) {
 
 //**********************************************************************************************
 //********************************************************************************* MAIN - START
-
 echo "<DIV align=\"center\">";
 if (empty($AddMessageTermination)) {
     echo "<BR>";
@@ -403,14 +394,9 @@ include("logged_in_end_of_page.php");
 
 //**********************************************************************************************
 //**************************************************************************** FUNCTIONS - START
-
-
 function Main() {
 
 }
-
-
 //****************************************************************************** FUNCTIONS - END
 //**********************************************************************************************
-
 ?>

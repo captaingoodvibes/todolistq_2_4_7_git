@@ -457,7 +457,6 @@ function choose_db() {
     </TABLE>
     <?PHP
 }
-
 function log_into_external_db() {
     $db_name = $_POST['db_name'];
     $db_folder = $_POST['db_folder'];
@@ -515,6 +514,5 @@ function log_into_external_db() {
     </TABLE>
     <?PHP
 }
-
 ?>
 
