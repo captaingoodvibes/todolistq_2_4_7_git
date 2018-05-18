@@ -57,9 +57,6 @@ $mybox_width = 280;
 
 ?>
 
-
-
-
 <div class="container">
     <div class="row">
         <div class="one.column column general_font_on_dark" style="border-radius: 4px; margin-top: 1%; background: url(images/back_test5_tiger.png);">

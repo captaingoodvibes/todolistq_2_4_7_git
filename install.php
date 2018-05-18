@@ -11,7 +11,7 @@
 include("config/dbSession.class");      // Test putting this include at the top so that the html
 // title in the tab shows the dbname. DP
 include("config/headAndBody001_with_db_name_in_tab.php");
-include("config/config.php");
+/*include("config/config.php");
 include("config/tpl_bodystart.php");
 // include("config/class_detect.php");
 // include("config/dbSession.class");   // Test putting this include at the top so that the
@@ -24,7 +24,7 @@ include("config/ht.inc");
 include("searchFunctions.php");
 include("client_functions.php");
 include("user_functions.php");
-include("JobDetails_functions.php");
+include("JobDetails_functions.php");*/
 include("create_db_functions.php");
 /* include("reminder_functions.php");
 include("action_functions.php");
@@ -38,8 +38,8 @@ include("logged_in_start_of_page.php"); */
 //******************************************************************************* INCLUDES - END
 //**********************************************************************************************
 
-echo "in the installer. vvvv<BR>";
-// create_db_form();
+echo "in the installer. vvvv at 11:37<BR>";
+create_db_form();
 
 //**********************************************************************************************
 //***************************************************************** DEBUG VARIABLES HERE - START
