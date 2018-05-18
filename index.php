@@ -7,13 +7,13 @@
  *  note:   new versioni based on the version from the main
  *               website folder /web_site_1_0_0_fire_up_paypal/
  *	auth:	Dion Patelis (owner)
- *	date:	10th Feb 2015       - Dion Patelis
+ *	date:	10th Feb 2015       - Dion Patelis ... whammo
  *	last:	18th May 2018 10:28 - Dion Patelis
  */
 //********************************************************************************** TITLE - END
 //**********************************************************************************************
 
-$new_install = 1;
+$new_install = 1;  // To run the TDLQ installer set this to 1
 if ($new_install == 1) {
     include ("install.php");
     exit;
@@ -102,7 +102,7 @@ $_POST['config_time_zone'] = $config_time_zone;
 
 //**********************************************************************************************
 //***************************************************************** DEBUG VARIABLES HERE - START
-$turn_this_debug_on = 0;
+$turn_this_debug_on = 1;
 if ($turn_this_debug_on == 1) {
     include("debug_array.php");
 }
