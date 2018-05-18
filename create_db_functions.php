@@ -21,6 +21,7 @@ function create_db_form() {
                 echo "<BR>";
 
                 echo "<input type=\"hidden\" name=\"Config_OS\" value=\"Off\">";
+                echo "<input type=\"hidden\" name=\"new_install\" value=\"1\">";
                 echo "<input type=\"hidden\" name=\"AddMessageTermination\" value=\"1\">";
                 echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"create_db\">";
                 echo "<input type=\"hidden\" name=\"StartTime\" value=\"$StartTime\">";
@@ -69,7 +70,7 @@ function create_db() {
         $sql = "CREATE USER '$db_name'@'localhost' IDENTIFIED BY '$db_pwd'";
         if ($dbs->getResult($sql)) {
             $msg = "User $db_name created.";
-            echo "<FONT class=\"edit_success_solid\">$msg<BR><BR></FONT>";
+            echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
             $create_user_fail = 0;
 
         } else {
@@ -86,7 +87,7 @@ function create_db() {
                 // $msg = "Usage granted for $db_name for connections, updates, queries.";
                 $check_num = "2";
                 $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                echo "<FONT class=\"edit_success_solid\">$msg<BR><BR></FONT>";
+                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
             } else {
                 $msg = $dbs2->printError();
                 echo "$msg<BR>";
@@ -98,7 +99,7 @@ function create_db() {
                 // $msg = "$db_name database completed. <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
                 $check_num = "3";
                 $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                echo "<FONT class=\"edit_success_solid\">$msg<BR><BR></FONT>";
+                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
 
             } else {
                 $msg = $dbs3->printError();
@@ -114,7 +115,7 @@ function create_db() {
                 // $msg = "Priviliedges grandted for user $db_name on DB $db_name - next bit.";
                 $check_num = "4";
                 $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                echo "<FONT class=\"edit_success_solid\">$msg<BR><BR></FONT>";
+                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
                 // echo "\$sql4 = $sql4<BR><BR>";
 
             } else {
@@ -129,10 +130,10 @@ function create_db() {
             $mysqlUserName = $dbs5->dbUser;
             $mysqlPassword = $dbs5->dbPass;
             $mysqlHostName = 'localhost';
-            $mysqlImportFilename ='base_database_20150211_generic.sql';
+            $mysqlImportFilename ='base_database_20160520_generic.sql';
 
-            $db_folder = $_POST['db_folder'];
-
+//            $db_folder = $_POST['db_folder'];
+            $db_folder = "todolistq_2_4_7";
             //ENTER THE RELEVANT INFO BELOW
             /**
             $mysqlDatabaseName ='test32';
@@ -172,19 +173,19 @@ function create_db() {
                 case 0:
                     // echo "<LINK rel=stylesheet href=\"css/main.css\" type=\"text/css\">";
 
-                    // echo "<FONT class=\"edit_success_solid\">Import file <b>" .$mysqlImportFilename ."</b> successfully imported to database </FONT><b>" .$mysqlDatabaseName ."</b><BR>";
+                    // echo "<span class=\"edit_success_solid\">Import file <b>" .$mysqlImportFilename ."</b> successfully imported to database </span><b>" .$mysqlDatabaseName ."</b><BR>";
                     $check_num = "5";
                     $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                    echo "<FONT class=\"edit_success_solid\">$msg<BR><BR></FONT>";
+                    echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
                     break;
                 case 1:
-                    echo '<FONT class="edit_fail">There was an error during import. Please make sure the import file is saved in the same folder as this script and check your values:<br/><br/><table><tr><td>MySQL Database Name:</td><td><b>' .$mysqlDatabaseName .'</b></td></tr><tr><td>MySQL User Name:</td><td><b>' .$mysqlUserName .'</b></td></tr><tr><td>MySQL Password:</td><td><b>NOTSHOWN</b></td></tr><tr><td>MySQL Host Name:</td><td><b>' .$mysqlHostName .'</b></td></tr><tr><td>MySQL Import Filename:</td><td><b>' .$mysqlImportFilename .'</FONT></b></td></tr></table>';
+                    echo '<span class="edit_fail">There was an error during import. Please make sure the import file is saved in the same folder as this script and check your values:<br/><br/><table><tr><td>MySQL Database Name:</td><td><b>' .$mysqlDatabaseName .'</b></td></tr><tr><td>MySQL User Name:</td><td><b>' .$mysqlUserName .'</b></td></tr><tr><td>MySQL Password:</td><td><b>NOTSHOWN</b></td></tr><tr><td>MySQL Host Name:</td><td><b>' .$mysqlHostName .'</b></td></tr><tr><td>MySQL Import Filename:</td><td><b>' .$mysqlImportFilename .'</span></b></td></tr></table>';
                     break;
                 case 2:
-                    echo "<FONT class=\"edit_fail\">Import file <b>" .$mysqlImportFilename .'</b> did not find the path. </FONT><b>' .$mysqlDatabaseName .'</b>';
+                    echo "<span class=\"edit_fail\">Import file <b>" .$mysqlImportFilename .'</b> did not find the path. </span><b>' .$mysqlDatabaseName .'</b>';
                     break;
             }
-            echo "<FONT class=\"generalFontOnWhite\">";
+            echo "<span class=\"generalspanOnWhite\">";
             $structure = ' /var/www/html/users/' . $db_name . '/';
             // $structure = ' /var/www/html/repository/';
             // mkdir("ztesting");
@@ -200,13 +201,13 @@ function create_db() {
             }
             switch($worked){
                 case 0:
-                    // echo "<FONT class=\"edit_success_solid\"><BR><BR>" . $command . "  worked.<BR><BR></FONT>";
+                    // echo "<span class=\"edit_success_solid\"><BR><BR>" . $command . "  worked.<BR><BR></span>";
                     $check_num = "6";
                     $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                    echo "<FONT class=\"edit_success_solid\">$msg<BR><BR></FONT>";
+                    echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
                     break;
                 case 1:
-                    echo "<FONT class=\"edit_fail\"><BR>" . $command . "  fail.<BR><BR></FONT>";
+                    echo "<span class=\"edit_fail\"><BR>" . $command . "  fail.<BR><BR></span>";
                     break;
             }
 
@@ -217,13 +218,13 @@ function create_db() {
             }
             switch($worked){
                 case 0:
-                    // echo "<FONT class=\"edit_success_solid\"><BR>" . $command2 . "  executed<BR><BR></FONT>";
+                    // echo "<span class=\"edit_success_solid\"><BR>" . $command2 . "  executed<BR><BR></span>";
                     $check_num = "7";
                     $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                    echo "<FONT class=\"edit_success_solid\">$msg<BR><BR></FONT>";
+                    echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
                     break;
                 case 1:
-                    echo "<FONT class=\"edit_fail\"><BR>" . $command2 . "  fail.<BR><BR></FONT>";
+                    echo "<span class=\"edit_fail\"><BR>" . $command2 . "  fail.<BR><BR></span>";
                     break;
             }
 
@@ -236,13 +237,13 @@ function create_db() {
             }
             switch($worked){
                 case 0:
-                    // echo "<FONT class=\"edit_success_solid\"><BR>" . $command3 . "  executed<BR><BR></FONT>";
+                    // echo "<span class=\"edit_success_solid\"><BR>" . $command3 . "  executed<BR><BR></span>";
                     $check_num = "8";
                     $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                    echo "<FONT class=\"edit_success_solid\">$msg<BR><BR></FONT>";
+                    echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
                     break;
                 case 1:
-                    echo "<FONT class=\"edit_fail\"><BR>" . $command3 . "  fail.<BR><BR></FONT>";
+                    echo "<span class=\"edit_fail\"><BR>" . $command3 . "  fail.<BR><BR></span>";
                     break;
             }
 
@@ -253,13 +254,13 @@ function create_db() {
             }
             switch($worked){
                 case 0:
-                    // echo "<FONT class=\"edit_success_solid\"><BR>" . $command4 . "  executed<BR><BR></FONT>";
+                    // echo "<span class=\"edit_success_solid\"><BR>" . $command4 . "  executed<BR><BR></span>";
                     $check_num = "9";
                     $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                    echo "<FONT class=\"edit_success_solid\">$msg<BR><BR></FONT>";
+                    echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
                     break;
                 case 1:
-                    echo "<FONT class=\"edit_fail\"><BR>" . $command4 . "  fail.<BR><BR></FONT>";
+                    echo "<span class=\"edit_fail\"><BR>" . $command4 . "  fail.<BR><BR></span>";
                     break;
             }
 
@@ -270,13 +271,13 @@ function create_db() {
             }
             switch($worked){
                 case 0:
-                    // echo "<FONT class=\"edit_success_solid\"><BR>" . $command5 . "  executed<BR><BR></FONT>";
+                    // echo "<span class=\"edit_success_solid\"><BR>" . $command5 . "  executed<BR><BR></span>";
                     $check_num = "10";
                     $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                    echo "<FONT class=\"edit_success_solid\">$msg<BR><BR></FONT>";
+                    echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
                     break;
                 case 1:
-                    echo "<FONT class=\"edit_fail\"><BR>" . $command5 . "  fail.<BR><BR></FONT>";
+                    echo "<span class=\"edit_fail\"><BR>" . $command5 . "  fail.<BR><BR></span>";
                     break;
             }
             $command4 = 'mysql -u ' . $mysqlUserName . ' -p' . $mysqlPassword . ' --execute "GRANT ALL PRIVILEGES ON ' . $mysqlDatabaseName . '.* TO \'' . $new_admin_user_name . '\'@\'localhost\' IDENTIFIED BY \'' . $new_admin_user_pwd . '\'"';
@@ -287,13 +288,13 @@ function create_db() {
             }
             switch($worked){
                 case 0:
-                    // echo "<FONT class=\"edit_success_solid\"> \$command4 = " . $command4 . "<BR><BR> and it worked successfully.</FONT><BR><BR>";
+                    // echo "<span class=\"edit_success_solid\"> \$command4 = " . $command4 . "<BR><BR> and it worked successfully.</span><BR><BR>";
                     $check_num = "11";
                     $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                    echo "<FONT class=\"edit_success_solid\">$msg<BR><BR></FONT>";
+                    echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
                     break;
                 case 1:
-                    echo "<FONT class=\"edit_fail\">There was an error during the User permissions editing. <BR> The command used was " . $command4 . "</FONT>";
+                    echo "<span class=\"edit_fail\">There was an error during the User permissions editing. <BR> The command used was " . $command4 . "</span>";
                     break;
             }
 
@@ -303,7 +304,7 @@ function create_db() {
             log_into_external_db();
         }
     } else {
-        echo "<FONT class=\"edit_fail\"><BR><BR>Not a valid name. Please type it again.</FONT>";
+        echo "<span class=\"edit_fail\"><BR><BR>Not a valid name. Please type it again.</span>";
     }
 }
 function insert_user_other_db($user_login, $user_pwd, $db_host_other_db, $db_user_other_db, $db_pass_other_db, $db_name_other_db) {
@@ -389,10 +390,10 @@ function insert_user_other_db($user_login, $user_pwd, $db_host_other_db, $db_use
 			WHERE UserID = '1'";
 
         if ($dbs_other_db->getResult($sql)) {
-            // $msg = "<FONT class=\"edit_success_solid\">User updated.</FONT>";
+            // $msg = "<span class=\"edit_success_solid\">User updated.</span>";
             $check_num = "12";
             $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-            echo "<FONT class=\"edit_success_solid\">$msg<BR><BR></FONT>";
+            echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
             /**
             $dbs = new dbSession();
             $sql = "SELECT UserID, UserLogin from user WHERE UserLogin = \"$user_login\"";
@@ -416,7 +417,7 @@ function insert_user_other_db($user_login, $user_pwd, $db_host_other_db, $db_use
             echo "<BR>$msg<BR>";
         }
     } else {
-        echo "<FONT class=\"edit_fail\"><BR><BR>Not a valid name. Please type it again.</FONT>";
+        echo "<span class=\"edit_fail\"><BR><BR>Not a valid name. Please type it again.</span>";
     }
 
 }

@@ -13,12 +13,14 @@
 //********************************************************************************** TITLE - END
 //**********************************************************************************************
 
-$new_install = 1;  // To run the TDLQ installer set this to 1
-if ($new_install == 1) {
+//$new_install = 1;  // To run the TDLQ installer set this to 1
+$new_install = $_POST['new_install'];
+echo "\$new_install = " . $new_install . "<br>";
+if (empty($new_install)) {
     include ("install.php");
     exit;
 }
-
+echo "after if in index<BR>";
 //**********************************************************************************************
 //***************************************************************************** INCLUDES - START
 include("config/dbSession.class");      // Test putting this include at the top so that the html
@@ -170,6 +172,7 @@ if (empty($AddMessageTermination)) {
             create_db_form();       // Found in create_db_functions.php
             break;
         case "create_db";
+            echo "in index createdb case<br>";
             create_db();            // Found in create_db_functions.php
             break;
         case "choose_db";

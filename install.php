@@ -9,7 +9,7 @@
 //**********************************************************************************************
 //***************************************************************************** INCLUDES - START
 include("config/dbSession.class");      // Test putting this include at the top so that the html
-// title in the tab shows the dbname. DP
+                                        // title in the tab shows the dbname. DP
 include("config/headAndBody001_with_db_name_in_tab.php");
 /*include("config/config.php");
 include("config/tpl_bodystart.php");
@@ -38,12 +38,12 @@ include("logged_in_start_of_page.php"); */
 //******************************************************************************* INCLUDES - END
 //**********************************************************************************************
 
-echo "in the installer. vvvv at 11:37<BR>";
+//echo "in the installer. vvvv at 11:37<BR>";
 create_db_form();
 
 //**********************************************************************************************
 //***************************************************************** DEBUG VARIABLES HERE - START
-$turn_this_debug_on = 1;  //Set this to 1 if you'd like to echo variables in the browser.
+$turn_this_debug_on = 1;                //Set this to 1 if you'd like to echo variables in the browser.
 if ($turn_this_debug_on == 1) {
     include("debug_array.php");
 }
