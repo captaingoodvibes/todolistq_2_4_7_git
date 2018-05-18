@@ -131,16 +131,27 @@ function create_db() {
             $mysqlPassword = $dbs5->dbPass;
             $mysqlHostName = 'localhost';
             $mysqlImportFilename ='base_database_20160520_generic.sql';
-
-//            $db_folder = $_POST['db_folder'];
             $db_folder = "todolistq_2_4_7";
             //ENTER THE RELEVANT INFO BELOW
-            /**
-            $mysqlDatabaseName ='test32';
-            $mysqlUserName ='live';
-            $mysqlPassword ='Ramjet44';
-             */
-            //**********************************************************************************************
+
+
+            exec("ls",$output=array(),$worked);
+            // echo "\$output = " . $output[0] . "<br>";
+            if($worked != 0) {
+                echo "\$worked on sql file import of tables - mysql -h error code = $worked <BR>";
+            }
+            echo "\$output = " . $output . "<br>";
+            print_r($output);
+            $result_array=explode(' ', $output);
+            echo "<br>Output: ".$result_array."<br>";
+            echo "Exit status: ".$return_var."<br>";
+
+            $pwd = shell_exec('pwd');
+            $pwd = trim($pwd);
+            //echo "<pre>$pwd</pre>";
+            echo "$pwd" . "x<br>";
+
+            /** ********************************************************************************************
             //********************************************************************** DEBUG VARIABLES HERE - START
             $debug = $_POST['debug'];
             $debugMsg .= "<b>\$mysqlDatabaseName = $mysqlDatabaseName</b><BR>";
@@ -150,15 +161,15 @@ function create_db() {
             $debugMsg .= "<b>\$mysqlImportFilename = $mysqlImportFilename</b><BR>";
             include("config/debug.php");
             //********************************************************************** DEBUG VARIABLES HERE - END
-            //**********************************************************************************************
+            //******************************************************************************************* */
 
             //DO NOT EDIT BELOW THIS LINE
             //Export the database and output the status to the page
             if ($Config_OS == "Off") {
                 // This is for linux ubuntu
                 // echo "<BR>This is for linux ubuntu - Spiros 2.3.2<BR><BR>";
-                $command='mysql -h' .$mysqlHostName .' -u' .$mysqlUserName .' -p' .$mysqlPassword .' ' .$mysqlDatabaseName .' < /var/www/html/repository/' . $db_folder . '/' . $mysqlImportFilename;
-                // echo "\$command for Ubuntu = $command<BR><BR>";
+                $command = 'mysql -h' .$mysqlHostName .' -u' .$mysqlUserName .' -p' .$mysqlPassword .' ' .$mysqlDatabaseName .' < ' . $pwd . '/' . $mysqlImportFilename;
+                echo "\$command for Ubuntu = $command<BR><BR>";
             } else {
                 // echo "<BR>This is for OSX MAMP<BR><BR>";
                 //echo exec('/applications/MAMP/library/bin/mysql -u live -pRamjet44 test47 < /Applications/MAMP/htdocs/s/spiros2_2_2_create_db/base_database_20131216_generic.sql ');
