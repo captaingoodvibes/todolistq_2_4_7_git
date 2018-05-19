@@ -4,7 +4,6 @@
     <list default="true" id="15492310-e8ad-468a-aa54-849830d2535e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_db_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/create_db_functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +28,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="261">
@@ -45,23 +44,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_db_functions.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create_db_functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/create_db_functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+            <state relative-caret-position="343">
+              <caret line="295" selection-start-line="295" selection-end-line="295" />
               <folding>
-                <element signature="n#populate_db#0;n#!!top" />
+                <element signature="n#create_db_form#0;n#!!top" />
+                <element signature="e#1626#2065#0#PHP" />
                 <element signature="e#2070#2676#0#PHP" />
                 <element signature="e#2964#3704#0#PHP" />
+                <element signature="e#3741#4264#0#PHP" />
                 <element signature="e#4316#6461#0#PHP" />
                 <element signature="e#6691#7245#0#PHP" />
                 <element signature="e#7606#8496#0#PHP" />
+                <element signature="e#8620#9466#0#PHP" />
                 <element signature="e#9015#9466#0#PHP" />
+                <element signature="e#9532#9663#0#PHP" />
+                <element signature="e#9676#11103#0#PHP" />
+                <element signature="e#10706#10838#0#PHP" />
+                <element signature="e#10893#11020#0#PHP" />
+                <element signature="e#11028#12484#0#PHP" />
+                <element signature="e#13464#13568#0#PHP" />
+                <element signature="e#13581#14149#0#PHP" />
+                <element signature="e#14385#14534#0#PHP" />
+                <element signature="e#14547#15115#0#PHP" />
+                <element signature="e#15352#15501#0#PHP" />
+                <element signature="e#15514#16083#0#PHP" />
+                <element signature="e#15239#16305#0#PHP" />
+                <element signature="e#16395#16538#0#PHP" />
+                <element signature="e#16551#17219#0#PHP" />
+                <element signature="e#16315#16571#0#PHP" />
                 <element signature="n#create_db#0;n#!!top" />
                 <element signature="n#insert_user_other_db#0;n#!!top" />
                 <element signature="n#choose_db#0;n#!!top" />
                 <element signature="n#log_into_external_db#0;n#!!top" />
+                <element signature="e#41342#42578#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -95,8 +113,8 @@
       <find>db_folder</find>
       <find>create_db</find>
       <find>Not a valid name. P</find>
-      <find>n index createdb</find>
       <find>EATE USER</find>
+      <find>n index createdb</find>
     </findStrings>
     <replaceStrings>
       <replace>span</replace>
@@ -145,8 +163,8 @@
         <option value="$PROJECT_DIR$/config/topIndex002.php" />
         <option value="$PROJECT_DIR$/config/dbSession.class" />
         <option value="$PROJECT_DIR$/install.php" />
-        <option value="$PROJECT_DIR$/create_db_functions.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/create_db_functions.php" />
       </list>
     </option>
   </component>
@@ -314,11 +332,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526685306347</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="The new download zip file is starting to take shape. New form created asking for the DBname, Uname and Pwd. Then it creates the tables in the DB. --&gt; working.">
+      <created>1526690182912</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1526690182912</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28772000" />
+    <option name="totallyTimeSpent" value="31829000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -394,7 +419,8 @@
     <MESSAGE value="&#10;Creating the install form, much like WordPress." />
     <MESSAGE value="Self creating it's own db now." />
     <MESSAGE value="Self creating it's own db now. Tested again --&gt; Seems good." />
-    <option name="LAST_COMMIT_MESSAGE" value="Self creating it's own db now. Tested again --&gt; Seems good." />
+    <MESSAGE value="The new download zip file is starting to take shape. New form created asking for the DBname, Uname and Pwd. Then it creates the tables in the DB. --&gt; working." />
+    <option name="LAST_COMMIT_MESSAGE" value="The new download zip file is starting to take shape. New form created asking for the DBname, Uname and Pwd. Then it creates the tables in the DB. --&gt; working." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -752,26 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create_db_functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="18" lean-forward="true" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-          <folding>
-            <element signature="n#populate_db#0;n#!!top" />
-            <element signature="e#2070#2676#0#PHP" />
-            <element signature="e#2964#3704#0#PHP" />
-            <element signature="e#4316#6461#0#PHP" />
-            <element signature="e#6691#7245#0#PHP" />
-            <element signature="e#7606#8496#0#PHP" />
-            <element signature="e#9015#9466#0#PHP" />
-            <element signature="n#create_db#0;n#!!top" />
-            <element signature="n#insert_user_other_db#0;n#!!top" />
-            <element signature="n#choose_db#0;n#!!top" />
-            <element signature="n#log_into_external_db#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -782,6 +788,45 @@
             <element signature="e#14056#14917#0#PHP" />
             <element signature="e#14923#15411#0#PHP" />
             <element signature="e#15417#15929#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create_db_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="295" selection-start-line="295" selection-end-line="295" />
+          <folding>
+            <element signature="n#create_db_form#0;n#!!top" />
+            <element signature="e#1626#2065#0#PHP" />
+            <element signature="e#2070#2676#0#PHP" />
+            <element signature="e#2964#3704#0#PHP" />
+            <element signature="e#3741#4264#0#PHP" />
+            <element signature="e#4316#6461#0#PHP" />
+            <element signature="e#6691#7245#0#PHP" />
+            <element signature="e#7606#8496#0#PHP" />
+            <element signature="e#8620#9466#0#PHP" />
+            <element signature="e#9015#9466#0#PHP" />
+            <element signature="e#9532#9663#0#PHP" />
+            <element signature="e#9676#11103#0#PHP" />
+            <element signature="e#10706#10838#0#PHP" />
+            <element signature="e#10893#11020#0#PHP" />
+            <element signature="e#11028#12484#0#PHP" />
+            <element signature="e#13464#13568#0#PHP" />
+            <element signature="e#13581#14149#0#PHP" />
+            <element signature="e#14385#14534#0#PHP" />
+            <element signature="e#14547#15115#0#PHP" />
+            <element signature="e#15352#15501#0#PHP" />
+            <element signature="e#15514#16083#0#PHP" />
+            <element signature="e#15239#16305#0#PHP" />
+            <element signature="e#16395#16538#0#PHP" />
+            <element signature="e#16551#17219#0#PHP" />
+            <element signature="e#16315#16571#0#PHP" />
+            <element signature="n#create_db#0;n#!!top" />
+            <element signature="n#insert_user_other_db#0;n#!!top" />
+            <element signature="n#choose_db#0;n#!!top" />
+            <element signature="n#log_into_external_db#0;n#!!top" />
+            <element signature="e#41342#42578#0#PHP" />
           </folding>
         </state>
       </provider>

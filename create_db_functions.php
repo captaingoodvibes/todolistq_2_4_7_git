@@ -212,15 +212,14 @@ function populate_db() {
         }
         echo "<span class=\"generalspanOnWhite\">";
         $structure = ' /var/www/html/users/' . $db_name . '/';
-        // $structure = ' /var/www/html/repository/';
+        /*// $structure = ' /var/www/html/repository/';
         // mkdir("ztesting");
 
-        // mkdir('/path/to/directory', 0755, true);
-
+        // mkdir('/path/to/directory', 0755, true);*/
         $command = 'mkdir -p' . $structure ;
-        // $command = 'mkdir -p ./zdepth01/depth2/depth3/';
-        // $command = 'mkdir("./zdepth01/depth2/depth3/", 0777, true)';
-        exec($command,$output=array(),$worked);
+        /*// $command = 'mkdir -p ./zdepth01/depth2/depth3/';
+        // $command = 'mkdir("./zdepth01/depth2/depth3/", 0777, true)';*/
+        /*exec($command,$output=array(),$worked);
         if($worked != 0) {
             echo "<BR> \$worked for mkdir = $worked <BR>";
         }
@@ -251,11 +250,12 @@ function populate_db() {
             case 1:
                 echo "<span class=\"edit_fail\"><BR>" . $command2 . "  fail.<BR><BR></span>";
                 break;
-        }
+        }*/
 
         //sed -i.bak 's/\($dbUser\s=\s"\).*/\1edgar";/' dbSession.class
 
-        $command3 = 'sed -i.bak \'s/\\($dbUser\\s=\\s"\\).*/\\1' . $db_name . '";/\' /var/www/html/users/' . $db_name . '/' . $db_folder . '/config/dbSession.class';
+        $command3 = 'sed -i.bak \'s/\\($dbUser\\s=\\s"\\).*/\\1' . $db_username . '";/\' ' .  $pwd . '/config/dbSession.class';
+        echo "\$command3 = " . $command3 . "<br>";
         exec($command3,$output=array(),$worked);
         if($worked != 0) {
             echo "\$worked sed specifying username = $worked <BR>";
@@ -272,7 +272,8 @@ function populate_db() {
                 break;
         }
 
-        $command4 = 'sed -i.bak \'s/\\($dbPass\\s=\\s"\\).*/\\1' . $db_pwd . '";/\' /var/www/html/users/' . $db_name . '/' . $db_folder . '/config/dbSession.class';
+        $command4 = 'sed -i.bak \'s/\\($dbPass\\s=\\s"\\).*/\\1' . $db_pwd . '";/\' ' . $pwd . '/config/dbSession.class';
+        echo "\$command4 = " . $command3 . "<br>";
         exec($command4,$output=array(),$worked);
         if($worked != 0) {
             echo "\$worked (the error code of the linux command itself) sed specifying password = $worked <BR>";
@@ -289,7 +290,8 @@ function populate_db() {
                 break;
         }
 
-        $command5 = 'sed -i.bak \'s/\\($dbName\\s=\\s"\\).*/\\1' . $db_name . '";/\' /var/www/html/users/' . $db_name . '/' . $db_folder . '/config/dbSession.class';
+        $command5 = 'sed -i.bak \'s/\\($dbName\\s=\\s"\\).*/\\1' . $db_name . '";/\' ' . $pwd . '/config/dbSession.class';
+        echo "\$command5 = " . $command3 . "<br>";
         exec($command5,$output=array(),$worked);
         if($worked != 0) {
             echo "\$worked (the error code of the linux command itself) specifying the database name = $worked";
@@ -305,8 +307,8 @@ function populate_db() {
                 echo "<span class=\"edit_fail\"><BR>" . $command5 . "  fail.<BR><BR></span>";
                 break;
         }
-        $command4 = 'mysql -u ' . $mysqlUserName . ' -p' . $mysqlPassword . ' --execute "GRANT ALL PRIVILEGES ON ' . $mysqlDatabaseName . '.* TO \'' . $new_admin_user_name . '\'@\'localhost\' IDENTIFIED BY \'' . $new_admin_user_pwd . '\'"';
 
+        /*$command4 = 'mysql -u ' . $mysqlUserName . ' -p' . $mysqlPassword . ' --execute "GRANT ALL PRIVILEGES ON ' . $mysqlDatabaseName . '.* TO \'' . $new_admin_user_name . '\'@\'localhost\' IDENTIFIED BY \'' . $new_admin_user_pwd . '\'"';
         exec($command4,$output=array(),$worked);
         if($worked != 0) {
             echo "\$worked (the error code of the linux command itself) mysql -h command. = $worked <BR>";
@@ -321,12 +323,12 @@ function populate_db() {
             case 1:
                 echo "<span class=\"edit_fail\">There was an error during the User permissions editing. <BR> The command used was " . $command4 . "</span>";
                 break;
-        }
+        }*/
 
-        insert_user_other_db($new_admin_user_name, $new_admin_user_pwd, 'localhost', $mysqlUserName, $mysqlPassword, $mysqlDatabaseName);
+        /*insert_user_other_db($new_admin_user_name, $new_admin_user_pwd, 'localhost', $mysqlUserName, $mysqlPassword, $mysqlDatabaseName);
         $_POST['dbName'] = $new_admin_user_name;
         $_POST['db_folder'] = $db_folder;
-        log_into_external_db();
+        log_into_external_db();*/
     }
 
 }
