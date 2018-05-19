@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/config/dbSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/config/dbSession.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_db_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/create_db_functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install.php" beforeDir="false" afterPath="$PROJECT_DIR$/install.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,40 +30,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-              <folding>
-                <element signature="e#3845#4643#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_db_functions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="create_db_functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_db_functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="181" column="66" lean-forward="true" selection-start-line="181" selection-start-column="66" selection-end-line="181" selection-end-column="66" />
+            <state relative-caret-position="-1740">
+              <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
               <folding>
-                <element signature="n#create_db_form#0;n#!!top" />
-                <element signature="e#5168#5607#0#PHP" />
-                <element signature="e#5612#6219#0#PHP" />
-                <element signature="e#4187#4276#0#PHP" />
-                <element signature="e#4281#4771#0#PHP" />
-                <element signature="e#4991#5125#0#PHP" />
-                <element signature="e#5130#5620#0#PHP" />
-                <element signature="e#5841#5975#0#PHP" />
-                <element signature="e#5980#6471#0#PHP" />
-                <element signature="e#6745#6891#0#PHP" />
-                <element signature="e#6896#7432#0#PHP" />
-                <element signature="e#10313#10867#0#PHP" />
-                <element signature="e#12214#12649#0#PHP" />
-                <element signature="e#12839#14210#0#PHP" />
-                <element signature="e#14334#14466#0#PHP" />
-                <element signature="e#14520#14647#0#PHP" />
+                <element signature="n#update_config_file#0;n#!!top" />
+                <element signature="e#8793#9228#0#PHP" />
+                <element signature="e#9286#9409#0#PHP" />
+                <element signature="e#9418#10789#0#PHP" />
                 <element signature="n#create_db#0;n#!!top" />
                 <element signature="n#insert_user_other_db#0;n#!!top" />
                 <element signature="n#choose_db#0;n#!!top" />
@@ -74,46 +49,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbSession.class" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/dbSession.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="debug_array.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/debug_array.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#7#966#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="whiteBoard.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/whiteBoard.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="68" column="24" lean-forward="true" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#font#0;n#TD#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#TABLE#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#TD#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="install.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/install.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11">
-              <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="366">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbSession.class" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/dbSession.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="47" column="42" lean-forward="true" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -122,9 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>FONT</find>
-      <find>dbName</find>
-      <find>i</find>
       <find>sql file import</find>
       <find>ase_dat</find>
       <find>_databa</find>
@@ -140,18 +95,21 @@
       <find>n index createdb</find>
       <find>EATE USER</find>
       <find>sleep</find>
-      <find>debug</find>
       <find>dbs5</find>
       <find>dbUser</find>
       <find>debug_array</find>
       <find>$mysqlUserName</find>
       <find>$dbs5</find>
-      <find>create</find>
       <find>select</find>
       <find>$mysqlUserName</find>
       <find>mysql</find>
       <find>mysqlUserName</find>
+      <find>create</find>
       <find>mysqlUser</find>
+      <find>debug</find>
+      <find>$pwd</find>
+      <find>creat</find>
+      <find>update_c</find>
     </findStrings>
     <replaceStrings>
       <replace>span</replace>
@@ -199,10 +157,11 @@
         <option value="$PROJECT_DIR$/../../7rocks/7rocks_20180413/xcom/responsive-test-v3b.html" />
         <option value="$PROJECT_DIR$/../../7rocks/7rocks_20180413/xcom/responsive-test-v3_dion.html" />
         <option value="$PROJECT_DIR$/config/topIndex002.php" />
-        <option value="$PROJECT_DIR$/install.php" />
-        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/db_creds.php" />
         <option value="$PROJECT_DIR$/config/dbSession.class" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/create_db_functions.php" />
+        <option value="$PROJECT_DIR$/install.php" />
       </list>
     </option>
   </component>
@@ -384,11 +343,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526693406906</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="It's almost working, just the timing of the dbsession.class un and pw rewrite does not seem to happen intime before the next read ????">
+      <created>1526719663597</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1526719663597</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47730000" />
+    <option name="totallyTimeSpent" value="54270000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -412,7 +378,7 @@
       <window_info anchor="bottom" x="21" y="298" width="1238" height="223" id="Version Control" order="12" weight="0.32924962" />
       <window_info anchor="bottom" id="Run" order="4" />
       <window_info anchor="bottom" id="Terminal" order="14" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992343" visible="true" weight="0.2584814" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992343" visible="true" weight="0.2584814" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32924962" />
@@ -491,7 +457,8 @@
     <MESSAGE value="Self creating it's own db now. Tested again --&gt; Seems good." />
     <MESSAGE value="The new download zip file is starting to take shape. New form created asking for the DBname, Uname and Pwd. Then it creates the tables in the DB. --&gt; working." />
     <MESSAGE value="Sed is updateing the config file and populating the DB. Just need to swap the order so sed happens first and then the DB population afterwards." />
-    <option name="LAST_COMMIT_MESSAGE" value="Sed is updateing the config file and populating the DB. Just need to swap the order so sed happens first and then the DB population afterwards." />
+    <MESSAGE value="It's almost working, just the timing of the dbsession.class un and pw rewrite does not seem to happen intime before the next read ????" />
+    <option name="LAST_COMMIT_MESSAGE" value="It's almost working, just the timing of the dbsession.class un and pw rewrite does not seem to happen intime before the next read ????" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -499,13 +466,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../7rocks/7rocks_20180413/xcom/responsive-test-v3_dion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -831,56 +791,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/install.php">
+    <entry file="file://$PROJECT_DIR$/db_creds.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="e#3845#4643#0#PHP" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="9" selection-start-line="9" selection-end-line="15" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/dbSession.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="187">
+          <caret line="47" column="42" lean-forward="true" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/create_db_functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="181" column="66" lean-forward="true" selection-start-line="181" selection-start-column="66" selection-end-line="181" selection-end-column="66" />
+        <state relative-caret-position="-1740">
+          <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
           <folding>
-            <element signature="n#create_db_form#0;n#!!top" />
-            <element signature="e#5168#5607#0#PHP" />
-            <element signature="e#5612#6219#0#PHP" />
-            <element signature="e#4187#4276#0#PHP" />
-            <element signature="e#4281#4771#0#PHP" />
-            <element signature="e#4991#5125#0#PHP" />
-            <element signature="e#5130#5620#0#PHP" />
-            <element signature="e#5841#5975#0#PHP" />
-            <element signature="e#5980#6471#0#PHP" />
-            <element signature="e#6745#6891#0#PHP" />
-            <element signature="e#6896#7432#0#PHP" />
-            <element signature="e#10313#10867#0#PHP" />
-            <element signature="e#12214#12649#0#PHP" />
-            <element signature="e#12839#14210#0#PHP" />
-            <element signature="e#14334#14466#0#PHP" />
-            <element signature="e#14520#14647#0#PHP" />
+            <element signature="n#update_config_file#0;n#!!top" />
+            <element signature="e#8793#9228#0#PHP" />
+            <element signature="e#9286#9409#0#PHP" />
+            <element signature="e#9418#10789#0#PHP" />
             <element signature="n#create_db#0;n#!!top" />
             <element signature="n#insert_user_other_db#0;n#!!top" />
             <element signature="n#choose_db#0;n#!!top" />
             <element signature="n#log_into_external_db#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
         </state>
       </provider>
     </entry>

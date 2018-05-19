@@ -41,8 +41,8 @@ class dbSession {
 
 // Database Variables
     var $dbHost = "localhost";
-    var $dbUser = "userlylll";
-    var $dbPass = "password";
+    var $dbUser = "userlylllkkk";
+    var $dbPass = "passwordggg";
     var $dbName = "database_name";
 
     var $max_active_users_allowed = "300";

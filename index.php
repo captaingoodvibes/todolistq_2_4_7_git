@@ -29,9 +29,9 @@ if ($new_install == 1) {
 } elseif ($db_has_been_setup == "no") {
     echo "In loop 2<br>";
     include ("install.php");
+    echo "In loop 22<br>";
     exit;
 }
-echo "After break<br>";
 
 include("config/config.php");
 include("config/tpl_bodystart.php");
@@ -177,8 +177,10 @@ if (empty($AddMessageTermination)) {
         case "create_db_form";
             create_db_form();       // Found in create_db_functions.php
             break;
-        case "populate_db";
-            echo "In index populate_db case statement.<br>";
+        case "update_config_file";
+            update_config_file();   // Found in create_db_functions.php
+            break;
+        case "populate_2";
             populate_db();          // Found in create_db_functions.php
             break;
         case "choose_db";

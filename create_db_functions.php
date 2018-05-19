@@ -1,5 +1,5 @@
 <?PHP
-function update_config_file($db_name, $db_username, $db_pwd, $pwd) {
+function update_config_file_old($db_name, $db_username, $db_pwd, $pwd) {
 
 }
 function create_db_form() {
@@ -29,7 +29,7 @@ function create_db_form() {
                 echo "<input type=\"hidden\" name=\"Config_OS\" value=\"Off\">";
                 echo "<input type=\"hidden\" name=\"new_install\" value=\"1\">";
                 echo "<input type=\"hidden\" name=\"AddMessageTermination\" value=\"1\">";
-                echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"populate_db\">";
+                echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"update_config_file\">";
                 echo "<input type=\"hidden\" name=\"StartTime\" value=\"$StartTime\">";
                 echo "<input type=\"submit\" name=\"Submit\" value=\"Create DB\">";
                 echo "</form>";
@@ -39,7 +39,7 @@ function create_db_form() {
     </TABLE>
     <?PHP
 }
-function populate_db() {
+function update_config_file() {
     /**
     Desc    :   Overview of populated_db()
     Creator :   Dion Patelis
@@ -163,159 +163,78 @@ function populate_db() {
                 echo "<span class=\"edit_fail\"><BR>" . $command5 . "  fail.<BR><BR></span>";
                 break;
         }
-        sleep(6);
-        echo "here here bro<br>";
+    }
+    ?>
+    <TABLE align="center">
+        <TR>
+            <TD>
+                <?PHP
+                $StartTime = time();
+                echo "<form method=\"post\" action=\"$PHP_SELF\">";
+                echo "<input type=\"hidden\" name=\"Config_OS\" value=\"Off\">";
+                echo "<input type=\"hidden\" name=\"AddMessageTermination\" value=\"1\">";
+                echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"populate_2\">";
+                echo "<input type=\"hidden\" name=\"StartTime\" value=\"$StartTime\">";
+                echo "<input type=\"submit\" name=\"Submit\" value=\"Create DB\">";
+                echo "</form>";
+                ?>
+            </TD>
+        </TR>
+    </TABLE>
+    <?PHP
 
+}
+function populate_db() {
 
-        $dbs5 = new dbSession();
-        $mysqlDatabaseName = $db_name;
-        $new_admin_user_name = $db_username;
-        $new_admin_user_pwd = $db_pwd;
-        $mysqlUserName = $dbs5->dbUser;
-        $mysqlPassword = $dbs5->dbPass;
-        $mysqlHostName = 'localhost';
-        $mysqlImportFilename ='base_database_20160520_generic.sql';
-        $db_folder = "todolistq_2_4_7";
+    $dbs5 = new dbSession();
+    $new_admin_user_name = $db_username;
+    $new_admin_user_pwd = $db_pwd;
+    $mysqlUserName = $dbs5->dbUser;
+    $mysqlPassword = $dbs5->dbPass;
+    $mysqlDatabaseName = $dbs5->dbName;
+    $mysqlHostName = 'localhost';
+    $mysqlImportFilename ='base_database_20160520_generic.sql';
+    $db_folder = "todolistq_2_4_7";
+    $pwd = shell_exec('pwd');
+    $pwd = trim($pwd);
 
-
-        echo "<b>\$mysqlUserName = $mysqlUserName</b><BR>";
-        echo "----------------------------------------------<br>";
-
-
-        $dbs6 = new dbSession();
-        $red = $dbs6->dbUser;
-        $ted = $dbs6->dbPass;
-        $mysqlHostName = 'localhost';
-
-        echo "<b>\$mysqlUserName 2 = $red</b><BR>";
-        echo "<b>\$mysqlPassword 2 = $ted</b><BR>";
-
-        //ENTER THE RELEVANT INFO BELOW
-        /** Can't remember what this was. Thing I was just playing with the pwd shell command. DP 19/5/2018 10:25
-        exec("ls",$output=array(),$worked);
-        // echo "\$output = " . $output[0] . "<br>";
-        if($worked != 0) {
-        echo "\$worked on sql file import of tables - mysql -h error code = $worked <BR>";
-        }
-        echo "\$output = " . $output . "<br>";
-        print_r($output);
-        $result_array=explode(' ', $output);
-        echo "<br>Output: ".$result_array."<br>";
-        echo "Exit status: ".$return_var."<br>"; */
-
-        //*******************************************************************************************
-        //************************************************************** DEBUG VARIABLES HERE - START
-        $debug = $_POST['debug'];
-        $debugMsg .= "<b>\$mysqlDatabaseName = $mysqlDatabaseName</b><BR>";
-        $debugMsg .= "<b>\$mysqlUserName = $mysqlUserName</b><BR>";
-        $debugMsg .= "<b>\$mysqlPassword = $mysqlPassword</b><BR>";
-        $debugMsg .= "<b>\$mysqlHostName = $mysqlHostName</b><BR>";
-        $debugMsg .= "<b>\$mysqlImportFilename = $mysqlImportFilename</b><BR>";
-        include("debug_array.php");
-        //**************************************************************** DEBUG VARIABLES HERE - END
-        //*******************************************************************************************
-
-        //DO NOT EDIT BELOW THIS LINE
-        //Export the database and output the status to the page
-        if ($Config_OS == "Off") {
-            // This is for linux ubuntu
-            // echo "<BR>This is for linux ubuntu - TDLQ 2.4.7<BR><BR>";
-            //$command = 'mysql -h' . $mysqlHostName .' -u' .$mysqlUserName .' -p' . $mysqlPassword .' ' . $mysqlDatabaseName .' < ' . $pwd . '/' . $mysqlImportFilename;
-            $command = 'mysql -hlocalhost -u' . $db_username .' -p' . $db_pwd .' ' . $db_name .' < ' . $pwd . '/' . $mysqlImportFilename;
-            echo "\$command for Ubuntu = $command<BR><BR>";
-        } else {
-            // echo "<BR>This is for OSX MAMP<BR><BR>";
-            //echo exec('/applications/MAMP/library/bin/mysql -u live -pRamjet44 test47 < /Applications/MAMP/htdocs/s/spiros2_2_2_create_db/base_database_20131216_generic.sql ');
-            $command='/applications/MAMP/library/bin/mysql -h ' . $mysqlHostName .' -u ' . $mysqlUserName .' -p' .$mysqlPassword .' ' .$mysqlDatabaseName .' < ' .$mysqlImportFilename;
-        }
-
-        exec($command,$output=array(),$worked);
-        if($worked != 0) {
-            echo "\$worked on sql file import of tables - mysql -h error code = $worked <BR>";
-        }
-        switch($worked){
-            case 0:
-                // echo "<LINK rel=stylesheet href=\"css/main.css\" type=\"text/css\">";
-
-                // echo "<span class=\"edit_success_solid\">Import file <b>" .$mysqlImportFilename ."</b> successfully imported to database </span><b>" .$mysqlDatabaseName ."</b><BR>";
-                $check_num = "5";
-                $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
-                break;
-            case 1:
-                echo '<span class="edit_fail">There was an error during import. Please make sure the import file is saved in the same folder as this script and check your values:<br/><br/><table><tr><td>MySQL Database Name:</td><td><b>' .$mysqlDatabaseName .'</b></td></tr><tr><td>MySQL User Name:</td><td><b>' .$mysqlUserName .'</b></td></tr><tr><td>MySQL Password:</td><td><b>NOTSHOWN</b></td></tr><tr><td>MySQL Host Name:</td><td><b>' .$mysqlHostName .'</b></td></tr><tr><td>MySQL Import Filename:</td><td><b>' .$mysqlImportFilename .'</span></b></td></tr></table>';
-                break;
-            case 2:
-                echo "<span class=\"edit_fail\">Import file <b>" .$mysqlImportFilename .'</b> did not find the path. </span><b>' .$mysqlDatabaseName .'</b>';
-                break;
-        }
-        //echo "<span class=\"generalspanOnWhite\">";
-        $structure = ' /var/www/html/users/' . $db_name . '/';
-        /*// $structure = ' /var/www/html/repository/';
-        // mkdir("ztesting");
-
-        // mkdir('/path/to/directory', 0755, true);*/
-        // $command = 'mkdir -p' . $structure ;
-        /*// $command = 'mkdir -p ./zdepth01/depth2/depth3/';
-        // $command = 'mkdir("./zdepth01/depth2/depth3/", 0777, true)';*/
-        /*exec($command,$output=array(),$worked);
-        if($worked != 0) {
-            echo "<BR> \$worked for mkdir = $worked <BR>";
-        }
-        switch($worked){
-            case 0:
-                // echo "<span class=\"edit_success_solid\"><BR><BR>" . $command . "  worked.<BR><BR></span>";
-                $check_num = "6";
-                $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
-                break;
-            case 1:
-                echo "<span class=\"edit_fail\"><BR>" . $command . "  fail.<BR><BR></span>";
-                break;
-        }
-
-        $command2 = 'rsync -hortig /var/www/html/repository/ /var/www/html/users/' . $db_name . '/';
-        exec($command2,$output=array(),$worked);
-        if($worked != 0) {
-            echo "\$worked for rsync = $worked <BR>";
-        }
-        switch($worked){
-            case 0:
-                // echo "<span class=\"edit_success_solid\"><BR>" . $command2 . "  executed<BR><BR></span>";
-                $check_num = "7";
-                $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
-                break;
-            case 1:
-                echo "<span class=\"edit_fail\"><BR>" . $command2 . "  fail.<BR><BR></span>";
-                break;
-        }*/
-
-        //sed -i.bak 's/\($dbUser\s=\s"\).*/\1edgar";/' dbSession.class
-
-        /*$command4 = 'mysql -u ' . $mysqlUserName . ' -p' . $mysqlPassword . ' --execute "GRANT ALL PRIVILEGES ON ' . $mysqlDatabaseName . '.* TO \'' . $new_admin_user_name . '\'@\'localhost\' IDENTIFIED BY \'' . $new_admin_user_pwd . '\'"';
-        exec($command4,$output=array(),$worked);
-        if($worked != 0) {
-            echo "\$worked (the error code of the linux command itself) mysql -h command. = $worked <BR>";
-        }
-        switch($worked){
-            case 0:
-                // echo "<span class=\"edit_success_solid\"> \$command4 = " . $command4 . "<BR><BR> and it worked successfully.</span><BR><BR>";
-                $check_num = "11";
-                $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
-                break;
-            case 1:
-                echo "<span class=\"edit_fail\">There was an error during the User permissions editing. <BR> The command used was " . $command4 . "</span>";
-                break;
-        }*/
-
-        /*insert_user_other_db($new_admin_user_name, $new_admin_user_pwd, 'localhost', $mysqlUserName, $mysqlPassword, $mysqlDatabaseName);
-        $_POST['dbName'] = $new_admin_user_name;
-        $_POST['db_folder'] = $db_folder;
-        log_into_external_db();*/
+    //ENTER THE RELEVANT INFO BELOW
+    //DO NOT EDIT BELOW THIS LINE
+    //Export the database and output the status to the page
+    $Config_OS = "Off";
+    if ($Config_OS == "Off") {
+        echo "in populate_2 funciton<br>";
+        // This is for linux ubuntu
+        // echo "<BR>This is for linux ubuntu - TDLQ 2.4.7<BR><BR>";
+        $command = 'mysql -h' . $mysqlHostName .' -u' .$mysqlUserName .' -p' . $mysqlPassword .' ' . $mysqlDatabaseName .' < ' . $pwd . '/' . $mysqlImportFilename;
+        // $command = 'mysql -hlocalhost -u' . $db_username .' -p' . $db_pwd .' ' . $db_name .' < ' . $pwd . '/' . $mysqlImportFilename;
+        echo "\$command for Ubuntu = $command<BR><BR>";
+    } else {
+        // echo "<BR>This is for OSX MAMP<BR><BR>";
+        //echo exec('/applications/MAMP/library/bin/mysql -u live -pRamjet44 test47 < /Applications/MAMP/htdocs/s/spiros2_2_2_create_db/base_database_20131216_generic.sql ');
+        $command='/applications/MAMP/library/bin/mysql -h ' . $mysqlHostName .' -u ' . $mysqlUserName .' -p' .$mysqlPassword .' ' .$mysqlDatabaseName .' < ' .$mysqlImportFilename;
     }
 
+    exec($command,$output=array(),$worked);
+    if($worked != 0) {
+        echo "\$worked on sql file import of tables - mysql -h error code = $worked <BR>";
+    }
+    switch($worked){
+        case 0:
+            // echo "<LINK rel=stylesheet href=\"css/main.css\" type=\"text/css\">";
+
+            // echo "<span class=\"edit_success_solid\">Import file <b>" .$mysqlImportFilename ."</b> successfully imported to database </span><b>" .$mysqlDatabaseName ."</b><BR>";
+            $check_num = "8";
+            $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
+            echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
+            break;
+        case 1:
+            echo '<span class="edit_fail">There was an error during import. Please make sure the import file is saved in the same folder as this script and check your values:<br/><br/><table><tr><td>MySQL Database Name:</td><td><b>' .$mysqlDatabaseName .'</b></td></tr><tr><td>MySQL User Name:</td><td><b>' .$mysqlUserName .'</b></td></tr><tr><td>MySQL Password:</td><td><b>NOTSHOWN</b></td></tr><tr><td>MySQL Host Name:</td><td><b>' .$mysqlHostName .'</b></td></tr><tr><td>MySQL Import Filename:</td><td><b>' .$mysqlImportFilename .'</span></b></td></tr></table>';
+            break;
+        case 2:
+            echo "<span class=\"edit_fail\">Import file <b>" .$mysqlImportFilename .'</b> did not find the path. </span><b>' .$mysqlDatabaseName .'</b>';
+            break;
+    }
 }
 function create_db() {
 // echo "<LINK rel=stylesheet href=\"css/main.css\" type=\"text/css\">";
