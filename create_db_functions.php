@@ -1,4 +1,7 @@
 <?PHP
+function update_config_file($db_name, $db_username, $db_pwd, $pwd) {
+
+}
 function create_db_form() {
     ?>
     <TABLE align="center">
@@ -61,6 +64,7 @@ function populate_db() {
     //******************************************************************* DEBUG VARIABLES HERE - END
     //******************************************************************************************* */
 
+
     // echo"Table Data<BR>";
     echo "<div align=\"center\">";
     $db_name = $_POST['db_name'];
@@ -70,75 +74,98 @@ function populate_db() {
     $ClientInsertDate = $_POST['StartTime'];
     $StartTime = time();
 
-    /**  *******************************************************************************************
-     ******************************************************************* DEBUG VARIABLES HERE - START
+    //************************************************************************************************
+    //******************************************************************* DEBUG VARIABLES HERE - START
     $debug = $_POST['debug'];
-    $debugMsg .= "<b>Inside create_db()</b><BR>";
+    $debugMsg .= "<b>Inside populate_db()</b><BR>";
     $debugMsg .= "<b>\$db_pwd = $db_pwd</b><BR>";
     $debugMsg .= "<b>\$Config_OS = $Config_OS</b><BR>";
     $debugMsg .= "This " . $ClientInsertDate . " is the \$ClientInsertDate in index.php<BR><BR>";
-    include("config/debug.php");
-     ********************************************************************* DEBUG VARIABLES HERE - END
-     ********************************************************************************************* */
+    include("debug_array.php");
+    //********************************************************************* DEBUG VARIABLES HERE - END
+    //************************************************************************************************
 
     if ($db_name != "") {
-        /**
-        $dbs = new dbSession();
-        $sql = "CREATE USER '$db_name'@'localhost' IDENTIFIED BY '$db_pwd'";
-        if ($dbs->getResult($sql)) {
-        $msg = "User $db_name created.";
-        echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
-        $create_user_fail = 0;
+        $pwd = shell_exec('pwd');
+        $pwd = trim($pwd);
+        // echo "$pwd" . "<br>";
+        // update_config_file($db_name, $db_username, $db_pwd, $pwd);
 
-        } else {
-        $msg = $dbs->printError();
-        echo "$msg <BR><BR>
-        Please try a different name as <B>" . $db_name . "</B> is already taken.<BR>";
-        $create_user_fail = 1;
-        }*/
-
-        /**
-        $dbs2 = new dbSession();
-        $sql2 = "GRANT USAGE ON *.* TO '$db_name'@'localhost' IDENTIFIED BY '$db_pwd' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0";
-        if ($dbs2->getResult($sql2)) {
-        // $msg = "Usage granted for $db_name for connections, updates, queries.";
-        $check_num = "2";
-        $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-        echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
-        } else {
-        $msg = $dbs2->printError();
-        echo "$msg<BR>";
+        $command3 = 'sed -i.bak \'s/\\($dbUser\\s=\\s"\\).*/\\1' . $db_username . '";/\' ' . $pwd . '/config/dbSession.class';
+        echo "\$command3 = " . $command3 . "<br>";
+        exec($command3, $output = array(), $worked);
+        if ($worked != 0) {
+            echo "\$worked sed specifying username = $worked <BR>";
+        }
+        switch ($worked) {
+            case 0:
+                // echo "<span class=\"edit_success_solid\"><BR>" . $command3 . "  executed<BR><BR></span>";
+                $check_num = "8";
+                $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
+                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
+                break;
+            case 1:
+                echo "<span class=\"edit_fail\"><BR>" . $command3 . "  fail.<BR><BR></span>";
+                break;
         }
 
-        $dbs3 = new dbSession();
-        $sql3 = "CREATE DATABASE IF NOT EXISTS `$db_name`";
-        if ($dbs3->getResult($sql3)) {
-        // $msg = "$db_name database completed. <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-        $check_num = "3";
-        $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-        echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
-
-        } else {
-        $msg = $dbs3->printError();
-        echo "$msg<BR>";
+        $command4 = 'sed -i.bak \'s/\\($dbPass\\s=\\s"\\).*/\\1' . $db_pwd . '";/\' ' . $pwd . '/config/dbSession.class';
+        echo "\$command4 = " . $command3 . "<br>";
+        exec($command4, $output = array(), $worked);
+        if ($worked != 0) {
+            echo "\$worked (the error code of the linux command itself) sed specifying password = $worked <BR>";
+        }
+        switch ($worked) {
+            case 0:
+                // echo "<span class=\"edit_success_solid\"><BR>" . $command4 . "  executed<BR><BR></span>";
+                $check_num = "9";
+                $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
+                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
+                break;
+            case 1:
+                echo "<span class=\"edit_fail\"><BR>" . $command4 . "  fail.<BR><BR></span>";
+                break;
         }
 
-        $dbs4 = new dbSession();
-        $sql4 = "GRANT ALL PRIVILEGES ON $db_name.* TO $db_name@localhost IDENTIFIED by 'star'";
-        // $sql4 = "GRANT ALL PRIVILEGES ON $db_name.* TO $db_name@localhost IDENTIFIED by 'star'";
-        // $sql4 = "GRANT ALL PRIVILEGES ON `test78` . * TO 'test78'@'localhost' WITH GRANT OPTION";
+        $command5 = 'sed -i.bak \'s/\\($dbName\\s=\\s"\\).*/\\1' . $db_name . '";/\' ' . $pwd . '/config/dbSession.class';
+        echo "\$command5 = " . $command3 . "<br>";
+        exec($command5, $output = array(), $worked);
+        if ($worked != 0) {
+            echo "\$worked (the error code of the linux command itself) specifying the database name = $worked";
+        }
+        switch ($worked) {
+            case 0:
+                // echo "<span class=\"edit_success_solid\"><BR>" . $command5 . "  executed<BR><BR></span>";
+                $check_num = "10";
+                $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
+                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
+                break;
+            case 1:
+                echo "<span class=\"edit_fail\"><BR>" . $command5 . "  fail.<BR><BR></span>";
+                break;
+        }
 
-        if ($dbs4->getResult($sql3)) {
-        // $msg = "Priviliedges grandted for user $db_name on DB $db_name - next bit.";
-        $check_num = "4";
-        $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-        echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
-        // echo "\$sql4 = $sql4<BR><BR>";
+        $db_has_been_setup = "yes";
+        $command6 = 'sed -i.bak \'s/\\($db_has_been_setup\\s=\\s"\\).*/\\1' . $db_has_been_setup . '";/\' ' . $pwd . '/config/dbSession.class';
+        echo "\$command6 = " . $command6 . "<br>";
+        exec($command6, $output = array(), $worked);
+        if ($worked != 0) {
+            echo "\$worked (the error code of the linux command itself) for updating the \$new_install variable. = $worked";
+        }
+        switch ($worked) {
+            case 0:
+                // echo "<span class=\"edit_success_solid\"><BR>" . $command5 . "  executed<BR><BR></span>";
+                $check_num = "6";
+                $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\"> \$new_install variable set to " . $new_install;
+                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
+                break;
+            case 1:
+                echo "<span class=\"edit_fail\"><BR>" . $command5 . "  fail.<BR><BR></span>";
+                break;
+        }
+        sleep(6);
+        echo "here here bro<br>";
 
-        } else {
-        $msg = $dbs4->printError();
-        echo "$msg<BR>";
-        } */
 
         $dbs5 = new dbSession();
         $mysqlDatabaseName = $db_name;
@@ -149,15 +176,26 @@ function populate_db() {
         $mysqlHostName = 'localhost';
         $mysqlImportFilename ='base_database_20160520_generic.sql';
         $db_folder = "todolistq_2_4_7";
-        $pwd = shell_exec('pwd');
-        $pwd = trim($pwd);
-        // echo "$pwd" . "<br>";
+
+
+        echo "<b>\$mysqlUserName = $mysqlUserName</b><BR>";
+        echo "----------------------------------------------<br>";
+
+
+        $dbs6 = new dbSession();
+        $red = $dbs6->dbUser;
+        $ted = $dbs6->dbPass;
+        $mysqlHostName = 'localhost';
+
+        echo "<b>\$mysqlUserName 2 = $red</b><BR>";
+        echo "<b>\$mysqlPassword 2 = $ted</b><BR>";
+
         //ENTER THE RELEVANT INFO BELOW
         /** Can't remember what this was. Thing I was just playing with the pwd shell command. DP 19/5/2018 10:25
         exec("ls",$output=array(),$worked);
         // echo "\$output = " . $output[0] . "<br>";
         if($worked != 0) {
-            echo "\$worked on sql file import of tables - mysql -h error code = $worked <BR>";
+        echo "\$worked on sql file import of tables - mysql -h error code = $worked <BR>";
         }
         echo "\$output = " . $output . "<br>";
         print_r($output);
@@ -165,24 +203,25 @@ function populate_db() {
         echo "<br>Output: ".$result_array."<br>";
         echo "Exit status: ".$return_var."<br>"; */
 
-        /** ********************************************************************************************
-        //********************************************************************** DEBUG VARIABLES HERE - START
+        //*******************************************************************************************
+        //************************************************************** DEBUG VARIABLES HERE - START
         $debug = $_POST['debug'];
         $debugMsg .= "<b>\$mysqlDatabaseName = $mysqlDatabaseName</b><BR>";
         $debugMsg .= "<b>\$mysqlUserName = $mysqlUserName</b><BR>";
         $debugMsg .= "<b>\$mysqlPassword = $mysqlPassword</b><BR>";
         $debugMsg .= "<b>\$mysqlHostName = $mysqlHostName</b><BR>";
         $debugMsg .= "<b>\$mysqlImportFilename = $mysqlImportFilename</b><BR>";
-        include("config/debug.php");
-        //********************************************************************** DEBUG VARIABLES HERE - END
-        //******************************************************************************************* */
+        include("debug_array.php");
+        //**************************************************************** DEBUG VARIABLES HERE - END
+        //*******************************************************************************************
 
         //DO NOT EDIT BELOW THIS LINE
         //Export the database and output the status to the page
         if ($Config_OS == "Off") {
             // This is for linux ubuntu
             // echo "<BR>This is for linux ubuntu - TDLQ 2.4.7<BR><BR>";
-            $command = 'mysql -h' .$mysqlHostName .' -u' .$mysqlUserName .' -p' .$mysqlPassword .' ' .$mysqlDatabaseName .' < ' . $pwd . '/' . $mysqlImportFilename;
+            //$command = 'mysql -h' . $mysqlHostName .' -u' .$mysqlUserName .' -p' . $mysqlPassword .' ' . $mysqlDatabaseName .' < ' . $pwd . '/' . $mysqlImportFilename;
+            $command = 'mysql -hlocalhost -u' . $db_username .' -p' . $db_pwd .' ' . $db_name .' < ' . $pwd . '/' . $mysqlImportFilename;
             echo "\$command for Ubuntu = $command<BR><BR>";
         } else {
             // echo "<BR>This is for OSX MAMP<BR><BR>";
@@ -210,13 +249,13 @@ function populate_db() {
                 echo "<span class=\"edit_fail\">Import file <b>" .$mysqlImportFilename .'</b> did not find the path. </span><b>' .$mysqlDatabaseName .'</b>';
                 break;
         }
-        echo "<span class=\"generalspanOnWhite\">";
+        //echo "<span class=\"generalspanOnWhite\">";
         $structure = ' /var/www/html/users/' . $db_name . '/';
         /*// $structure = ' /var/www/html/repository/';
         // mkdir("ztesting");
 
         // mkdir('/path/to/directory', 0755, true);*/
-        $command = 'mkdir -p' . $structure ;
+        // $command = 'mkdir -p' . $structure ;
         /*// $command = 'mkdir -p ./zdepth01/depth2/depth3/';
         // $command = 'mkdir("./zdepth01/depth2/depth3/", 0777, true)';*/
         /*exec($command,$output=array(),$worked);
@@ -253,60 +292,6 @@ function populate_db() {
         }*/
 
         //sed -i.bak 's/\($dbUser\s=\s"\).*/\1edgar";/' dbSession.class
-
-        $command3 = 'sed -i.bak \'s/\\($dbUser\\s=\\s"\\).*/\\1' . $db_username . '";/\' ' .  $pwd . '/config/dbSession.class';
-        echo "\$command3 = " . $command3 . "<br>";
-        exec($command3,$output=array(),$worked);
-        if($worked != 0) {
-            echo "\$worked sed specifying username = $worked <BR>";
-        }
-        switch($worked){
-            case 0:
-                // echo "<span class=\"edit_success_solid\"><BR>" . $command3 . "  executed<BR><BR></span>";
-                $check_num = "8";
-                $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
-                break;
-            case 1:
-                echo "<span class=\"edit_fail\"><BR>" . $command3 . "  fail.<BR><BR></span>";
-                break;
-        }
-
-        $command4 = 'sed -i.bak \'s/\\($dbPass\\s=\\s"\\).*/\\1' . $db_pwd . '";/\' ' . $pwd . '/config/dbSession.class';
-        echo "\$command4 = " . $command3 . "<br>";
-        exec($command4,$output=array(),$worked);
-        if($worked != 0) {
-            echo "\$worked (the error code of the linux command itself) sed specifying password = $worked <BR>";
-        }
-        switch($worked){
-            case 0:
-                // echo "<span class=\"edit_success_solid\"><BR>" . $command4 . "  executed<BR><BR></span>";
-                $check_num = "9";
-                $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
-                break;
-            case 1:
-                echo "<span class=\"edit_fail\"><BR>" . $command4 . "  fail.<BR><BR></span>";
-                break;
-        }
-
-        $command5 = 'sed -i.bak \'s/\\($dbName\\s=\\s"\\).*/\\1' . $db_name . '";/\' ' . $pwd . '/config/dbSession.class';
-        echo "\$command5 = " . $command3 . "<br>";
-        exec($command5,$output=array(),$worked);
-        if($worked != 0) {
-            echo "\$worked (the error code of the linux command itself) specifying the database name = $worked";
-        }
-        switch($worked){
-            case 0:
-                // echo "<span class=\"edit_success_solid\"><BR>" . $command5 . "  executed<BR><BR></span>";
-                $check_num = "10";
-                $msg = "Check $check_num <img src=\"images/tick.gif\" width=\"20\" height=\"20\">";
-                echo "<span class=\"edit_success_solid\">$msg<BR><BR></span>";
-                break;
-            case 1:
-                echo "<span class=\"edit_fail\"><BR>" . $command5 . "  fail.<BR><BR></span>";
-                break;
-        }
 
         /*$command4 = 'mysql -u ' . $mysqlUserName . ' -p' . $mysqlPassword . ' --execute "GRANT ALL PRIVILEGES ON ' . $mysqlDatabaseName . '.* TO \'' . $new_admin_user_name . '\'@\'localhost\' IDENTIFIED BY \'' . $new_admin_user_pwd . '\'"';
         exec($command4,$output=array(),$worked);
@@ -619,43 +604,43 @@ function create_db() {
 }
 function insert_user_other_db($user_login, $user_pwd, $db_host_other_db, $db_user_other_db, $db_pass_other_db, $db_name_other_db) {
     // Get data from the database where the name variable = ????
-/** ***********************************************************************************************
-//******************************************************************** DEBUG VARIABLES HERE - START
+    /** ***********************************************************************************************
+    //******************************************************************** DEBUG VARIABLES HERE - START
     $turn_this_debug_on = 0;
     if ($turn_this_debug_on == 1) {
-        $debug = $_POST['debug'];
-        $debugMsg .= "<BR>********************************************************************<BR>";
-        $debugMsg .= "Debug in InsertClient() in index.php<BR>";
-        $debugMsg .= "\$_POST['name'] =" . $_POST['name'] . "<BR>";
-        $debugMsg .= "\$_POST['pass'] = " . $_POST['pass'] . "<BR>";
-        $debugMsg .= "\$peopleName = $peopleName<BR>";
-        $debugMsg .= "\$peoplePwd = $peoplePwd<BR>";
-        $debugMsg .= "\$UserID = $UserID<BR>";
-        $debugMsg .= "\$user_authenticated = $user_authenticated<BR>";
-        $debugMsg .= "\$_POST['user_authenticated'] = " . $_POST['user_authenticated'] . "<BR>";
-        $debugMsg .= "\$tab_cluster = $tab_cluster<BR>";
-        $debugMsg .= "\$_POST['login_instance_token'] = " . $_POST['login_instance_token'] . "<BR>";
-        $debugMsg .= "\$login_instance_token = " . $login_instance_token . "<BR>";
-        $debugMsg .= "\$_POST['User_db_token'] = " . $_POST['User_db_token'] . "<BR>";
-        $debugMsg .= "\$User_db_token = " . $User_db_token . "<BR>";
-        $debugMsg .= "\$login_name = " . $login_name . "<BR>";
-        $debugMsg .= "********************************************************************<BR>";
-        include("config/debug.php");
+    $debug = $_POST['debug'];
+    $debugMsg .= "<BR>********************************************************************<BR>";
+    $debugMsg .= "Debug in InsertClient() in index.php<BR>";
+    $debugMsg .= "\$_POST['name'] =" . $_POST['name'] . "<BR>";
+    $debugMsg .= "\$_POST['pass'] = " . $_POST['pass'] . "<BR>";
+    $debugMsg .= "\$peopleName = $peopleName<BR>";
+    $debugMsg .= "\$peoplePwd = $peoplePwd<BR>";
+    $debugMsg .= "\$UserID = $UserID<BR>";
+    $debugMsg .= "\$user_authenticated = $user_authenticated<BR>";
+    $debugMsg .= "\$_POST['user_authenticated'] = " . $_POST['user_authenticated'] . "<BR>";
+    $debugMsg .= "\$tab_cluster = $tab_cluster<BR>";
+    $debugMsg .= "\$_POST['login_instance_token'] = " . $_POST['login_instance_token'] . "<BR>";
+    $debugMsg .= "\$login_instance_token = " . $login_instance_token . "<BR>";
+    $debugMsg .= "\$_POST['User_db_token'] = " . $_POST['User_db_token'] . "<BR>";
+    $debugMsg .= "\$User_db_token = " . $User_db_token . "<BR>";
+    $debugMsg .= "\$login_name = " . $login_name . "<BR>";
+    $debugMsg .= "********************************************************************<BR>";
+    include("config/debug.php");
     }
-//********************************************************************** DEBUG VARIABLES HERE - END
-//************************************************************************************************/
+    //********************************************************************** DEBUG VARIABLES HERE - END
+    //************************************************************************************************/
 
-/** ***********************************************************************************************
-//******************************************************************** DEBUG VARIABLES HERE - START
+    /** ***********************************************************************************************
+    //******************************************************************** DEBUG VARIABLES HERE - START
     $turn_this_debug_on = 0;
     if ($turn_this_debug_on == 1) {
-        $debug = $_POST['debug'];
-        $debugMsg .= "<b>Inside InsertClient()</b><BR>";
-        $debugMsg .= "This " . $_POST['StartTime'] . " is the \$StartTime in index.php<BR><BR>";
-        include("config/debug.php");
+    $debug = $_POST['debug'];
+    $debugMsg .= "<b>Inside InsertClient()</b><BR>";
+    $debugMsg .= "This " . $_POST['StartTime'] . " is the \$StartTime in index.php<BR><BR>";
+    include("config/debug.php");
     }
-//********************************************************************** DEBUG VARIABLES HERE - END
-//************************************************************************************************/
+    //********************************************************************** DEBUG VARIABLES HERE - END
+    //************************************************************************************************/
 
     // echo"Table Data<BR>";
     echo "<div align=\"center\">";
@@ -672,10 +657,10 @@ function insert_user_other_db($user_login, $user_pwd, $db_host_other_db, $db_use
     //******************************************************************** DEBUG VARIABLES HERE - START
     $turn_this_debug_on = 0;
     if ($turn_this_debug_on == 1) {
-        $debug = $_POST['debug'];
-        $debugMsg .= "<b>Inside InsertClient()</b><BR>";
-        $debugMsg .= "This " . $ClientInsertDate . " is the \$ClientInsertDate in index.php<BR><BR>";
-        include("config/debug.php");
+    $debug = $_POST['debug'];
+    $debugMsg .= "<b>Inside InsertClient()</b><BR>";
+    $debugMsg .= "This " . $ClientInsertDate . " is the \$ClientInsertDate in index.php<BR><BR>";
+    include("config/debug.php");
     }
     //********************************************************************** DEBUG VARIABLES HERE - END
     //************************************************************************************************/

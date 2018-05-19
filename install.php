@@ -8,9 +8,9 @@
 
 //**********************************************************************************************
 //***************************************************************************** INCLUDES - START
-include("config/dbSession.class");      // Test putting this include at the top so that the html
+// include("config/dbSession.class");      // Test putting this include at the top so that the html
                                         // title in the tab shows the dbname. DP
-include("config/headAndBody001_with_db_name_in_tab.php");
+// include("config/headAndBody001_with_db_name_in_tab.php");
 /*include("config/config.php");
 include("config/tpl_bodystart.php");
 // include("config/class_detect.php");
@@ -39,6 +39,7 @@ include("logged_in_start_of_page.php"); */
 //**********************************************************************************************
 
 //echo "in the installer. vvvv at 11:37<BR>";
+echo "\$new_install in install.php.... = " . $new_install . "<br>";
 create_db_form();
 
 //**********************************************************************************************

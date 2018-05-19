@@ -2,30 +2,37 @@
 //***********************************************************************************************
 //********************************************************************************* TITLE - START
 /**
- *	file:	index.php
  * 	desc;	Main ToDolist page.
- *  note:   new versioni based on the version from the main
- *               website folder /web_site_1_0_0_fire_up_paypal/
+ *  note:
  *	auth:	Dion Patelis (owner)
- *	date:	10th Feb 2015       - Dion Patelis ... whammo
- *	last:	18th May 2018 10:28 - Dion Patelis
+ *	date:	10th Feb 2015       - Dion Patelis
+ *	last:	19th May 2018 12:38 - Dion Patelis
  */
 //********************************************************************************** TITLE - END
 //**********************************************************************************************
 
-//$new_install = 1;  // To run the TDLQ installer set this to 1
-$new_install = $_POST['new_install'];
-echo "\$new_install = " . $new_install . "<br>";
-if (empty($new_install)) {
-    include ("install.php");
-    exit;
-}
-echo "after if in index<BR>";
+
+
 //**********************************************************************************************
 //***************************************************************************** INCLUDES - START
 include("config/dbSession.class");      // Test putting this include at the top so that the html
 // title in the tab shows the dbname. DP
 include("config/headAndBody001_with_db_name_in_tab.php");
+
+//$new_install = 1;  // To run the TDLQ installer set this to 1
+$new_install = $_POST['new_install'];
+echo "\$new_install = " . $new_install . "<br>";
+echo "\$db_has_been_setup = " . $db_has_been_setup . "<br>";
+if ($new_install == 1) {
+    echo "In loop 1<br>";
+
+} elseif ($db_has_been_setup == "no") {
+    echo "In loop 2<br>";
+    include ("install.php");
+    exit;
+}
+echo "After break<br>";
+
 include("config/config.php");
 include("config/tpl_bodystart.php");
 // include("config/class_detect.php");
@@ -54,6 +61,7 @@ include("logged_in_start_of_page.php");
 //**********************************************************************************************
 
 
+
 //**********************************************************************************************
 //****************************************************************** CONNECT TO DATABASE - START
 $dbs = new dbSession();
@@ -70,21 +78,20 @@ if ( ! empty($_POST['JobID']) ){
 //**********************************************************************************************
 
 
-//**********************************************************************************************
-//*************************************************************** START GLOBAL VARIABLES - START
+/** ********************************************************************************************
+***************************************************************** START GLOBAL VARIABLES - START
 $Job_imp_urg_set = $_POST['Job_imp_urg_set'];
 $SearchClientName = $_POST['SearchClientName'];
 $fieldName = $_POST['fieldName'];
 $JobID = $_POST['JobID'];
 $JobPriorityUp = $_POST['JobPriorityUp'];
 $Job_imp_urg_set = $_POST['Job_imp_urg_set'];
-//******************************************************************* END GLOBAL VARIABLES - END
-//**********************************************************************************************
+********************************************************************* END GLOBAL VARIABLES - END
+********************************************************************************************* */
 
 
-//**********************************************************************************************
-//**************************************************************************** TIME ZONE - START
-/**
+/** ********************************************************************************************
+****************************************************************************** TIME ZONE - START
 $dbst = new dbSession();
 $sqlt = "SELECT * from config WHERE ConfigID = 1 LIMIT 0, 30";
 
@@ -96,10 +103,9 @@ while ($rowt = $dbst->getArray($Resultst)) {
 $config_time_zone = $_POST['user_time_zone'];
 $_POST['config_time_zone'] = $config_time_zone;
 }
- */
 //echo "\$config_time_zone = $config_time_zone and " . $_POST['config_time_zone'] . " <BR>";
-//****************************************************************************** TIME ZONE - END
-//**********************************************************************************************
+******************************************************************************** TIME ZONE - END
+********************************************************************************************* */
 
 
 //**********************************************************************************************
