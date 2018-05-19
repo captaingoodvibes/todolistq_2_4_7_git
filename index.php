@@ -171,9 +171,9 @@ if (empty($AddMessageTermination)) {
         case "create_db_form";
             create_db_form();       // Found in create_db_functions.php
             break;
-        case "create_db";
-            echo "in index createdb case<br>";
-            create_db();            // Found in create_db_functions.php
+        case "populate_db";
+            echo "In index populate_db case statement.<br>";
+            populate_db();          // Found in create_db_functions.php
             break;
         case "choose_db";
             choose_db();            // Found in create_db_functions.php
