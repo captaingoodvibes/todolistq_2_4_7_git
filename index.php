@@ -19,17 +19,13 @@ include("config/dbSession.class");      // Test putting this include at the top 
 // title in the tab shows the dbname. DP
 include("config/headAndBody001_with_db_name_in_tab.php");
 
-//$new_install = 1;  // To run the TDLQ installer set this to 1
-$new_install = $_POST['new_install'];
-echo "\$new_install = " . $new_install . "<br>";
-echo "\$db_has_been_setup = " . $db_has_been_setup . "<br>";
-if ($new_install == 1) {
-    echo "In loop 1<br>";
 
+$new_install = $_POST['new_install'];
+//echo "\$new_install = " . $new_install . "<br>";
+//echo "\$db_has_been_setup = " . $db_has_been_setup . "<br>";
+if ($new_install == 1) {
 } elseif ($db_has_been_setup == "no") {
-    echo "In loop 2<br>";
     include ("install.php");
-    echo "In loop 22<br>";
     exit;
 }
 
@@ -297,7 +293,7 @@ if (empty($AddMessageTermination)) {
             add_user();             // Found in user_functions.php
             break;
         case "insert_user";
-            insert_user();             // Found in user_functions.php
+            insert_user();          // Found in user_functions.php
             break;
         case "list_users";
             show_user();            // Found in user_functions.php

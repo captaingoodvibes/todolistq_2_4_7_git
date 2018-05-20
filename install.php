@@ -39,7 +39,7 @@ include("logged_in_start_of_page.php"); */
 //**********************************************************************************************
 
 //echo "in the installer. vvvv at 11:37<BR>";
-echo "\$new_install in install.php.... = " . $new_install . "<br>";
+//echo "\$new_install in install.php.... = " . $new_install . "<br>";
 create_db_form();
 
 //**********************************************************************************************

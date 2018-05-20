@@ -8,7 +8,7 @@
  *	date:	12 Sep 2001
  *	last:	19th May 2018 - Dion Patelis
  *
- *  log:    DP 19/2/15 - 2.3.5 - Using getskelton.com to make Spiros work on all devies.
+ *  log:    DP 19/2/15 - 2.3.5 - Using getskelton.com to make TDLQ work on all devies.
  */
 //********************************************************************************** TITLE - END
 //**********************************************************************************************
@@ -41,8 +41,8 @@ class dbSession {
 
 // Database Variables
     var $dbHost = "localhost";
-    var $dbUser = "userlylllkkk";
-    var $dbPass = "passwordggg";
+    var $dbUser = "user_name";
+    var $dbPass = "password";
     var $dbName = "database_name";
 
     var $max_active_users_allowed = "300";

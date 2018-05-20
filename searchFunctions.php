@@ -39,7 +39,7 @@ function show_user() {
 	echo "<DIV align=\"center\">";
 	$header_size = $_POST['header_size'];
 	echo "<H" . $header_size . ">List Users</H" . $header_size . ">";
-	
+
 	global $debug;
 	$debugMsg .= "Start Time = $StartTime<BR>";
 	$debugMsg .= "\$SearchClientName= $SearchClientName<BR>";
@@ -71,7 +71,7 @@ function show_user() {
 		                echo "<TR>";
 		                        echo "<TD>";
 		                        echo "<form method=\"post\" action=\"./user_card_with_time_limits_ajax.php\">";
-                                        echo " <FONT class=\"" . $user_active_css . "\">" . $UserLogin . "</FONT>";
+                                        echo " <span class=\"" . $user_active_css . "\">" . $UserLogin . "</span>";
                                         echo "</TD>";
                                         echo "<TD>";
                                         echo "<input type=\"hidden\" name=\"user_ID_to_display\" value=\"" . $user_ID_to_display . "\">";
