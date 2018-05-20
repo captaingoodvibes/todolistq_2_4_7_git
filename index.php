@@ -2,8 +2,8 @@
 //***********************************************************************************************
 //********************************************************************************* TITLE - START
 /**
- *  file:   index.php
  * 	desc;	Main ToDolist page.
+ *  file:   index.php
  *  note:   The server database settings can be found in dbsession.class
  *          This is the main file, although a lot happens out of whiteboard.php as well.
  *	auth:	Dion Patelis (owner)
@@ -21,6 +21,11 @@ include("config/dbSession.class");      // Test putting this include at the top 
 // title in the tab shows the dbname. DP
 include("config/headAndBody001_with_db_name_in_tab.php");
 
+/**
+ The following section is what's run when you first install TDLQ. It brings up a web page
+ asking for the database credentials. It then runs scripts to alter dbSession.class to
+ setup the database name, username, and password.
+ */
 $new_install = $_POST['new_install'];
 //echo "\$new_install = " . $new_install . "<br>";
 //echo "\$db_has_been_setup = " . $db_has_been_setup . "<br>";
@@ -56,7 +61,6 @@ include("log_in_authentication_form.php");
 include("logged_in_start_of_page.php");
 //******************************************************************************* INCLUDES - END
 //**********************************************************************************************
-
 
 
 //**********************************************************************************************
@@ -123,7 +127,6 @@ if (empty($AddMessageTermination)) {
     echo "<LINK rel=stylesheet href=\"css/main.css\" type=\"text/css\">";
     //**********************************************************************************************
     //**************************************************************************** CATCHES 2 - START
-    // echo "\$OptionCatch = $OptionCatch<BR>";
     switch ($_POST['OptionCatch']) {
         case "SearchClient";
             if($_POST['SearchClientName'] == ""){
@@ -393,16 +396,16 @@ if (empty($AddMessageTermination)) {
     //**********************************************************************************************
     echo "</DIV>";
 }
-
 //*********************************************************************************** MAIN - END
 //**********************************************************************************************
 
+
 include("logged_in_end_of_page.php");
+
 
 //**********************************************************************************************
 //**************************************************************************** FUNCTIONS - START
 function Main() {
-
 }
 //****************************************************************************** FUNCTIONS - END
 //**********************************************************************************************

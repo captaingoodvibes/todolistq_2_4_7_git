@@ -4,7 +4,8 @@
 /**
  *	file:	dbSession.class
  *	auth:	Mike Donnici
- *	desc;	A class for session with mysql server - confiuration variables.
+ *	desc:	See line 43 for the database variables to be altered at setup.
+ *          A class for session with mysql server - confiuration variables.
  *	date:	12 Sep 2001
  *	last:	20th May 2018 - Dion Patelis
  *
@@ -15,7 +16,7 @@
 
 
 //***********************************************************************************************
-//********************************************************************************* TITLE - START
+//***************************************************************************** VARIABLES - START
 /**
  *	Some configuration variables here. Some in the class below.
  *
@@ -34,12 +35,12 @@ $ProgramName = "<span class=\"titles\"  >$ProgramTitle</span>
 $header_size = "4";
 $_POST['header_size'] = $header_size;
 $db_has_been_setup = "no";
-//********************************************************************************** TITLE - END
+//****************************************************************************** VARIABLES - END
 //**********************************************************************************************
 
 class dbSession {
 
-// Database Variables
+    // Database Variables to be altered at initial setup.
     var $dbHost = "localhost";
     var $dbUser = "user_name";
     var $dbPass = "password";
@@ -156,7 +157,6 @@ class dbSession {
         echo "<b><font color=\"red\">" . $this->errNum . ": " .
             $this->errMessage . "</b></font><BR>";
     }
-
 }
 //END dbSession class
 ?>
