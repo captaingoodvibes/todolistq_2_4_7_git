@@ -2,11 +2,13 @@
 //***********************************************************************************************
 //********************************************************************************* TITLE - START
 /**
+ *  file:   index.php
  * 	desc;	Main ToDolist page.
- *  note:
+ *  note:   The server database settings can be found in dbsession.class
+ *          This is the main file, although a lot happens out of whiteboard.php as well.
  *	auth:	Dion Patelis (owner)
- *	date:	10th Feb 2015       - Dion Patelis
- *	last:	19th May 2018 12:38 - Dion Patelis
+ *	date:	10th Feb 2015 - Dion Patelis
+ *	last:	20th May 2018 - Dion Patelis
  */
 //********************************************************************************** TITLE - END
 //**********************************************************************************************
@@ -18,7 +20,6 @@
 include("config/dbSession.class");      // Test putting this include at the top so that the html
 // title in the tab shows the dbname. DP
 include("config/headAndBody001_with_db_name_in_tab.php");
-
 
 $new_install = $_POST['new_install'];
 //echo "\$new_install = " . $new_install . "<br>";
@@ -75,19 +76,19 @@ if ( ! empty($_POST['JobID']) ){
 
 
 /** ********************************************************************************************
-***************************************************************** START GLOBAL VARIABLES - START
+ ***************************************************************** START GLOBAL VARIABLES - START
 $Job_imp_urg_set = $_POST['Job_imp_urg_set'];
 $SearchClientName = $_POST['SearchClientName'];
 $fieldName = $_POST['fieldName'];
 $JobID = $_POST['JobID'];
 $JobPriorityUp = $_POST['JobPriorityUp'];
 $Job_imp_urg_set = $_POST['Job_imp_urg_set'];
-********************************************************************* END GLOBAL VARIABLES - END
-********************************************************************************************* */
+ ********************************************************************* END GLOBAL VARIABLES - END
+ ********************************************************************************************* */
 
 
 /** ********************************************************************************************
-****************************************************************************** TIME ZONE - START
+ ****************************************************************************** TIME ZONE - START
 $dbst = new dbSession();
 $sqlt = "SELECT * from config WHERE ConfigID = 1 LIMIT 0, 30";
 
@@ -100,13 +101,13 @@ $config_time_zone = $_POST['user_time_zone'];
 $_POST['config_time_zone'] = $config_time_zone;
 }
 //echo "\$config_time_zone = $config_time_zone and " . $_POST['config_time_zone'] . " <BR>";
-******************************************************************************** TIME ZONE - END
-********************************************************************************************* */
+ ******************************************************************************** TIME ZONE - END
+ ********************************************************************************************* */
 
 
 //**********************************************************************************************
 //***************************************************************** DEBUG VARIABLES HERE - START
-$turn_this_debug_on = 1;
+$turn_this_debug_on = 0;
 if ($turn_this_debug_on == 1) {
     include("debug_array.php");
 }
@@ -120,13 +121,12 @@ echo "<DIV align=\"center\">";
 if (empty($AddMessageTermination)) {
     echo "<BR>";
     echo "<LINK rel=stylesheet href=\"css/main.css\" type=\"text/css\">";
-
     //**********************************************************************************************
     //**************************************************************************** CATCHES 2 - START
     // echo "\$OptionCatch = $OptionCatch<BR>";
     switch ($_POST['OptionCatch']) {
         case "SearchClient";
-            if($SearchClientName==""){
+            if($_POST['SearchClientName'] == ""){
                 echo "<BR><BR>";
                 echo "<H3>You can not have a blank entry! Try again.</H3><BR><BR><BR>";
             }else{
