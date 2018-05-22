@@ -1,7 +1,11 @@
 Updated : Dion Patelis 22/5/18 12:23AEST
 
 ## TDLQ (To Do List Q)
-A cascading ToDo / task list whereby you can prioritise and collaborate with multi users in different time zones.
+
+1. A cascaded ToDo list
+2. An address book
+3. A timed action logger
+
 
 ### Demo
 Is available on the [todolistq.com][1] website
