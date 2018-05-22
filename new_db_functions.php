@@ -5,7 +5,7 @@ function refresh_db() {
     $mysqlDatabaseName = '';
     $new_admin_user_name = '';
     $new_admin_user_pwd = '';
-    $mysqlUserName = '';
+    $mysqlUserName = 'demo';
     $mysqlPassword = '';
     $mysqlHostName = 'localhost';
     $mysqlImportFilename ='base_database_20150211_generic.sql';

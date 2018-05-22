@@ -92,7 +92,8 @@ function update_config_file() {
         // update_config_file($db_name, $db_username, $db_pwd, $pwd);
 
         $command3 = 'sed -i.bak \'s/\\($dbUser\\s=\\s"\\).*/\\1' . $db_username . '";/\' ' . $pwd . '/config/dbSession.class';
-        echo "\$command3 = " . $command3 . "<br>";
+        // echo "\$command3 = " . $command3 . "<br>";
+        echo "Update config file with username.<br>";
         exec($command3, $output = array(), $worked);
         if ($worked != 0) {
             echo "\$worked sed specifying username = $worked <BR>";
@@ -110,7 +111,8 @@ function update_config_file() {
         }
 
         $command4 = 'sed -i.bak \'s/\\($dbPass\\s=\\s"\\).*/\\1' . $db_pwd . '";/\' ' . $pwd . '/config/dbSession.class';
-        echo "\$command4 = " . $command3 . "<br>";
+        // echo "\$command4 = " . $command3 . "<br>";
+        echo "Update config file with the password.<br>";
         exec($command4, $output = array(), $worked);
         if ($worked != 0) {
             echo "\$worked (the error code of the linux command itself) sed specifying password = $worked <BR>";
@@ -128,7 +130,8 @@ function update_config_file() {
         }
 
         $command5 = 'sed -i.bak \'s/\\($dbName\\s=\\s"\\).*/\\1' . $db_name . '";/\' ' . $pwd . '/config/dbSession.class';
-        echo "\$command5 = " . $command3 . "<br>";
+        // echo "\$command5 = " . $command3 . "<br>";
+        echo "Update config file with the datebase name.<br>";
         exec($command5, $output = array(), $worked);
         if ($worked != 0) {
             echo "\$worked (the error code of the linux command itself) specifying the database name = $worked";
@@ -147,7 +150,8 @@ function update_config_file() {
 
         $db_has_been_setup = "yes";
         $command6 = 'sed -i.bak \'s/\\($db_has_been_setup\\s=\\s"\\).*/\\1' . $db_has_been_setup . '";/\' ' . $pwd . '/config/dbSession.class';
-        echo "\$command6 = " . $command6 . "<br>";
+        // echo "\$command6 = " . $command6 . "<br>";
+        echo "Turn this initial installation page off in the config file.<br>";
         exec($command6, $output = array(), $worked);
         if ($worked != 0) {
             echo "\$worked (the error code of the linux command itself) for updating the \$new_install variable. = $worked";
@@ -203,12 +207,12 @@ function populate_db() {
     //Export the database and output the status to the page
     $Config_OS = "Off";
     if ($Config_OS == "Off") {
-        echo "in populate_2 funciton<br>";
         // This is for linux ubuntu
         // echo "<BR>This is for linux ubuntu - TDLQ 2.4.7<BR><BR>";
         $command = 'mysql -h' . $mysqlHostName .' -u' .$mysqlUserName .' -p' . $mysqlPassword .' ' . $mysqlDatabaseName .' < ' . $pwd . '/' . $mysqlImportFilename;
         // $command = 'mysql -hlocalhost -u' . $db_username .' -p' . $db_pwd .' ' . $db_name .' < ' . $pwd . '/' . $mysqlImportFilename;
-        echo "\$command for Ubuntu = $command<BR><BR>";
+        // echo "\$command for Ubuntu = $command<BR><BR>";
+        echo "$mysqlDatabaseName database populated.<br>";
     } else {
         // echo "<BR>This is for OSX MAMP<BR><BR>";
         //echo exec('/applications/MAMP/library/bin/mysql -u live -pRamjet44 test47 < /Applications/MAMP/htdocs/s/spiros2_2_2_create_db/base_database_20131216_generic.sql ');

@@ -44,7 +44,7 @@ create_db_form();
 
 //**********************************************************************************************
 //***************************************************************** DEBUG VARIABLES HERE - START
-$turn_this_debug_on = 1;                //Set this to 1 if you'd like to echo variables in the browser.
+$turn_this_debug_on = 0;                //Set this to 1 if you'd like to echo variables in the browser.
 if ($turn_this_debug_on == 1) {
     include("debug_array.php");
 }
