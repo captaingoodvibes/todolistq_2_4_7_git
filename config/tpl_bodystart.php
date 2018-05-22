@@ -2,7 +2,7 @@
         if ($bg) {
                 $bgcolor = $bg;
         } else {
-                $bgcolor = "#79a3db";
+                $bgcolor = "";
         }
         if ($lm) {
                 $lmargin = $lm;
