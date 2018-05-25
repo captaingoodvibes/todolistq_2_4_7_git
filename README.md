@@ -17,6 +17,3 @@ Is available on the [todolistq.com][1] website
 * ~~Make telephone link button from client cards so that dialing from a mobile screen is possible.~~
 
 [1]: http://todolistq.com
-iiii
-
-asdfasdfsdf
