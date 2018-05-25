@@ -86,9 +86,6 @@
         <entry key="$PROJECT_DIR$" value="Refine_search_old" />
       </map>
     </option>
-    <option name="PUSH_TAGS">
-      <GitPushTagMode />
-    </option>
     <favorite-branches>
       <branch-storage>
         <map>
@@ -240,7 +237,7 @@
       <workItem from="1526768253983" duration="12094000" />
       <workItem from="1526875214878" duration="6926000" />
       <workItem from="1526943840604" duration="5062000" />
-      <workItem from="1527249736919" duration="523000" />
+      <workItem from="1527249736919" duration="1436000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit with 3 dots in top reference.">
       <created>1526469657653</created>
@@ -389,11 +386,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527248416279</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Adjusting README.md testa">
+      <created>1527250426357</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1527250426357</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81149000" />
+    <option name="totallyTimeSpent" value="82062000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -406,7 +410,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.26655897" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.32988167" />
@@ -471,6 +474,32 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -492,7 +521,8 @@
     <MESSAGE value="Cleaning up file neatness a bit." />
     <MESSAGE value="Adjusting README.md" />
     <MESSAGE value="Adjusting README.md test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusting README.md test" />
+    <MESSAGE value="Adjusting README.md testa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusting README.md testa" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
