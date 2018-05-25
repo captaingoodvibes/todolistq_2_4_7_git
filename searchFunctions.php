@@ -220,11 +220,11 @@ function SearchClient3() {
             <div class="twelve columns" style="margin-top: 5%; text-align: center">
                 <?PHP
                     $fieldName = $_POST['fieldName'];
-                    $SearchClientName_unstripped = $_POST['SearchClientName'];
-                    // Remove all special characters, grammar, punctuation and spaces from a string.
+                    $SearchClientName = $_POST['SearchClientName'];
+                    /** Remove all special characters, grammar, punctuation and spaces from a string.
                     $SearchClientName = preg_replace('/[^a-zA-Z0-9-_\.]/','', $SearchClientName_unstripped);
                     echo "\$SearchClientName_unstripped = $SearchClientName_unstripped<br>";
-                    echo "\$SearchClientName = $SearchClientName<br>";
+                    echo "\$SearchClientName = $SearchClientName<br>";*/
                     $StartTime = $_POST['StartTime'];
                     $message = $_POST['message'];
                     echo "<DIV align=\"center\">";
