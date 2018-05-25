@@ -229,7 +229,7 @@ function SearchClient3() {
                     echo "</DIV><BR>";
                     $dbs = new dbSession();
                     // $sql = "SELECT ClientID, ClientName, ClientContactName, ClientPhone1, ClientPhone2 from client WHERE $fieldName REGEXP \"$SearchClientName\" ORDER BY ClientName ASC";
-                    $sql = "SELECT ClientID, ClientName, ClientContactName, ClientPhone1, ClientPhone2 from client WHERE ( ($fieldName REGEXP \"$SearchClientName\") || (ClientContactName REGEXP \"$SearchClientName\") ) ORDER BY ClientName ASC";
+                    $sql = "SELECT ClientID, ClientName, ClientContactName, ClientPhone1, ClientPhone2 from client WHERE ( ($fieldName REGEXP \"$SearchClientName\") || (ClientContactName REGEXP \"$SearchClientName\") || (ClientPhone1 REGEXP \"$SearchClientName\") || (ClientPhone2 REGEXP \"$SearchClientName\") ) ORDER BY ClientName ASC";
                     //**********************************************************************************************
                     //***************************************************************** DEBUG VARIABLES HERE - START
                         $turn_this_debug_on = 0;
