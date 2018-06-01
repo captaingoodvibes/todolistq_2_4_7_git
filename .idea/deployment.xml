@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="tdlq_247installer">
+  <component name="PublishConfigData" autoUpload="Always" serverName="todolistq_2_4_7_git_phpstorm">
     <serverData>
-      <paths name="tdlq_247installer">
+      <paths name="todolistq_2_4_7_git_phpstorm">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
