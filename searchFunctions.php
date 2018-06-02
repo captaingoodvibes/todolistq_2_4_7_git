@@ -30,7 +30,6 @@ if ($turn_this_debug_on == 1) {
 
 $SearchClientName = $_POST['fieldName'];
 
-
 //**********************************************************************************************
 //**************************************************************************** FUNCTIONS - START
 function show_user() {
@@ -614,22 +613,4 @@ function list_clients_connected_to_reminder_and_back_to_reminder_card() {
 }
 //****************************************************************************** FUNCTIONS - END
 //**********************************************************************************************
-
-
-// QUICK LISTING
-// INCLUDES
-// SECURITY (OPTIONAL)
-// DATABASE CONNECTION
-
-// START CATCHES
-// 	$option_catch
-// END CATCHES
-
-// START MAIN
-// END MAIN
-
-// START LOCAL FUNCTIONS
-
-// END LOCAL FUNCTIONS
-
 ?>

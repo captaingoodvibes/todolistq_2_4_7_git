@@ -161,32 +161,6 @@ $mybox_width = 280;
                                 ?>
                             </a>
                         </li>
-                        <?PHP /**  ?>
-                        <li><a href="#">
-                        <!-- <a href="./whiteBoard.php" FACE="Arial" SIZE="" COLOR="white">Job Board <?PHP echo "$login_instance_token"; ?>doo dah</a> -->
-                        <!-- <a href="./whiteBoard.php" FACE="Arial" SIZE="" COLOR="white">  -->
-                        <?PHP /**
-                        echo "<form method=\"post\" action=\"./index.php\">";
-                        echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"job_board\">";
-                        include ("log_in_authentication_form_vars.php");
-                        echo "<input class=\"top_buttons\"  type=\"submit\" name=\"action\" value=\"Job Board 2\">";
-                        echo "</form>";
-                        ?>
-                        </a>
-                        </li>
-                        <li><a href="#">
-                        <!-- <a href="./history_01.php">History</a>
-                        <a href="./history_01.php" FACE="Arial" SIZE="" COLOR="white"> -->
-                        <?PHP
-                        echo "<form method=\"post\" action=\"./index.php\">";
-                        echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"slip\">";
-                        include ("log_in_authentication_form_vars.php");
-                        echo "<input class=\"top_buttons\" type=\"submit\" name=\"action\" value=\"Slip\">";
-                        echo "</form>";
-                        ?>
-                        </a>
-
-                        </li> <?PHP */ ?>
                         <li><a href="#">
                                 <!-- <a href="./history_01.php">History</a>
                                 <a href="./history_01.php" FACE="Arial" SIZE="" COLOR="white"> -->
@@ -217,28 +191,6 @@ $mybox_width = 280;
                 </li>
                 <li><a href="#">Add</a>
                     <ul>
-                        <!--  <li><a href="#">Item 3</a></li>
-                              <li><a href="#">Folder 2</a>
-                                  <ul>
-                                          <li><a href="#">Sub Item 2.1</a></li>
-                                          <li><a href="#">Folder 2.1</a>
-                                          <ul>
-                                                  <li><a href="#">Sub Item 2.1.1</a></li>
-                                                  <li><a href="#">Sub Item 2.1.2</a></li>
-                                                  <li><a href="#">Folder 3.1.1</a>
-                                                  <ul>
-                                                          <li><a href="#">Sub Item 3.1.1.1</a></li>
-                                                          <li><a href="#">Sub Item 3.1.1.2</a></li>
-                                                          <li><a href="#">Sub Item 3.1.1.3</a></li>
-                                                          <li><a href="#">Sub Item 3.1.1.4</a></li>
-                                                          <li><a href="#">Sub Item 3.1.1.5</a></li>
-                                                  </ul>
-                                                  </li>
-                                                  <li><a href="#">Sub Item 2.1.4</a></li>
-                                          </ul>
-                                          </li>
-                                  </ul>
-                                  </li> -->
                         <li><a href="#">
                                 <!-- <a href="./index.php" FACE="Arial" SIZE="" COLOR="white"> -->
                                 <?PHP
@@ -292,12 +244,37 @@ $mybox_width = 280;
                         </li>
                     </ul>
                 </li>
+                <li><a href="#">DB</a>
+                    <ul>
+                        <li><a href="#">
+                                <!-- <a href="./index.php" FACE="Arial" SIZE="" COLOR="white"> -->
+                                <?PHP
+                                //echo "$login_instance_token...$user_authenticated";
+                                echo "<form method=\"post\" action=\"./index.php\">";
+                                echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"backup_db\">";
+                                include ("log_in_authentication_form_vars.php");
+                                echo "<input class=\"top_buttons\" type=\"submit\" name=\"action\" value=\"Backup\">";
+                                echo "</form>";
+                                ?>
+                            </a>
+                        </li>
+                        <li><a href="#">
+                                <!-- <a href="./addJob3.php?OptionCatch=AddJob&StartTime=<?PHP echo "$StartTime";?>&ClientName=<?PHP echo "$name";?>&ClientID=<?PHP echo "$ClientID";?>"></a>
+                <a href="./addJob3.php" FACE="Arial" SIZE="" COLOR="white"> -->
+                                <?PHP
+                                echo "<form method=\"post\" action=\"./index.php\">";
+                                echo "<input type=\"hidden\" name=\"ClientID\" value=\"" . $_POST['ClientID'] . "\">";
+                                echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"restore_db\">";
+                                include ("log_in_authentication_form_vars.php");
+                                echo "<input class=\"top_buttons\" type=\"submit\" name=\"action\" value=\"Restore\">";
+                                echo "</form>";
+                                ?>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li><font color="#0099FF"><img src="images/spacer.gif" width="5" height="0" alt="">.</font></li>
                 <li><a href="#">
-
-
-
-
                         <!-- <a href="./config.php" FACE="Arial" SIZE="" COLOR="white">  -->
                         <?PHP
                         $conf_button = 0;
@@ -313,8 +290,6 @@ $mybox_width = 280;
                     </a>
                 </li>
                 <br style="clear: left" />
-
-
                 <?PHP
                 }
 

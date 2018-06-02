@@ -59,6 +59,7 @@ include("slip_functions.php");
 include("file_functions.php");
 include("log_in_authentication_form.php");
 include("logged_in_start_of_page.php");
+include("class_lib_backup.php");
 //******************************************************************************* INCLUDES - END
 //**********************************************************************************************
 
@@ -133,23 +134,28 @@ if (empty($AddMessageTermination)) {
                 echo "<BR><BR>";
                 echo "<H3>You can not have a blank entry! Try again.</H3><BR><BR><BR>";
             }else{
-                SearchClient3(); // In searchFunctions.php
+                SearchClient3();                    // In searchFunctions.php
             }
             break;
         case "search_client_in_add_reminder";
-            list_clients_connected_to_reminder(); // In searchFunctions.php
-            add_reminder();  // Found in reminder_functions.php
+            list_clients_connected_to_reminder();   // In searchFunctions.php
+            add_reminder();                         // Found in reminder_functions.php
             break;
         case "search_client_in_reminder_card";
             list_clients_connected_to_reminder_and_back_to_reminder_card(); // In searchFunctions.php
-            reminder_card();  // Found in reminder_functions.php
+            reminder_card();                        // Found in reminder_functions.php
+            break;
+        case "backup_db";
+            echo "In backup_db case statement<br>";
+            $backup_go = new \tdlq\backup01\class_lib_backup;    // Found in class_lib_backup.php
+            $backup_go->backup_db();
             break;
         /* case "";
 
-            include("whiteBoard.php");  // In index.php --> Doesn't do anything ATM.
+            include("whiteBoard.php");              // In index.php --> Doesn't do anything ATM.
             break; */
         case "client_details";
-            client_details();       // Found in client_functions.php
+            client_details();                       // Found in client_functions.php
             ?>
             <div class="container">
                 <div class="row">
@@ -162,7 +168,7 @@ if (empty($AddMessageTermination)) {
                 </div>
             </div>
             <?PHP
-            ShowActions(0,0,0);          // In action_functions.php
+            ShowActions(0,0,0);     // In action_functions.php
             break;
         case "EditDetails";
             EditDetails();          // Found in client_functions.php

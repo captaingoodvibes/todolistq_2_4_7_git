@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15492310-e8ad-468a-aa54-849830d2535e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/class_lib_backup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface_lib_tdlq247.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/topIndex002.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/topIndex002.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_db_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/new_db_functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchFunctions.php" beforeDir="false" afterPath="$PROJECT_DIR$/searchFunctions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,32 +34,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="270">
-                <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="150" column="12" selection-start-line="150" selection-start-column="12" selection-end-line="150" selection-end-column="12" />
+              <folding>
+                <element signature="e#3591#4223#0#PHP" />
+                <element signature="e#4226#5027#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logOffLink.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logOffLink.php">
+      <file leaf-file-name="interface_lib_tdlq247.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interface_lib_tdlq247.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="161" selection-start-line="34" selection-start-column="147" selection-end-line="34" selection-end-column="161" />
+            <state relative-caret-position="150">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <folding>
+                <element signature="e#212#286#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchFunctions.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/searchFunctions.php">
+      <file leaf-file-name="class_lib_backup.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class_lib_backup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="230" column="71" selection-start-line="230" selection-start-column="71" selection-end-line="230" selection-end-column="71" />
+            <state relative-caret-position="75">
+              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+              <folding>
+                <element signature="n#class_lib_backup#0;n#!!top" expanded="true" />
+                <element signature="n#backup_db#0;n#class_lib_backup#0;n#!!top" expanded="true" />
+                <element signature="n#restore_db#0;n#class_lib_backup#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="topIndex002.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/topIndex002.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="267" column="80" lean-forward="true" selection-start-line="267" selection-start-column="80" selection-end-line="267" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -61,7 +86,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>show_user</find>
       <find>show_user_ol</find>
       <find>user_fun</find>
       <find>_old</find>
@@ -91,6 +115,7 @@
       <find>drop</find>
       <find>to datab</find>
       <find>db_host_other_db</find>
+      <find>user\</find>
     </findStrings>
     <replaceStrings>
       <replace>span</replace>
@@ -130,6 +155,7 @@
     <setting file="file://$PROJECT_DIR$/config/dbSession.class" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/create_db_functions.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config/topIndex002.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -137,24 +163,27 @@
         <option value="$PROJECT_DIR$/../../7rocks/7rocks_20180413/xcom/responsive-test-v3.html" />
         <option value="$PROJECT_DIR$/../../7rocks/7rocks_20180413/xcom/responsive-test-v3b.html" />
         <option value="$PROJECT_DIR$/../../7rocks/7rocks_20180413/xcom/responsive-test-v3_dion.html" />
-        <option value="$PROJECT_DIR$/config/topIndex002.php" />
         <option value="$PROJECT_DIR$/db_creds.php" />
         <option value="$PROJECT_DIR$/user_card_with_time_limits_ajax.php" />
-        <option value="$PROJECT_DIR$/searchFunctions.php" />
         <option value="$PROJECT_DIR$/logOffLink.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/config/dbSession.class" />
         <option value="$PROJECT_DIR$/install.php" />
         <option value="$PROJECT_DIR$/config/tpl_bodystart.php" />
         <option value="$PROJECT_DIR$/create_db_functions.php" />
         <option value="$PROJECT_DIR$/../todolistq_2_4_7_git_phpstorm_messing_around_files/whiteBoard.php" />
-        <option value="$PROJECT_DIR$/new_db_functions.php" />
         <option value="$PROJECT_DIR$/../../web_site_todolistq/web_site_todolistq_1_0_3_7rocks_base/create_db_functions.php" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.php" />
         <option value="$PROJECT_DIR$/../todolistq_2_4_7_git_phpstorm_messing_around_files/dbSession.class" />
         <option value="$PROJECT_DIR$/../todolistq_2_4_7_git_phpstorm_messing_around_files/index.php" />
         <option value="$PROJECT_DIR$/../todolistq_2_4_7_git_phpstorm_messing_around_files/new_db_functions.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/searchFunctions.php" />
+        <option value="$PROJECT_DIR$/new_db_functions.php" />
+        <option value="$PROJECT_DIR$/interface_lib_tdlq247b.php" />
+        <option value="$PROJECT_DIR$/config/topIndex002.php" />
+        <option value="$PROJECT_DIR$/interface_lib_tdlq247.php" />
+        <option value="$PROJECT_DIR$/class_lib_backup.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -177,6 +206,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,7 +223,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,7 +236,7 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
     <key name="OPEN_URL_DIALOG">
@@ -256,6 +285,7 @@
       <workItem from="1526875214878" duration="6926000" />
       <workItem from="1526943840604" duration="5062000" />
       <workItem from="1527249736919" duration="1436000" />
+      <workItem from="1527917694263" duration="7715000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit with 3 dots in top reference.">
       <created>1526469657653</created>
@@ -411,11 +441,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527250426357</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Adjusting README.md testa">
+      <created>1527859189305</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1527859189305</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82166000" />
+    <option name="totallyTimeSpent" value="90841000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -433,39 +470,26 @@
       <window_info anchor="bottom" id="TODO" order="13" weight="0.32988167" />
       <window_info anchor="bottom" id="Event Log" order="22" sideWeight="0.50080776" side_tool="true" weight="0.32924962" />
       <window_info anchor="bottom" id="Database Changes" order="21" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="File Transfer" order="1" visible="true" weight="0.32924962" />
+      <window_info anchor="bottom" id="File Transfer" order="1" weight="0.32924962" />
       <window_info anchor="bottom" id="Version Control" order="20" weight="0.32924962" />
       <window_info anchor="bottom" id="Run" order="6" />
       <window_info anchor="bottom" id="Terminal" order="19" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.27059773" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24878837" />
       <window_info anchor="bottom" id="Docker" order="18" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49919224" weight="0.32924962" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="18" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="right" id="Remote Host" order="4" weight="0.32956383" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.26655897" />
-      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="13" weight="0.32988167" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="20" visible="true" weight="0.32924962" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="21" show_stripe_button="false" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="0" weight="0.32924962" />
-      <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32988167" />
       <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="22" sideWeight="0.50080776" side_tool="true" weight="0.32924962" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="File Transfer" order="1" weight="0.32924962" />
-      <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49919224" weight="0.32924962" />
-      <window_info anchor="bottom" id="Terminal" order="19" />
-      <window_info id="Favorites" order="5" side_tool="true" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -569,25 +593,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/new_db_functions.php" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="195">
-            <caret line="13" selection-start-line="13" selection-end-line="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2055">
-          <caret line="137" column="58" lean-forward="true" selection-start-line="137" selection-start-column="58" selection-end-line="137" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/new_db_functions.php" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -699,13 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/topIndex002.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3835">
-          <caret line="69" column="61" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user_card_with_time_limits_ajax.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -780,7 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/new_db_functions.php" />
     <entry file="file://$PROJECT_DIR$/config/ssl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -789,13 +786,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/install.php" />
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="135" column="22" selection-start-line="135" selection-start-column="22" selection-end-line="135" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../web_site_todolistq/web_site_todolistq_1_0_2/demo_db_functions.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -872,16 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="270">
-            <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logOffLink.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -889,10 +869,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="225">
+            <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/searchFunctions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="230" column="71" selection-start-line="230" selection-start-column="71" selection-end-line="230" selection-end-column="71" />
+        <state relative-caret-position="201">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zxfvzxdf_fghfg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="n#zxfvzxdf_fghfg#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_db_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_lib_tdlq247b.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/topIndex002.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="267" column="80" lean-forward="true" selection-start-line="267" selection-start-column="80" selection-end-line="267" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface_lib_tdlq247.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#212#286#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class_lib_backup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding>
+            <element signature="n#class_lib_backup#0;n#!!top" expanded="true" />
+            <element signature="n#backup_db#0;n#class_lib_backup#0;n#!!top" expanded="true" />
+            <element signature="n#restore_db#0;n#class_lib_backup#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="150" column="12" selection-start-line="150" selection-start-column="12" selection-end-line="150" selection-end-column="12" />
+          <folding>
+            <element signature="e#3591#4223#0#PHP" />
+            <element signature="e#4226#5027#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
