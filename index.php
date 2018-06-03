@@ -8,7 +8,7 @@
  *          This is the main file, although a lot happens out of whiteboard.php as well.
  *	auth:	Dion Patelis (owner)
  *	date:	10th Feb 2015 - Dion Patelis
- *	last:	20th May 2018 - Dion Patelis
+ *	last:	2nd June 2018 - Dion Patelis
  */
 //********************************************************************************** TITLE - END
 //**********************************************************************************************
@@ -19,6 +19,7 @@
 //***************************************************************************** INCLUDES - START
 include("config/dbSession.class");      // Test putting this include at the top so that the html
 // title in the tab shows the dbname. DP
+
 include("config/headAndBody001_with_db_name_in_tab.php");
 
 /**
@@ -60,6 +61,7 @@ include("file_functions.php");
 include("log_in_authentication_form.php");
 include("logged_in_start_of_page.php");
 include("class_lib_backup.php");
+
 //******************************************************************************* INCLUDES - END
 //**********************************************************************************************
 
@@ -134,21 +136,34 @@ if (empty($AddMessageTermination)) {
                 echo "<BR><BR>";
                 echo "<H3>You can not have a blank entry! Try again.</H3><BR><BR><BR>";
             }else{
-                SearchClient3();                    // In searchFunctions.php
+                SearchClient3();                                    // In searchFunctions.php
             }
             break;
         case "search_client_in_add_reminder";
-            list_clients_connected_to_reminder();   // In searchFunctions.php
-            add_reminder();                         // Found in reminder_functions.php
+            list_clients_connected_to_reminder();                   // In searchFunctions.php
+            add_reminder();                                         // Found in reminder_functions.php
             break;
         case "search_client_in_reminder_card";
             list_clients_connected_to_reminder_and_back_to_reminder_card(); // In searchFunctions.php
-            reminder_card();                        // Found in reminder_functions.php
+            reminder_card();                                        // Found in reminder_functions.php
             break;
         case "backup_db";
             echo "In backup_db case statement<br>";
-            $backup_go = new \tdlq\backup01\class_lib_backup;    // Found in class_lib_backup.php
-            $backup_go->backup_db();
+
+          
+
+            // if (file_exists("/var/www/html/todolistq.com/247installer/" . $file)) {
+
+            $backup_go = new class_lib_movedb();       // Found in class_lib_backup.php
+            echo $backup_go->backup_db() . "<br><br>";
+            echo $backup_go->whats_the_status() . "<br><br>";
+            //echo "Stefan's full name: " . $stefan->get_name() . "<br><br>";
+            break;
+        case "restore_db";
+            // echo "In restore_db case statement<br>";
+            $restore_go = new class_lib_movedb();       // Found in class_lib_backup.php
+            echo $restore_go->restore_db() . "<br><br>";
+            echo $restore_go->whats_the_status() . "<br><br>";
             break;
         /* case "";
 
