@@ -4,6 +4,7 @@ include("interface_lib_tdlq247.php");
 
 class class_lib_movedb implements move_db{
     var $status;
+    var $restore_file;
 
     // This setter function executes a backup and relays the status of the database movement
     function backup_db() {
@@ -29,7 +30,8 @@ class class_lib_movedb implements move_db{
 
     }
     // This setter function restores from backup and relays the status of the database movement.
-    function restore_db() {
+    function restore_db($new_restore_file) {
+        $this->restore_file = $new_restore_file;
         $dbsbu = new dbSession();
         /**
          * Use
@@ -37,7 +39,7 @@ class class_lib_movedb implements move_db{
          * to restore the db.
          */
         echo "Restore DB<br><br>";
-        $command = 'mysql -u ' . $dbsbu->get_dbUser() . ' -p\'' . $dbsbu->get_dbPass() . '\' ' . $dbsbu->get_dbName() . ' < dump6.sql';
+        $command = 'mysql -u ' . $dbsbu->get_dbUser() . ' -p\'' . $dbsbu->get_dbPass() . '\' ' . $dbsbu->get_dbName() . ' < uploads/' . $new_restore_file;
         exec($command,$output=array(),$worked);
         if($worked != 0) {
             $this->status = "<BR> \$worked for mysqldump = $worked <BR>";

@@ -161,8 +161,13 @@ if (empty($AddMessageTermination)) {
             break;
         case "restore_db";
             // echo "In restore_db case statement<br>";
+            file_browse();          // Found in file_functions.php
+            break;
+        case "upload_sql";
+            $target_file_only = upload();                                   // Found in file_functions.php
+            echo "<br><br>\$target_file_only in case = $target_file_only<br>";
             $restore_go = new class_lib_movedb();       // Found in class_lib_backup.php
-            echo $restore_go->restore_db() . "<br><br>";
+            echo $restore_go->restore_db($target_file_only) . "<br><br>";
             echo $restore_go->whats_the_status() . "<br><br>";
             break;
         /* case "";
@@ -337,27 +342,32 @@ if (empty($AddMessageTermination)) {
             job_complete();
             break;
         case "slip";
-            slip();                 // Found in slip_functions.php
+            slip();                                     // Found in slip_functions.php
             break;
         case "upload";
-            job_card();             // Found in JobDetails_functions.php
+            job_card();                                 // Found in JobDetails_functions.php
             $_POST['in_job_card'] = 1;
-            upload();               // Found in file_functions.php
-            LocEndCallAddAction();  // Found in action_functions.php
+            upload();                                   // Found in file_functions.php
+            LocEndCallAddAction();                      // Found in action_functions.php
             ShowActions(1,0,0);
             break;
+        case "dl";
+            $_POST['in_job_card'] = 1;
+            echo "<BR>";
+            file_browse();                              // Found in file_functions.php
+            break;
         /* default;
-            include("whiteBoard.php");                // Found in index.php
+            include("whiteBoard.php");                  // Found in index.php
             break; */
     }
 
     switch ($_GET['OptionCatch']) {
         case "";
-            include("whiteBoard.php");  // In index.php --> Doesn't do anything ATM.
+            include("whiteBoard.php");                  // In index.php --> Doesn't do anything ATM.
             break;
         case "client_details";
 
-            client_details();       // Found in client_functions.php
+            client_details();                           // Found in client_functions.php
             ?>
             <div class="container">
                 <div class="row">
@@ -370,7 +380,7 @@ if (empty($AddMessageTermination)) {
                 </div>
             </div>
             <?PHP
-            ShowActions(0,0,0);          // In action_functions.php
+            ShowActions(0,0,0);                         // In action_functions.php
             break;
         default;
             include("whiteBoard.php");                // Found in index.php

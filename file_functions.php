@@ -5,7 +5,7 @@ function file_browse() {
         echo "<form action=\"index.php\" method=\"post\" enctype=\"multipart/form-data\">";
         echo "Select image to upload:";
         echo "<input type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\">";
-        echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"upload\">";
+        echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"upload_sql\">";
         echo "<input type=\"hidden\" name=\"JobID\" value=\"" . $JobID . "\">";
         echo "<input type=\"hidden\" name=\"ClientID\" value=\"" . $JobFkClientID . "\">";
         echo "<input type=\"hidden\" name=\"JobCardNumber\" value=\"" . $JobCardNumber . "\">";
@@ -20,7 +20,7 @@ function upload() {
         echo "In the upload() function.<BR>";
         //**********************************************************************************************
         //***************************************************************** DEBUG VARIABLES HERE - START
-        $turn_this_debug_on = 1;
+        $turn_this_debug_on = 0;
         if ($turn_this_debug_on == 1) {
                 include("debug_array.php");
         }
@@ -28,6 +28,9 @@ function upload() {
         //**********************************************************************************************
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $target_file_only = basename($_FILES["fileToUpload"]["name"]);
+        echo "\$target_file_only = $target_file_only<br>";
+
         $uploadOk = 1;
         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
         /**
@@ -73,9 +76,11 @@ function upload() {
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+                return $target_file_only;
             } else {
-                echo "Sorry, there was an error uploading your fileo.";
+                echo "Sorry, there was an error uploading your file.";
             }
         }
+
 }
 ?>
