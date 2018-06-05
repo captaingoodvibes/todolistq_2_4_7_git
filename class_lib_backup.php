@@ -15,12 +15,8 @@ class class_lib_movedb implements move_db{
         $StartTime = $dt->format('U');
         $date = new DateTime("@$StartTime");
         $date->setTimezone($MNTTZ);
-
-        //echo date("Ymd_hm", $StartTime) . "<br><br>";
-        // echo $date->format(DATE_RFC1123) . "<br><br>";
-        // echo $date->format("Ymd_Hi_") . "<br><br>";
         $rev_date_time = $date->format("Ymd_Hi_");
-        echo "date =" . $rev_date_time . "<br><br>";
+
         $dbsbu = new dbSession();
         $command = 'mysqldump -u ' . $dbsbu->get_dbUser() . ' -p\'' . $dbsbu->get_dbPass() . '\' --single-transaction --quick --lock-tables=false ' . $dbsbu->get_dbName() . ' > ' . $rev_date_time . 'backup.sql';
         exec($command,$output=array(),$worked);

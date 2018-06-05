@@ -203,42 +203,7 @@ a.blue:hover {
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* /* Possibly make each element have to specify its style - DP 22/3/15 */ /*
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  display: inline-block;
-  height: 38px;
-  padding: 0px 30px;
-  color: #555;
-  text-align: center;
-  font-size: 11px; 
-  font-weight: 600; 
-  line-height: none; /* Was 38px - DP 20150220 1615AEST */ /*
-  letter-spacing: .1rem; 
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap; 
-  background-color: transparent; 
-  border-radius: 4px; 
-  border: 1px solid #bbb; 
-  cursor: pointer; 
-  box-sizing: border-box; }
-.button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-.button:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
-  outline: 0; } */
+/* /* Possibly make each element have to specify its style - DP 22/3/15 */
 .button.button-primary,
 button.button-primary,
 input[type="submit"].button-primary,
@@ -303,44 +268,6 @@ button.action_buttons:hover,
 input[type="submit"].action_buttons:hover {
   /* background-image: url("back_test5_tiger.jpg"); */
   color: #000000; }
-  
-/*
-.button2,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  display: inline-block;
-  height: 58px;
-  width: 44px;
-  padding: 0 30px;
-  color: #555;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  box-sizing: border-box; }
-.button2:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-.button2:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
-  outline: 0; } */
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
