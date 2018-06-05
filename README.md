@@ -13,8 +13,8 @@ Is available on the [todolistq.com][1] website
 
 ### TODO
 
-* Build backup and restore buttons.
 * Make this TODO using TDLQ itself.
+* ~~Build backup and restore buttons. Done 5th June 2018~~
 * ~~Make 5 minute installer zip or tar.gz~~
 * ~~Make telephone link button from client cards so that dialing from a mobile screen is possible.~~
 

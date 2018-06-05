@@ -148,15 +148,11 @@ if (empty($AddMessageTermination)) {
             reminder_card();                                        // Found in reminder_functions.php
             break;
         case "backup_db";
-            echo "In backup_db case statement<br>";
-
-          
-
             // if (file_exists("/var/www/html/todolistq.com/247installer/" . $file)) {
-
-            $backup_go = new class_lib_movedb();       // Found in class_lib_backup.php
-            echo $backup_go->backup_db() . "<br><br>";
-            echo $backup_go->whats_the_status() . "<br><br>";
+            $backup_go = new class_lib_movedb();
+            $backup_go->backup_db();// Found in class_lib_backup.php
+            // echo $backup_go->backup_db() . "<br><br>";
+            // echo $backup_go->whats_the_status() . "<br><br>";
             //echo "Stefan's full name: " . $stefan->get_name() . "<br><br>";
             break;
         case "restore_db";
@@ -165,10 +161,9 @@ if (empty($AddMessageTermination)) {
             break;
         case "upload_sql";
             $target_file_only = upload();                                   // Found in file_functions.php
-            echo "<br><br>\$target_file_only in case = $target_file_only<br>";
             $restore_go = new class_lib_movedb();       // Found in class_lib_backup.php
-            echo $restore_go->restore_db($target_file_only) . "<br><br>";
-            echo $restore_go->whats_the_status() . "<br><br>";
+            $restore_go->restore_db($target_file_only);
+            // echo $restore_go->whats_the_status() . "<br><br>";
             break;
         /* case "";
 

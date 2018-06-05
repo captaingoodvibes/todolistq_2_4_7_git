@@ -3,7 +3,7 @@ function file_browse() {
         $JobID = $_POST['JobID'];
 	$JobFkClientID = $_POST['ClientID'];
         echo "<form action=\"index.php\" method=\"post\" enctype=\"multipart/form-data\">";
-        echo "Select image to upload:";
+        echo "Select an sql file to upload:";
         echo "<input type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\">";
         echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"upload_sql\">";
         echo "<input type=\"hidden\" name=\"JobID\" value=\"" . $JobID . "\">";
@@ -11,13 +11,13 @@ function file_browse() {
         echo "<input type=\"hidden\" name=\"JobCardNumber\" value=\"" . $JobCardNumber . "\">";
         echo "<input type=\"hidden\" name=\"JobParent\" value=\"" . $JobParent . "\">";
         include("log_in_authentication_form_vars.php");
-        echo "<input type=\"submit\" value=\"Upload Image\" name=\"submit\">
+        echo "<input type=\"submit\" value=\"Upload file\" name=\"submit\">
+        <BR><BR>
         </form>";
 }
 function upload() {
         $JobID = $_POST['JobID'];
 	$JobFkClientID = $_POST['ClientID'];
-        echo "In the upload() function.<BR>";
         //**********************************************************************************************
         //***************************************************************** DEBUG VARIABLES HERE - START
         $turn_this_debug_on = 0;
@@ -29,7 +29,7 @@ function upload() {
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $target_file_only = basename($_FILES["fileToUpload"]["name"]);
-        echo "\$target_file_only = $target_file_only<br>";
+        // echo "\$target_file_only = $target_file_only<br>";
 
         $uploadOk = 1;
         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
