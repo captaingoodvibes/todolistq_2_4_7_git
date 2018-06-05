@@ -1,19 +1,14 @@
 <?PHP
-//***********************************************************************************************
-//********************************************************************************* TITLE - START
 /**
  * 	desc;	Main ToDolist page.
- *  file:   index.php
  *  note:   The server database settings can be found in dbsession.class
  *          This is the main file, although a lot happens out of whiteboard.php as well.
+ *  By:     7rocks.com
+ *  file:   index.php
  *	auth:	Dion Patelis (owner)
  *	date:	10th Feb 2015 - Dion Patelis
  *	last:	2nd June 2018 - Dion Patelis
  */
-//********************************************************************************** TITLE - END
-//**********************************************************************************************
-
-
 
 //**********************************************************************************************
 //***************************************************************************** INCLUDES - START

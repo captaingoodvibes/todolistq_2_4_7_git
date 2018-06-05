@@ -1,13 +1,14 @@
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/skeleton.css">
 <?PHP
-
 /**
- *	file:	searchFunctions.php
+ *	desc;	For all the search methods
+ *  note:
+ *  by:     7rocks.com
+ *  file:	searchFunctions.php
  *	auth:	Dion Patelis (owner)
- *	desc;	Dions messaging system
  *	date:	26 Feb 2003 - Dion Patelis
- *	last:	Monday 19th Jan 2015 - Dion Patelis
+ *	last:	5/6/2018 - Dion Patelis
  */
 
 $dbs = new dbSession();

@@ -1,16 +1,15 @@
-<?PHP 
-//***********************************************************************************************
-//********************************************************************************* TITLE - START
+<?PHP
 /**
-*	file:	whiteBoard.php
-*	auth:	Dion Patelis (owner)
-*	desc;	Job manager.
-*	date:	15th April 2003 - Dion Patelis
-*	last:	16th Jan 2015 - Dion Patelis
-*/
-//********************************************************************************** TITLE - END
-//**********************************************************************************************
-
+ *	desc;	Job manager or ToDoList.
+ *  note:   Originally created in the office to mimic the office
+ *          white board where we'd have our morning meetings and plan out the day for
+ *          all the staff in the office.
+ *  by:     7rocks.com
+ *  file:	whiteBoard.php
+ *	auth:	Dion Patelis (owner)
+ *	date:	15th April 2003 - Dion Patelis
+ *	last:	16th Jan 2015 - Dion Patelis
+ */
 
 //**********************************************************************************************
 //***************************************************************************** INCLUDES - START

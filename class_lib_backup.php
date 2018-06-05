@@ -8,6 +8,27 @@ class class_lib_movedb implements move_db{
 
     // This setter function executes a backup and relays the status of the database movement
     function backup_db() {
+        $filename = getcwd();
+        // echo "\$filename = " . $filename . "<br><br>";
+        $basename = basename($filename);
+        $back_one_dir = '../' . $basename;
+        // echo "\$basename = " . $basename . "<br><br>";
+        // echo "\$back_one_dir = " .  $back_one_dir . "<br><br>";
+        $filename = $back_one_dir;
+        // echo "\$filename = " . $filename . "<br><br>";
+        $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $actual_link = rtrim( $actual_link , "index.php" );
+        $dir_name = getcwd();
+        if (is_writable($dir_name)) {
+            // echo 'The directory is writable<br>';
+        } else {
+            echo 'Sorry, your backup file could not be written<br><br>
+                    You may need to modify permissions to get it to write.<br><br>
+                    In Linux based systems the commands:<br>
+                    chown -R www-data: /your/web/directory<br>
+                    chmod -R 755 /your/web/directory<br>
+                    or some variant of this should allow you to write. <br><br>';
+        }
         $config_time_zone = $_POST['user_time_zone'];
         $MNTTZ = new DateTimeZone($config_time_zone);
         $dt = new DateTime();
@@ -26,7 +47,7 @@ class class_lib_movedb implements move_db{
         switch($worked){
             case 0:
                 $this->status = "case 0 " . $command;
-                echo "<a href=\"http://todolistq.com/247installer/" . $rev_date_time . "backup.sql\" class=\"blue\">Download my backup</a><br><br>";
+                echo "<a href=" . $actual_link . $rev_date_time . "backup.sql class=\"blue\">Download my backup</a><br><br>";
                 break;
             case 1:
                 // echo "<span class=\"edit_fail\"><BR>" . $command . "  fail.<BR><BR></span>";
