@@ -16,8 +16,9 @@ function file_browse() {
         </form>";
 }
 function upload() {
+        include("config/config.php");
         $JobID = $_POST['JobID'];
-	$JobFkClientID = $_POST['ClientID'];
+	    $JobFkClientID = $_POST['ClientID'];
         //**********************************************************************************************
         //***************************************************************** DEBUG VARIABLES HERE - START
         $turn_this_debug_on = 0;
@@ -54,8 +55,8 @@ function upload() {
             $uploadOk = 0;
         } 
 
-         // Check file size 500000 = 500kb
-        if ($_FILES["fileToUpload"]["size"] > 500000) {
+        // Check file size 5000000b = 5MB Max
+        if ($_FILES["fileToUpload"]["size"] > $max_file_upload_size) {
             echo "Sorry, your file is too large.";
             $uploadOk = 0;
         } 

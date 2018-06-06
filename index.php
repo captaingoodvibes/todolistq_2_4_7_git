@@ -152,11 +152,11 @@ if (empty($AddMessageTermination)) {
             break;
         case "restore_db";
             // echo "In restore_db case statement<br>";
-            file_browse();          // Found in file_functions.php
+            file_browse();                          // Found in file_functions.php
             break;
         case "upload_sql";
-            $target_file_only = upload();                                   // Found in file_functions.php
-            $restore_go = new class_lib_movedb();       // Found in class_lib_backup.php
+            $target_file_only = upload();           // Found in file_functions.php
+            $restore_go = new class_lib_movedb();   // Found in class_lib_backup.php
             $restore_go->restore_db($target_file_only);
             // echo $restore_go->whats_the_status() . "<br><br>";
             break;

@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15492310-e8ad-468a-aa54-849830d2535e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/class_lib_backup.php" beforeDir="false" afterPath="$PROJECT_DIR$/class_lib_backup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/dbSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/config/dbSession.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/file_functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install.php" beforeDir="false" afterPath="$PROJECT_DIR$/install.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logOffLink.php" beforeDir="false" afterPath="$PROJECT_DIR$/logOffLink.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/searchFunctions.php" beforeDir="false" afterPath="$PROJECT_DIR$/searchFunctions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whiteBoard.php" beforeDir="false" afterPath="$PROJECT_DIR$/whiteBoard.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,14 +31,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="class_lib_backup.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="class_lib_backup.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class_lib_backup.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="337">
+              <caret line="84" column="5" lean-forward="true" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
               <folding>
+                <element signature="n#backup_db#0;n#class_lib_movedb#0;n#!!top" expanded="true" />
                 <element signature="n#restore_db#0;n#class_lib_movedb#0;n#!!top" expanded="true" />
                 <element signature="n#whats_the_status#0;n#class_lib_movedb#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="10" selection-end-column="3" />
+              <folding>
+                <element signature="e#6#356#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file_functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/file_functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+              <folding>
+                <element signature="n#file_browse#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="e#6#356#0#PHP" expanded="true" />
+                <element signature="e#399#477#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -51,8 +86,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dbUser</find>
-      <find>noCon</find>
       <find>no</find>
       <find>jQuery</find>
       <find>jQueryjQuery</find>
@@ -81,6 +114,8 @@
       <find>label</find>
       <find>butt</find>
       <find>store D</find>
+      <find>restor</find>
+      <find>config.php</find>
     </findStrings>
     <replaceStrings>
       <replace>span</replace>
@@ -153,9 +188,7 @@
         <option value="$PROJECT_DIR$/upload_001_show_files.php" />
         <option value="$PROJECT_DIR$/interface_lib_tdlq247.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/file_functions.php" />
         <option value="$PROJECT_DIR$/css/skeleton.css" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/whiteBoard.php" />
         <option value="$PROJECT_DIR$/browse.php" />
         <option value="$PROJECT_DIR$/searchFunctions.php" />
@@ -163,6 +196,10 @@
         <option value="$PROJECT_DIR$/install.php" />
         <option value="$PROJECT_DIR$/config/dbSession.class" />
         <option value="$PROJECT_DIR$/class_lib_backup.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/config/todolistq.conf" />
+        <option value="$PROJECT_DIR$/file_functions.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
       </list>
     </option>
   </component>
@@ -273,7 +310,7 @@
       <workItem from="1527917694263" duration="14359000" />
       <workItem from="1527979624237" duration="33578000" />
       <workItem from="1528108501551" duration="9926000" />
-      <workItem from="1528234323158" duration="5563000" />
+      <workItem from="1528234323158" duration="8522000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit with 3 dots in top reference.">
       <created>1526469657653</created>
@@ -471,11 +508,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528198600653</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Some fault tollerance in the file backup system so that it alerts the new user as to whether the directory is writable or not. It gives soem suggestions on how to fix it within Linux systems.">
+      <created>1528241734674</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1528241734675</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146552000" />
+    <option name="totallyTimeSpent" value="149511000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -581,7 +625,8 @@
     <MESSAGE value="Restore function is downloading from a file on the local computer as well." />
     <MESSAGE value="Added a date_time stamp to the backup file name. Backup and Restore functionality tested and appears to be working." />
     <MESSAGE value="Cleaning up the backup a little more. Browse for file input button not so stright forward to CSS up." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaning up the backup a little more. Browse for file input button not so stright forward to CSS up." />
+    <MESSAGE value="Some fault tollerance in the file backup system so that it alerts the new user as to whether the directory is writable or not. It gives soem suggestions on how to fix it within Linux systems." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some fault tollerance in the file backup system so that it alerts the new user as to whether the directory is writable or not. It gives soem suggestions on how to fix it within Linux systems." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -596,13 +641,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user_card_with_time_limits_ajax_functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/change_user2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -754,9 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5352">
@@ -854,13 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file_functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/install.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -872,6 +900,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+          <folding>
+            <element signature="e#6#226#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -879,6 +911,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" selection-start-line="3" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="e#103#308#0#PHP" expanded="true" />
+            <element signature="n#SearchClient3#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -896,13 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/dbSession.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -912,11 +941,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/class_lib_backup.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="337">
+          <caret line="84" column="5" lean-forward="true" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
           <folding>
+            <element signature="n#backup_db#0;n#class_lib_movedb#0;n#!!top" expanded="true" />
             <element signature="n#restore_db#0;n#class_lib_movedb#0;n#!!top" expanded="true" />
             <element signature="n#whats_the_status#0;n#class_lib_movedb#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/todolistq.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="n#file_browse#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#356#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#6#356#0#PHP" expanded="true" />
+            <element signature="e#399#477#0#PHP" />
           </folding>
         </state>
       </provider>

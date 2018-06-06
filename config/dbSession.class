@@ -34,7 +34,7 @@ $ProgramName = "<span class=\"titles\"  >$ProgramTitle</span>
                 <!-- <font face=\"arial\" size=\"2\">FP</font> -->";
 $header_size = "4";
 $_POST['header_size'] = $header_size;
-$db_has_been_setup = "Yes";
+$db_has_been_setup = "no";
 //****************************************************************************** VARIABLES - END
 //**********************************************************************************************
 
@@ -42,12 +42,9 @@ class dbSession {
 
     // Database Variables to be altered at initial setup.
     var $dbHost = "localhost";
-    var $dbUser = "aa_28";
-    var $dbPass = "aa_28";
-    var $dbName = "aa_28";
-    /**var $dbUser = "user_name";
+    var $dbUser = "user_name";
     var $dbPass = "password";
-    var $dbName = "database_name";*/
+    var $dbName = "database_name";
 
     var $max_active_users_allowed = "300";
     var $link;

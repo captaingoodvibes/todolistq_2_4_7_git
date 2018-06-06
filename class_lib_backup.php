@@ -63,11 +63,6 @@ class class_lib_movedb implements move_db{
     function restore_db($new_restore_file) {
         $this->restore_file = $new_restore_file;
         $dbsbu = new dbSession();
-        /**
-         * Use
-         * shell> mysql < dump.sql
-         * to restore the db.
-         */
         echo "Restore DB<br><br>";
         $command = 'mysql -u ' . $dbsbu->get_dbUser() . ' -p\'' . $dbsbu->get_dbPass() . '\' ' . $dbsbu->get_dbName() . ' < uploads/' . $new_restore_file;
         exec($command,$output=array(),$worked);
