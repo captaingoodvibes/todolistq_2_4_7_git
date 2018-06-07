@@ -15,7 +15,7 @@
 //**********************************************************************************************
 //***************************************************************************** INCLUDES - START
 include("config/dbSession.class");
-include("config/headAndBody001.php");
+include("config/headAndBody001_with_db_name_in_tab.php");
 $user_authenticated = $_POST['user_authenticated'];
 $login_instance_token = $_POST['login_instance_token'];
 $login_name = $_POST['name'];

@@ -63,6 +63,18 @@ class dbSession {
         }
     }
 
+    function get_dbUser() {
+        return $this->dbUser;
+    }
+
+    function get_dbPass() {
+        return $this->dbPass;
+    }
+
+    function get_dbName() {
+        return $this->dbName;
+    }
+
     function max_active_users_exceeded() {
         $dbs_max_users = new dbSession();
         $sql_max_users = "SELECT UserActive from user WHERE UserActive = 1";

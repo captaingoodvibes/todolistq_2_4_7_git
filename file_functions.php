@@ -3,24 +3,25 @@ function file_browse() {
         $JobID = $_POST['JobID'];
 	$JobFkClientID = $_POST['ClientID'];
         echo "<form action=\"index.php\" method=\"post\" enctype=\"multipart/form-data\">";
-        echo "Select image to upload:";
+        echo "Select an sql file to upload:";
         echo "<input type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\">";
-        echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"upload\">";
+        echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"upload_sql\">";
         echo "<input type=\"hidden\" name=\"JobID\" value=\"" . $JobID . "\">";
         echo "<input type=\"hidden\" name=\"ClientID\" value=\"" . $JobFkClientID . "\">";
         echo "<input type=\"hidden\" name=\"JobCardNumber\" value=\"" . $JobCardNumber . "\">";
         echo "<input type=\"hidden\" name=\"JobParent\" value=\"" . $JobParent . "\">";
         include("log_in_authentication_form_vars.php");
-        echo "<input type=\"submit\" value=\"Upload Image\" name=\"submit\">
+        echo "<input type=\"submit\" value=\"Upload file\" name=\"submit\">
+        <BR><BR>
         </form>";
 }
 function upload() {
+        include("config/config.php");
         $JobID = $_POST['JobID'];
-	$JobFkClientID = $_POST['ClientID'];
-        echo "In the upload() function.<BR>";
+	    $JobFkClientID = $_POST['ClientID'];
         //**********************************************************************************************
         //***************************************************************** DEBUG VARIABLES HERE - START
-        $turn_this_debug_on = 1;
+        $turn_this_debug_on = 0;
         if ($turn_this_debug_on == 1) {
                 include("debug_array.php");
         }
@@ -28,6 +29,9 @@ function upload() {
         //**********************************************************************************************
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $target_file_only = basename($_FILES["fileToUpload"]["name"]);
+        // echo "\$target_file_only = $target_file_only<br>";
+
         $uploadOk = 1;
         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
         /**
@@ -51,8 +55,8 @@ function upload() {
             $uploadOk = 0;
         } 
 
-         // Check file size 500000 = 500kb
-        if ($_FILES["fileToUpload"]["size"] > 500000) {
+        // Check file size 5000000b = 5MB Max
+        if ($_FILES["fileToUpload"]["size"] > $max_file_upload_size) {
             echo "Sorry, your file is too large.";
             $uploadOk = 0;
         } 
@@ -73,9 +77,11 @@ function upload() {
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+                return $target_file_only;
             } else {
-                echo "Sorry, there was an error uploading your fileo.";
+                echo "Sorry, there was an error uploading your file.";
             }
         }
+
 }
 ?>

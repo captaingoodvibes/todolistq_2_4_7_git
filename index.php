@@ -1,24 +1,20 @@
 <?PHP
-//***********************************************************************************************
-//********************************************************************************* TITLE - START
 /**
  * 	desc;	Main ToDolist page.
- *  file:   index.php
  *  note:   The server database settings can be found in dbsession.class
  *          This is the main file, although a lot happens out of whiteboard.php as well.
+ *  By:     7rocks.com
+ *  file:   index.php
  *	auth:	Dion Patelis (owner)
  *	date:	10th Feb 2015 - Dion Patelis
- *	last:	20th May 2018 - Dion Patelis
+ *	last:	2nd June 2018 - Dion Patelis
  */
-//********************************************************************************** TITLE - END
-//**********************************************************************************************
-
-
 
 //**********************************************************************************************
 //***************************************************************************** INCLUDES - START
 include("config/dbSession.class");      // Test putting this include at the top so that the html
 // title in the tab shows the dbname. DP
+
 include("config/headAndBody001_with_db_name_in_tab.php");
 
 /**
@@ -59,6 +55,8 @@ include("slip_functions.php");
 include("file_functions.php");
 include("log_in_authentication_form.php");
 include("logged_in_start_of_page.php");
+include("class_lib_backup.php");
+
 //******************************************************************************* INCLUDES - END
 //**********************************************************************************************
 
@@ -133,23 +131,41 @@ if (empty($AddMessageTermination)) {
                 echo "<BR><BR>";
                 echo "<H3>You can not have a blank entry! Try again.</H3><BR><BR><BR>";
             }else{
-                SearchClient3(); // In searchFunctions.php
+                SearchClient3();                                    // In searchFunctions.php
             }
             break;
         case "search_client_in_add_reminder";
-            list_clients_connected_to_reminder(); // In searchFunctions.php
-            add_reminder();  // Found in reminder_functions.php
+            list_clients_connected_to_reminder();                   // In searchFunctions.php
+            add_reminder();                                         // Found in reminder_functions.php
             break;
         case "search_client_in_reminder_card";
             list_clients_connected_to_reminder_and_back_to_reminder_card(); // In searchFunctions.php
-            reminder_card();  // Found in reminder_functions.php
+            reminder_card();                                        // Found in reminder_functions.php
+            break;
+        case "backup_db";
+            // if (file_exists("/var/www/html/todolistq.com/247installer/" . $file)) {
+            $backup_go = new class_lib_movedb();
+            $backup_go->backup_db();// Found in class_lib_backup.php
+            // echo $backup_go->backup_db() . "<br><br>";
+            // echo $backup_go->whats_the_status() . "<br><br>";
+            //echo "Stefan's full name: " . $stefan->get_name() . "<br><br>";
+            break;
+        case "restore_db";
+            // echo "In restore_db case statement<br>";
+            file_browse();                          // Found in file_functions.php
+            break;
+        case "upload_sql";
+            $target_file_only = upload();           // Found in file_functions.php
+            $restore_go = new class_lib_movedb();   // Found in class_lib_backup.php
+            $restore_go->restore_db($target_file_only);
+            // echo $restore_go->whats_the_status() . "<br><br>";
             break;
         /* case "";
 
-            include("whiteBoard.php");  // In index.php --> Doesn't do anything ATM.
+            include("whiteBoard.php");              // In index.php --> Doesn't do anything ATM.
             break; */
         case "client_details";
-            client_details();       // Found in client_functions.php
+            client_details();                       // Found in client_functions.php
             ?>
             <div class="container">
                 <div class="row">
@@ -162,7 +178,7 @@ if (empty($AddMessageTermination)) {
                 </div>
             </div>
             <?PHP
-            ShowActions(0,0,0);          // In action_functions.php
+            ShowActions(0,0,0);     // In action_functions.php
             break;
         case "EditDetails";
             EditDetails();          // Found in client_functions.php
@@ -316,27 +332,32 @@ if (empty($AddMessageTermination)) {
             job_complete();
             break;
         case "slip";
-            slip();                 // Found in slip_functions.php
+            slip();                                     // Found in slip_functions.php
             break;
         case "upload";
-            job_card();             // Found in JobDetails_functions.php
+            job_card();                                 // Found in JobDetails_functions.php
             $_POST['in_job_card'] = 1;
-            upload();               // Found in file_functions.php
-            LocEndCallAddAction();  // Found in action_functions.php
+            upload();                                   // Found in file_functions.php
+            LocEndCallAddAction();                      // Found in action_functions.php
             ShowActions(1,0,0);
             break;
+        case "dl";
+            $_POST['in_job_card'] = 1;
+            echo "<BR>";
+            file_browse();                              // Found in file_functions.php
+            break;
         /* default;
-            include("whiteBoard.php");                // Found in index.php
+            include("whiteBoard.php");                  // Found in index.php
             break; */
     }
 
     switch ($_GET['OptionCatch']) {
         case "";
-            include("whiteBoard.php");  // In index.php --> Doesn't do anything ATM.
+            include("whiteBoard.php");                  // In index.php --> Doesn't do anything ATM.
             break;
         case "client_details";
 
-            client_details();       // Found in client_functions.php
+            client_details();                           // Found in client_functions.php
             ?>
             <div class="container">
                 <div class="row">
@@ -349,7 +370,7 @@ if (empty($AddMessageTermination)) {
                 </div>
             </div>
             <?PHP
-            ShowActions(0,0,0);          // In action_functions.php
+            ShowActions(0,0,0);                         // In action_functions.php
             break;
         default;
             include("whiteBoard.php");                // Found in index.php

@@ -1,33 +1,29 @@
 <?php
-        
-	// $_POST['debug'] = "on";  // On or Off
-	
-	$_POST['SSLon'] = "no";  // yes or no
+/**
+ * 	desc;	Configuration file.
+ *  note:   The only exception to this is the database detials which exist in
+ * 			dbSession.class. These variables need to be moved here at a later
+ * 			date.
+ *  By:     7rocks.com
+ *  file:   index.php
+ *	auth:	Dion Patelis (owner)
+ *	date:	10th Feb 2015 - Dion Patelis
+ *	last:	6nd June 2018 - Dion Patelis
+ */
 
-	// $debug = "off"; // on or off
+/**
+ * Set to maximum restore file size in bytes.
+ * In file_functions.php
+ */
+$max_file_upload_size = 5000000;        // Check file size 5000000b = 5MB Max
 
-	//include("config/class_detect.php");
-	//$what_dev = new detect;
-	//$what_dev->my_current_device_is();
-	//echo $what_dev->current_device;
+// $_POST['SSLon'] = "no";  // yes or no
 
-	//echo "<LINK rel=stylesheet href=\"css/smart_phone.css\" type=\"text/css\">";
-	//echo "<LINK rel=stylesheet href=\"css/main.css\" type=\"text/css\">";
-	
-	/* This is a standard layout to be inserted into a 
-		function or a page to debug the code.
-		
-	$debug = $_POST['debug'];
-	$debugMsg .= "Start Time = $StartTime<BR>";
-	$debugMsg .= "\$SearchClientName= $SearchClientName<BR>";
-	$debugMsg .= "\$fieldName= $fieldName<BR>";
-	include("config/debug.php");
-	
-	
-	$_POST['ProgramTitle'] = "Spiros 2.3.6";
-	$ProgramName = "<font class=\"titles\" >$ProgramTitle</font>
-	<font face=\"arial\" size=\"2\">FP</font>";
-	//$message = "<BR><B></B>"; */
-	$message = "<BR>";
-	
+// $debug = "off"; // on or off
+
+/*$_POST['ProgramTitle'] = "Spiros 2.3.6";
+$ProgramName = "<font class=\"titles\" >$ProgramTitle</font>
+<font face=\"arial\" size=\"2\">FP</font>";*/
+
+
 ?>

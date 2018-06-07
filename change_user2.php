@@ -261,7 +261,7 @@ echo "<H" . $header_size . ">User Card</H" . $header_size . ">";
 			                </TD>
 		                </TR>
 		                <TR>
-			                <TD>UserCountry</TD>
+			                <TD>UserCountry.</TD>
 			                <TD>
 			                <input type=\"text\" name=\"UserCountry_to_display\" tabindex=\"12\"  value=\"$row[UserCountry]\" onchange=\"change_user('UserCountry',this.value,$user_ID_to_display,0)\"></input>
 			                </TD>

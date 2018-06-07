@@ -1,13 +1,14 @@
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/skeleton.css">
 <?PHP
-
 /**
- *	file:	searchFunctions.php
+ *	desc;	For all the search methods
+ *  note:
+ *  by:     7rocks.com
+ *  file:	searchFunctions.php
  *	auth:	Dion Patelis (owner)
- *	desc;	Dions messaging system
  *	date:	26 Feb 2003 - Dion Patelis
- *	last:	Monday 19th Jan 2015 - Dion Patelis
+ *	last:	5/6/2018 - Dion Patelis
  */
 
 $dbs = new dbSession();
@@ -29,7 +30,6 @@ if ($turn_this_debug_on == 1) {
 //*************************************************************************************************
 
 $SearchClientName = $_POST['fieldName'];
-
 
 //**********************************************************************************************
 //**************************************************************************** FUNCTIONS - START
@@ -618,22 +618,4 @@ function list_clients_connected_to_reminder_and_back_to_reminder_card() {
 }
 //****************************************************************************** FUNCTIONS - END
 //**********************************************************************************************
-
-
-// QUICK LISTING
-// INCLUDES
-// SECURITY (OPTIONAL)
-// DATABASE CONNECTION
-
-// START CATCHES
-// 	$option_catch
-// END CATCHES
-
-// START MAIN
-// END MAIN
-
-// START LOCAL FUNCTIONS
-
-// END LOCAL FUNCTIONS
-
 ?>

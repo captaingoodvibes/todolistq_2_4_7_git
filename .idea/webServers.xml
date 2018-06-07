@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="721a39ab-dad1-4969-b51a-57f1e1e7b0e3" name="todolistq_2_4_7_git_phpstorm" url="http://jupiter.7rocks.com">
+        <fileTransfer host="jupiter.7rocks.com" port="22" rootFolder="/var/www/html/todolistq.com/247installer" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

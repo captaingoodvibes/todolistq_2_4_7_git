@@ -1,0 +1,21 @@
+# Note : Dion Patelis 7/6/2018
+# This line stops all http access to this directory.
+# For the purpose of not reading credentials in
+# dbsession.class
+# In /etc/apache2/apache.conf the
+# AllowOverride All
+# needs to be set so that the web server will follow
+# all directives from .htaccess
+# For a speed increase add this directive directly to
+# apache.conf so that it does not have to parse for
+# .htaccess in all directories...
+
+# deny from all
+
+# Note : Dion Patelis 7/6/2018
+# The following is if I want Apache to deny access to
+# dbSession.class
+<Files dbSession.class>
+order allow,deny
+deny from all
+</Files>
