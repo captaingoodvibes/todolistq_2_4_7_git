@@ -1795,7 +1795,7 @@ function loc_Show_all_Reminders() {
         $lower = $_POST['lower'];
         $upper = $_POST['upper'];
     }
-    //echo "lower and upper = $lower and $upper <br>";
+    // echo "lower and upper = $lower and $upper <br>";
     //echo "..... posts" . $_POST['lower'] . "---" . $_POST['upper'] . "<br>";
 
     echo "<TABLE>
@@ -1841,7 +1841,7 @@ function loc_Show_all_Reminders() {
     $dbs = new dbSession();
     // $sql = "SELECT * from reminder WHERE ReminderTimeDismissedInSecs = '0'  AND ReminderSchedTimeInSecs <= '$currentTime' ORDER BY ReminderSchedTimeInSecs DESC";
     // $sql = "SELECT * from reminder WHERE ReminderTimeDismissedInSecs = '0'  AND ReminderSchedTimeInSecs <= '$currentTime' AND ReminderToFkUserID = '$UserID' ORDER BY ReminderSchedTimeInSecs DESC";
-    $sql = "SELECT * from reminder WHERE (ReminderToFkUserID = '$UserID' OR ReminderToFkUserID = '2') ORDER BY ReminderSchedTimeInSecs DESC LIMIT $lower , $upper";
+    $sql = "SELECT * from reminder WHERE (ReminderToFkUserID = '$UserID' OR ReminderToFkUserID = '2') ORDER BY ReminderSchedTimeInSecs DESC LIMIT $lower , $factor";
 
     $Results = $dbs->getResult($sql);
 
