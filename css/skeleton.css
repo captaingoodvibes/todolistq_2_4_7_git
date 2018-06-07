@@ -225,29 +225,29 @@ input[type="button"].button-primary:focus {
   color: #FFF;
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
-  
-  
+
+
 button.top_buttons,
 input[type="submit"].top_buttons {
   /* background-image: url("back_test5_tiger.jpg"); */
   color: #eeeeec;
-  background-color: #3465a4; 
+  background-color: #3465a4;
   display: inline-block;
   height: 38px;
   padding: 0px 30px;
   text-align: center;
-  font-size: 11px; 
-  font-weight: 600; 
-  line-height: none; /* Was 38px - DP 20150220 1615AEST */ 
-  letter-spacing: .1rem; 
+  font-size: 11px;
+  font-weight: 600;
+  line-height: none; /* Was 38px - DP 20150220 1615AEST */
+  letter-spacing: .1rem;
   text-transform: uppercase;
   text-decoration: none;
-  white-space: nowrap; 
-  border-radius: 4px; 
-  border: 1px solid #bbb; 
-  cursor: pointer; 
+  white-space: nowrap;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
   box-sizing: border-box; }
-  
+
 button.top_buttons:hover,
 input[type="submit"].top_buttons:hover {
   /* background-image: url("back_test5_tiger.jpg"); */
@@ -259,11 +259,11 @@ button.action_buttons,
 input[type="submit"].action_buttons {
   /* background-image: url("back_test5_tiger.jpg"); */
   color: #2e3436;
-  background-color: transparent; 
+  background-color: transparent;
   height: 38px;
   padding: 0px 10px; }
 
-.action_buttons 
+.action_buttons
 button.action_buttons:hover,
 input[type="submit"].action_buttons:hover {
   /* background-image: url("back_test5_tiger.jpg"); */
@@ -330,8 +330,8 @@ label > .label-body {
   display: inline-block;
   margin-left: .5rem;
   font-weight: normal; }
-  
-  
+
+
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*ul {
@@ -374,7 +374,7 @@ box {
   margin: 0 .2rem;
   font-size: 90%;
   white-space: pre-line;
-  
+
   border: 1px solid #babdb6;
   border-radius: 4px; }
 pre > box {
@@ -382,7 +382,7 @@ pre > box {
   background-image: url("back_test5_tiger.png");
   padding: 1rem 1.5rem;
   white-space: pre-line; }
-  
+
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

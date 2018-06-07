@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15492310-e8ad-468a-aa54-849830d2535e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/config/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/change_user2.php" beforeDir="false" afterPath="$PROJECT_DIR$/change_user2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/skeleton.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/skeleton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/priorityDwn.php" beforeDir="false" afterPath="$PROJECT_DIR$/priorityDwn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/priorityUp.php" beforeDir="false" afterPath="$PROJECT_DIR$/priorityUp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_card_with_time_limits_ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_card_with_time_limits_ajax.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whiteBoard.php" beforeDir="false" afterPath="$PROJECT_DIR$/whiteBoard.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +36,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
+            <state relative-caret-position="-1287">
               <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
               <folding>
                 <element signature="e#6#356#0#PHP" expanded="true" />
@@ -40,65 +45,112 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log_in_authentication_form_vars.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log_in_authentication_form_vars.php">
+      <file leaf-file-name="client_functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client_functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="topIndex002.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/topIndex002.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
-              <caret line="184" column="116" selection-start-line="184" selection-start-column="107" selection-end-line="184" selection-end-column="116" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file_functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file_functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+            <state relative-caret-position="-5">
+              <caret line="44" column="63" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
               <folding>
-                <element signature="n#file_browse#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/config.php">
+      <file leaf-file-name="skeleton.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/skeleton.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+            <state relative-caret-position="188">
+              <caret line="130" column="7" selection-start-line="130" selection-start-column="3" selection-end-line="130" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="change_user2.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/change_user2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="252" column="39" selection-start-line="252" selection-start-column="39" selection-end-line="252" selection-end-column="39" />
               <folding>
-                <element signature="e#6#356#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="e#12796#12838#0#HTML" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#!!top" />
+                <element signature="e#17682#17687#0#HTML" expanded="true" />
+                <element signature="e#18358#18363#0#HTML" expanded="true" />
+                <element signature="e#18602#18607#0#HTML" expanded="true" />
+                <element signature="e#19301#19306#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbSession.class" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/dbSession.class">
+      <file leaf-file-name="headAndBody001_with_db_name_in_tab.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/headAndBody001_with_db_name_in_tab.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+            <state relative-caret-position="458">
+              <caret line="79" column="73" lean-forward="true" selection-start-line="79" selection-start-column="73" selection-end-line="79" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="whiteBoard.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/whiteBoard.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="553" lean-forward="true" selection-start-line="553" selection-end-line="553" />
               <folding>
-                <element signature="n#dbSession#0;n#!!top" expanded="true" />
+                <element signature="e#6#395#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#font#0;n#TD#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/.htaccess">
+      <file leaf-file-name="priorityUp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/priorityUp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            <state relative-caret-position="98">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="priorityDwn.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/priorityDwn.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_card_with_time_limits_ajax.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user_card_with_time_limits_ajax.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="178" column="23" selection-start-line="178" selection-start-column="23" selection-end-line="178" selection-end-column="23" />
+              <folding>
+                <element signature="e#3504#4630#0#PHP" />
+                <element signature="e#5046#5546#0#PHP" />
+                <element signature="e#5969#6210#0#PHP" />
+                <element signature="e#7112#7689#0#HTML" />
+                <element signature="e#7429#8315#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_card_with_time_limits_ajax_functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user_card_with_time_limits_ajax_functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="155" column="17" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="17" />
+              <folding>
+                <element signature="e#10618#13050#0#PHP" />
+                <element signature="e#15160#19874#0#PHP" />
+                <element signature="e#51881#55046#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,12 +159,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>jQuery</find>
-      <find>jQueryjQuery</find>
-      <find>$</find>
-      <find>/style</find>
-      <find>POST</find>
-      <find>file_f</find>
       <find>upload</find>
       <find>as been uploa</find>
       <find>$_FILES</find>
@@ -137,6 +183,12 @@
       <find>restor</find>
       <find>config.php</find>
       <find>orm_va</find>
+      <find>up_poi</find>
+      <find>User Card</find>
+      <find>input</find>
+      <find>&quot;text&quot;</find>
+      <find>tel</find>
+      <find>hide</find>
     </findStrings>
     <replaceStrings>
       <replace>span</replace>
@@ -178,6 +230,7 @@
     <setting file="file://$PROJECT_DIR$/searchFunctions.php" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/dl.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/class_lib_backup.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/change_user2.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/config/dbSession.class" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/create_db_functions.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
@@ -190,7 +243,6 @@
         <option value="$PROJECT_DIR$/../../7rocks/7rocks_20180413/xcom/responsive-test-v3b.html" />
         <option value="$PROJECT_DIR$/../../7rocks/7rocks_20180413/xcom/responsive-test-v3_dion.html" />
         <option value="$PROJECT_DIR$/db_creds.php" />
-        <option value="$PROJECT_DIR$/user_card_with_time_limits_ajax.php" />
         <option value="$PROJECT_DIR$/config/tpl_bodystart.php" />
         <option value="$PROJECT_DIR$/create_db_functions.php" />
         <option value="$PROJECT_DIR$/../todolistq_2_4_7_git_phpstorm_messing_around_files/whiteBoard.php" />
@@ -204,13 +256,10 @@
         <option value="$PROJECT_DIR$/config/topIndex002.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/jqueryslidemenu.js" />
-        <option value="$PROJECT_DIR$/config/headAndBody001_with_db_name_in_tab.php" />
         <option value="$PROJECT_DIR$/dl.php" />
         <option value="$PROJECT_DIR$/upload_001_show_files.php" />
         <option value="$PROJECT_DIR$/interface_lib_tdlq247.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/css/skeleton.css" />
-        <option value="$PROJECT_DIR$/whiteBoard.php" />
         <option value="$PROJECT_DIR$/browse.php" />
         <option value="$PROJECT_DIR$/searchFunctions.php" />
         <option value="$PROJECT_DIR$/logOffLink.php" />
@@ -222,6 +271,14 @@
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/config/.htaccess" />
+        <option value="$PROJECT_DIR$/whiteBoard.php" />
+        <option value="$PROJECT_DIR$/priorityUp.php" />
+        <option value="$PROJECT_DIR$/priorityDwn.php" />
+        <option value="$PROJECT_DIR$/user_card_with_time_limits_ajax.php" />
+        <option value="$PROJECT_DIR$/user_card_with_time_limits_ajax_functions.php" />
+        <option value="$PROJECT_DIR$/config/headAndBody001_with_db_name_in_tab.php" />
+        <option value="$PROJECT_DIR$/css/skeleton.css" />
+        <option value="$PROJECT_DIR$/change_user2.php" />
       </list>
     </option>
   </component>
@@ -333,7 +390,7 @@
       <workItem from="1527979624237" duration="33578000" />
       <workItem from="1528108501551" duration="9926000" />
       <workItem from="1528234323158" duration="17923000" />
-      <workItem from="1528332303817" duration="2165000" />
+      <workItem from="1528332303817" duration="9395000" />
     </task>
     <task id="LOCAL-00001" summary="Test commit with 3 dots in top reference.">
       <created>1526469657653</created>
@@ -545,13 +602,27 @@
       <option name="project" value="LOCAL" />
       <updated>1528245762500</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Makng everything work for the hosted solution on Todolistq.com. Added a .htaccess file to /config to stop access to the .dbSession.class file.">
+      <created>1528337177785</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1528337177785</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Testing commit of .htaccess?">
+      <created>1528337319590</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1528337319590</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161077000" />
+    <option name="totallyTimeSpent" value="168307000" />
   </component>
-  <component name="TodoView" selected-index="3">
+  <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
       <is-preview-enabled value="true" />
     </todo-panel>
@@ -564,16 +635,17 @@
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32924962" />
-      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.50080776" side_tool="true" weight="0.32924962" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49919224" weight="0.32924962" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.47980613" side_tool="true" weight="0.32924962" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" order="1" visible="true" weight="0.32465544" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32924962" />
+      <window_info anchor="bottom" id="File Transfer" order="1" sideWeight="0.49919224" weight="0.32465544" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.5201939" weight="0.32924962" />
       <window_info anchor="bottom" id="Run" order="4" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3154671" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26494345" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49919224" weight="0.32924962" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
@@ -586,7 +658,6 @@
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32988167" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49919224" weight="0.32924962" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -633,7 +704,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
-    <MESSAGE value="Test commit with 3 dots in top reference." />
     <MESSAGE value="&#10;Auto indent cleanup." />
     <MESSAGE value="Messing with deployment" />
     <MESSAGE value="Messing with deployment 2" />
@@ -657,7 +727,9 @@
     <MESSAGE value="Cleaning up the backup a little more. Browse for file input button not so stright forward to CSS up." />
     <MESSAGE value="Some fault tollerance in the file backup system so that it alerts the new user as to whether the directory is writable or not. It gives soem suggestions on how to fix it within Linux systems." />
     <MESSAGE value="Fixing the $max_upload_size and localising the variables to a central config file. config.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing the $max_upload_size and localising the variables to a central config file. config.php" />
+    <MESSAGE value="Makng everything work for the hosted solution on Todolistq.com. Added a .htaccess file to /config to stop access to the .dbSession.class file." />
+    <MESSAGE value="Testing commit of .htaccess?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing commit of .htaccess?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -667,42 +739,16 @@
           <line>288</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/user_card_with_time_limits_ajax.php</url>
+          <line>108</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="17" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user_card_with_time_limits_ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/callBack001.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="245" column="10" selection-start-line="245" selection-start-column="9" selection-end-line="245" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/whiteboard_imp_urg_matrix.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/ht.inc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../todolistq_2_4_7_git_phpstorm_messing_around_files/whiteBoard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log_in_authentication_check.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -820,13 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/headAndBody001_with_db_name_in_tab.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/upload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -879,9 +918,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client_functions.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -889,13 +925,6 @@
             <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/skeleton.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="270" lean-forward="true" selection-start-line="270" selection-end-line="270" />
         </state>
       </provider>
     </entry>
@@ -917,6 +946,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" selection-start-line="3" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="e#103#308#0#PHP" expanded="true" />
+            <element signature="n#SearchClient3#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -927,38 +960,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/whiteBoard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/todolistq.conf" />
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding>
-            <element signature="e#6#356#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log_in_authentication_form_vars.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/file_functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding>
-            <element signature="n#file_browse#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -974,23 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
-          <folding>
-            <element signature="e#6#356#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/topIndex002.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="184" column="116" selection-start-line="184" selection-start-column="107" selection-end-line="184" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/dbSession.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -1003,8 +992,137 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="150">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/topIndex002.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="184" column="116" selection-start-line="184" selection-start-column="107" selection-end-line="184" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#356#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="n#file_browse#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/whiteBoard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="553" lean-forward="true" selection-start-line="553" selection-end-line="553" />
+          <folding>
+            <element signature="e#6#395#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#font#0;n#TD#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_card_with_time_limits_ajax_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="155" column="17" selection-start-line="155" selection-start-column="17" selection-end-line="155" selection-end-column="17" />
+          <folding>
+            <element signature="e#10618#13050#0#PHP" />
+            <element signature="e#15160#19874#0#PHP" />
+            <element signature="e#51881#55046#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_card_with_time_limits_ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="178" column="23" selection-start-line="178" selection-start-column="23" selection-end-line="178" selection-end-column="23" />
+          <folding>
+            <element signature="e#3504#4630#0#PHP" />
+            <element signature="e#5046#5546#0#PHP" />
+            <element signature="e#5969#6210#0#PHP" />
+            <element signature="e#7112#7689#0#HTML" />
+            <element signature="e#7429#8315#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1287">
+          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+          <folding>
+            <element signature="e#6#356#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="44" column="63" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priorityDwn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priorityUp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/headAndBody001_with_db_name_in_tab.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="79" column="73" lean-forward="true" selection-start-line="79" selection-start-column="73" selection-end-line="79" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/skeleton.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="130" column="7" selection-start-line="130" selection-start-column="3" selection-end-line="130" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/change_user2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="252" column="39" selection-start-line="252" selection-start-column="39" selection-end-line="252" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="e#12796#12838#0#HTML" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#!!top" />
+            <element signature="e#17682#17687#0#HTML" expanded="true" />
+            <element signature="e#18358#18363#0#HTML" expanded="true" />
+            <element signature="e#18602#18607#0#HTML" expanded="true" />
+            <element signature="e#19301#19306#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
