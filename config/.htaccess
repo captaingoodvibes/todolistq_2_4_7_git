@@ -8,7 +8,7 @@
 # all directives from .htaccess
 # For a speed increase add this directive directly to
 # apache.conf so that it does not have to parse for
-# .htaccess in all directories.
+# .htaccess in all directories...
 
 # deny from all
 
