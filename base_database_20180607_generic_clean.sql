@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `action` (
   `ActionType` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`ActionID`),
   FULLTEXT KEY `ActionText` (`ActionText`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='Action table represents all Job transactions' AUTO_INCREMENT=21 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='Action table represents all Job transactions' AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `action`
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `client` (
   `ClientUrl` varchar(100) NOT NULL DEFAULT '',
   `ClientCallOrder` int(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ClientID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='Client Information' AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='Client Information' AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `client`
@@ -169,7 +169,7 @@ CREATE TABLE IF NOT EXISTS `job` (
   `JobParts` text NOT NULL,
   `job_visibility` tinyint(2) NOT NULL,
   PRIMARY KEY (`JobID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='Job is a complete request or project' AUTO_INCREMENT=20 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='Job is a complete request or project' AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `job`
@@ -237,7 +237,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `UserUrl` varchar(100) NOT NULL DEFAULT '',
   PRIMARY KEY (`UserID`),
   UNIQUE KEY `UserLogin` (`UserLogin`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='User Information' AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='User Information' AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `user`
