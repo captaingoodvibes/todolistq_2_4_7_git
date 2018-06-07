@@ -114,6 +114,9 @@ switch ($_POST['OptionCatch']) {
     case "OK";
         locUpdateReminder();
         break;
+    case "OK_b";
+        locUpdateReminder_b();
+        break;
     case "SearchClient";
         if($SearchClientName==""){
             echo "<A href=\"index.php\">    Home</A>";
@@ -129,8 +132,16 @@ switch ($_POST['OptionCatch']) {
         postponeUpdate();
         exit();
         break;
+    case "postponeUpdate_b";
+        postponeUpdate_b();
+        exit();
+        break;
     case "postpone";
         postpone();
+        exit();
+        break;
+    case "postpone_b";
+        postpone_b();
         exit();
         break;
     case "whiteBoard_public";
@@ -138,6 +149,15 @@ switch ($_POST['OptionCatch']) {
         echo "<BR>";
         echo "<LINK rel=\"stylesheet\" href=\"css/main.css\" type=\"text/css\">";
         Main();
+        echo "</DIV>";
+        include("logged_in_end_of_page.php");
+        exit();
+        break;
+    case "reminders_all";
+        echo "<DIV align=\"center\">";
+        echo "<BR>";
+        echo "<LINK rel=\"stylesheet\" href=\"css/main.css\" type=\"text/css\">";
+        loc_Show_all_Reminders();
         echo "</DIV>";
         include("logged_in_end_of_page.php");
         exit();
@@ -1590,9 +1610,12 @@ function locReminderCheck() {
 
 }
 function locShowReminder() {
+    echo "<BR>";
+    echo "<LINK rel=\"stylesheet\" href=\"css/main.css\" type=\"text/css\">";
     $UserID = $_POST['UserID'];
     $user_log_in_name = $_POST['name'];
-    echo "<FONT SIZE=\"5\" COLOR=\"#CC3300\"><B>!!Reminders!!</B></FONT><BR>";
+    // echo "<FONT SIZE=\"5\" COLOR=\"#CC3300\"><B>!!Reminders!!</B></FONT><BR>";
+    echo "<span class=\"red_header\"><h5>!!Reminders!!</h5></span><BR>";
     $currentTime = time();
     $dbs = new dbSession();
     // $sql = "SELECT * from reminder WHERE ReminderTimeDismissedInSecs = '0'  AND ReminderSchedTimeInSecs <= '$currentTime' ORDER BY ReminderSchedTimeInSecs DESC";
@@ -1625,7 +1648,6 @@ function locShowReminder() {
         // $JobType = $row['JobType'];
 
 
-        $ReminderFkJobID = $row['ReminderFkJobID'];
         $dbsJobNumber = new dbSession();
         $sql = "SELECT JobID, JobCardNumber from job WHERE JobID = \"$ReminderFkJobID\" LIMIT 1";
         $ResultsClient = $dbsJobNumber->getResult($sql);
@@ -1664,7 +1686,7 @@ function locShowReminder() {
         }
         else {
             $aColor = 1;
-            $setColor = "#FFFFFF";
+            $setColor = "#ffe8e8";
         }
 
         echo "<TR>";
@@ -1719,6 +1741,243 @@ function locShowReminder() {
         // echo "<a href='whiteBoard.php?OptionCatch=postpone&AddMessageTermination=1&ReminderTitle=$ReminderTitle&ReminderID=$ReminderID&ReminderSchedTimeInSecs=$ReminderSchedTimeInSecs'><img src=\"images/sort_none.png\" height=\"10\" width=\"12\" border=\"0\"></a>";
         echo "<form method=\"post\" action=\"./whiteBoard.php\">";
         echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"postpone\">";
+        echo "<input type=\"hidden\" name=\"AddMessageTermination\" value=\"1\">";
+        echo "<input type=\"hidden\" name=\"ReminderTitle\" value=\"" . $ReminderTitle . "\">";
+        echo "<input type=\"hidden\" name=\"ReminderID\" value=\"" . $ReminderID . "\">";
+        echo "<input type=\"hidden\" name=\"ReminderSchedTimeInSecs\" value=\"" . $ReminderSchedTimeInSecs . "\">";
+        include("log_in_authentication_form_vars.php");
+        echo "<input type=\"image\" src=\"./images/sort_none.png\"  title=\"Postpone.\" name=\"action\">";
+        echo "</form>";
+        echo "</TD>";
+        echo "<TD bgcolor=\"$setColor\" align=\"middle\">";
+        if ($ReminderFkJobID == "0") {
+
+        }else{
+            // echo "<a href=\"JobDetails.php?JobID=$ReminderFkJobID\">$ReminderFkJobID-$JobCardNumber</a>";
+            job_button($ReminderFkJobID,'','','');
+        }
+        echo "</TD>";
+        echo "</TR>";
+
+    }
+
+    echo "</TABLE><BR>";
+
+}
+function loc_Show_all_Reminders() {
+    echo "<BR>";
+    echo "<LINK rel=\"stylesheet\" href=\"css/main.css\" type=\"text/css\">";
+    $UserID = $_POST['UserID'];
+    $limit = $_POST['limit'];
+    //echo "\$limit= " . $limit . "<br>";
+    $user_log_in_name = $_POST['name'];
+    echo "<h5>!!All Reminders!!</h5><BR>";
+    echo "Green = future, Red = due now, Grey = dismissed<br>";
+    //echo "..... posts" . $_POST['lower'] . "  ---  " . $_POST['upper'] . "<br>";
+    if (empty($_POST['lower']) || $_POST['lower'] <= 0) {
+        $_POST['lower'] = 0;
+        $_POST['upper'] = 29;
+        $lower = 0;
+        $upper = 29;
+    }
+    $factor = 30;
+    if($limit == 'plus') {
+        //echo "in plus<br>";
+        $_POST['lower'] = $_POST['lower'] + $factor;
+        $_POST['upper'] = $_POST['upper'] + $factor;
+        $lower = $_POST['lower'];
+        $upper = $_POST['upper'];
+    }
+    if($limit == 'minus' && $_POST['upper'] >= 59) {
+        //echo "in minus<br>";
+        $_POST['lower'] = $_POST['lower'] - $factor;
+        $_POST['upper'] = $_POST['upper'] - $factor;
+        $lower = $_POST['lower'];
+        $upper = $_POST['upper'];
+    }
+    //echo "lower and upper = $lower and $upper <br>";
+    //echo "..... posts" . $_POST['lower'] . "---" . $_POST['upper'] . "<br>";
+
+    echo "<TABLE>
+            <TR>
+                <TD valign=\"bottom\">";
+                echo "<<";
+                echo "<form method=\"post\" action=\"./whiteBoard.php\">";
+                echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"reminders_all\">";
+                echo "<input type=\"hidden\" name=\"limit\" value=\"minus\">";
+                echo "<input type=\"hidden\" name=\"lower\" value=\"" . $lower . "\">";
+                echo "<input type=\"hidden\" name=\"upper\" value=\"" . $upper . "\">";
+                echo "<input type=\"hidden\" name=\"AddMessageTermination\" value=\"1\">";
+                echo "<input type=\"hidden\" name=\"ReminderTitle\" value=\"" . $ReminderTitle . "\">";
+                echo "<input type=\"hidden\" name=\"ReminderID\" value=\"" . $ReminderID . "\">";
+                echo "<input type=\"hidden\" name=\"ReminderSchedTimeInSecs\" value=\"" . $ReminderSchedTimeInSecs . "\">";
+                include("log_in_authentication_form_vars.php");
+                echo "<input type=\"image\" src=\"./images/sort_none.png\"  title=\"Last 30\" name=\"action\">";
+                echo "</form>";
+                echo "</TD>
+                      <TD> <image src=\"images/spacer.gif\" width=\"42\"></image></TD>
+                      <TD valign=\"bottom\">";
+                echo "<br>";
+                echo ">>";
+                echo "<form method=\"post\" action=\"./whiteBoard.php\">";
+                echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"reminders_all\">";
+                echo "<input type=\"hidden\" name=\"limit\" value=\"plus\">";
+                echo "<input type=\"hidden\" name=\"lower\" value=\"" . $lower . "\">";
+                echo "<input type=\"hidden\" name=\"upper\" value=\"" . $upper . "\">";
+                echo "<input type=\"hidden\" name=\"AddMessageTermination\" value=\"1\">";
+                echo "<input type=\"hidden\" name=\"ReminderTitle\" value=\"" . $ReminderTitle . "\">";
+                echo "<input type=\"hidden\" name=\"ReminderID\" value=\"" . $ReminderID . "\">";
+                echo "<input type=\"hidden\" name=\"ReminderSchedTimeInSecs\" value=\"" . $ReminderSchedTimeInSecs . "\">";
+                include("log_in_authentication_form_vars.php");
+                echo "<input type=\"image\" src=\"./images/sort_none.png\"  title=\"Next 30\" name=\"action\">";
+                echo "</form>";
+    echo "      </TD>
+            </TR>
+        </TABLE>";
+    echo "<br>";
+
+
+    $currentTime = time();
+    $dbs = new dbSession();
+    // $sql = "SELECT * from reminder WHERE ReminderTimeDismissedInSecs = '0'  AND ReminderSchedTimeInSecs <= '$currentTime' ORDER BY ReminderSchedTimeInSecs DESC";
+    // $sql = "SELECT * from reminder WHERE ReminderTimeDismissedInSecs = '0'  AND ReminderSchedTimeInSecs <= '$currentTime' AND ReminderToFkUserID = '$UserID' ORDER BY ReminderSchedTimeInSecs DESC";
+    $sql = "SELECT * from reminder WHERE (ReminderToFkUserID = '$UserID' OR ReminderToFkUserID = '2') ORDER BY ReminderSchedTimeInSecs DESC LIMIT $lower , $upper";
+
+    $Results = $dbs->getResult($sql);
+
+    $aColor = 1;
+
+    echo "<TABLE>";
+    echo "<TR>";
+    echo "<TD bgcolor=\"#FFFFFF\" align=\"middle\" width=\"6%\"><B>From</B></TD>";
+    echo "<TD bgcolor=\"#FFFFFF\" align=\"middle\" width=\"10%\"><B>Client</B></TD>";
+    echo "<TD bgcolor=\"#FFFFFF\" align=\"middle\"><B>Details</B></TD>";
+    echo "<TD bgcolor=\"#FFFFFF\" align=\"middle\" width=\"3%\"><B>OK</B></TD>";
+    echo "<TD bgcolor=\"#FFFFFF\" align=\"middle\" width=\"3%\"><B>Postpone</B></TD>";
+    echo "<TD bgcolor=\"#FFFFFF\" align=\"middle\" width=\"8%\" title=\"Job IDentification Number.\"><B>JID</B></TD>";
+    echo "</TR>";
+
+    while ($row = $dbs->getArray($Results)) {
+
+
+        $ReminderSchedTimeInSecs = $row['ReminderSchedTimeInSecs'];
+        $ReminderTitle = $row['ReminderTitle'];
+        $ReminderID = $row['ReminderID'];
+        $ReminderFkJobID = $row['ReminderFkJobID'];
+        $ReminderTimeAddedInSecs = $row['ReminderTimeAddedInSecs'];
+        $ReminderTimeDismissedInSecs = $row['ReminderTimeDismissedInSecs'];
+        // $JobCardNumber = $row['JobCardNumber'];
+        // $JobPriority = $row['JobPriority'];
+        // $JobType = $row['JobType'];
+
+
+        $dbsJobNumber = new dbSession();
+        $sql = "SELECT JobID, JobCardNumber from job WHERE JobID = \"$ReminderFkJobID\" LIMIT 1";
+        $ResultsClient = $dbsJobNumber->getResult($sql);
+        $rowJob = $dbsJobNumber->getArray($ResultsClient);
+        $JobCardNumber = $rowJob['JobCardNumber'];
+
+        $ReminderToFkUserID = $row['ReminderToFkUserID'];
+
+
+        $ReminderFromFkUserID = $row['ReminderFromFkUserID'];
+
+        $dbsUserFirstName = new dbSession();
+        $sql = "SELECT UserFirstname, UserLogin from user WHERE UserID = \"$ReminderFromFkUserID\" LIMIT 1";
+        $ResultsUser = $dbsUserFirstName->getResult($sql);
+        $rowUser = $dbsUserFirstName->getArray($ResultsUser);
+        $UserFirstname = $rowUser['UserFirstname'];
+        $user_login_from_db_for_reminder = $rowUser['UserLogin'];
+
+        $ReminderFkClientID = $row['ReminderFkClientID'];
+        $dbsClientName = new dbSession();
+        $sql = "SELECT ClientName from client WHERE ClientID = \"$ReminderFkClientID\" LIMIT 1";
+        $ResultsClient = $dbsClientName->getResult($sql);
+        $rowClient = $dbsClientName->getArray($ResultsClient);
+        $clientName = $rowClient['ClientName'];
+
+
+
+        //global $debug;
+        //$debugMsg .= "\$ReminderFkClientID = $ReminderFkClientID<BR>";
+        //$debugMsg .= "\$ReminderSchedTimeInSecs = $ReminderSchedTimeInSecs<BR>";
+        //include("config/tpl_bodystart.php");
+
+        if ($aColor == 1) {
+            $aColor = 0;
+            $setColor = "#FFCCCC";
+            if ($ReminderSchedTimeInSecs > $currentTime){
+                $setColor = '#baffc0';
+            }
+            if ($ReminderTimeDismissedInSecs != 0){
+                $setColor = '#b3b6bc';
+            }
+        }
+        else {
+            $aColor = 1;
+            $setColor = "#ffe8e8";
+            if ($ReminderSchedTimeInSecs > $currentTime){
+                $setColor = '#dbfcde';
+            }
+            if ($ReminderTimeDismissedInSecs != 0){
+                $setColor = '#cbd0d8';
+            }
+        }
+
+        echo "<TR>";
+        echo "<TD bgcolor=\"$setColor\" align=\"middle\">";
+        //echo "\$user_log_in_name = $user_log_in_name<BR>";
+        //echo "\$UserFirstname = $UserFirstname<BR>";
+        //echo "\$user_login_from_db_for_reminder = $user_login_from_db_for_reminder<BR>";
+        if(($user_log_in_name == $user_login_from_db_for_reminder) && ($ReminderToFkUserID == 2)) {
+            echo "Me to Everyone.";
+        }elseif($ReminderToFkUserID == 2) {
+            user_button($ReminderFromFkUserID);
+            echo "to Everyone.";
+        }elseif ($user_log_in_name == $user_login_from_db_for_reminder) {
+            // echo "Me";
+        }else{
+            user_button($ReminderFromFkUserID);
+        }
+        echo "</TD>";
+        echo "<TD bgcolor=\"$setColor\" align=\"middle\">";
+        // echo "<a href=\"clientcard2.php?id=$ReminderFkClientID&name=$clientName\" class=\"linkPlainInWhiteAreas\">$clientName</a>";
+        // echo "\$ReminderFkClientID = $ReminderFkClientID<BR>";
+        if (empty($ReminderFkClientID)){
+
+        }else{
+            client_button_with_start_time($ReminderFkClientID,'');
+        }
+        echo "</TD>";
+        echo "<TD bgcolor=\"$setColor\" align=\"middle\">";
+        // echo "<a href='reminderCard.php?OptionCatch=&AddMessageTermination=&ReminderID=$ReminderID&JobPriorityUp=$JobPriority&JobType=$JobType' class=\"linkPlainInWhiteAreas\">$ReminderTitle</a>";
+        echo "<form method=\"post\" action=\"./index.php\">$ReminderTitle";
+        echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"reminder_card\">";
+        echo "<input type=\"hidden\" name=\"ReminderID\" value=\"" . $ReminderID . "\">";
+        echo "<input type=\"hidden\" name=\"JobPriorityUp\" value=\"" . $JobPriority . "\">";
+        echo "<input type=\"hidden\" name=\"JobType\" value=\"" . $JobType . "\">";
+        include("log_in_authentication_form_vars.php");
+        echo "<input class=\"inputA\" type=\"submit\" name=\"action\" title=\"Edit Reminder.\" value=\"Edit\">";
+        echo "</form>";
+        echo "</TD>";
+        echo "<TD bgcolor=\"$setColor\" align=\"middle\">";
+        // echo "<a href='whiteBoard.php?OptionCatch=OK&AddMessageTermination=1&ReminderID=$ReminderID&JobPriorityUp=$JobPriority&JobType=$JobType'><img src=\"images/sort_none.png\" height=\"10\" width=\"12\" border=\"0\"></a>";
+        if ($ReminderTimeDismissedInSecs == 0) {
+            echo "<form method=\"post\" action=\"./whiteBoard.php\">";
+            echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"OK_b\">";
+            echo "<input type=\"hidden\" name=\"AddMessageTermination\" value=\"1\">";
+            echo "<input type=\"hidden\" name=\"ReminderID\" value=\"" . $ReminderID . "\">";
+            echo "<input type=\"hidden\" name=\"JobPriorityUp\" value=\"" . $JobPriority . "\">";
+            echo "<input type=\"hidden\" name=\"JobType\" value=\"" . $JobType . "\">";
+            include("log_in_authentication_form_vars.php");
+            echo "<input type=\"image\" src=\"./images/sort_none.png\"  title=\"Confirm Reminder and hide it permanently.\" name=\"action\">";
+            echo "</form>";
+        }
+        echo "</TD>";
+        echo "<TD bgcolor=\"$setColor\" align=\"middle\">";
+        // echo "<a href='whiteBoard.php?OptionCatch=postpone&AddMessageTermination=1&ReminderTitle=$ReminderTitle&ReminderID=$ReminderID&ReminderSchedTimeInSecs=$ReminderSchedTimeInSecs'><img src=\"images/sort_none.png\" height=\"10\" width=\"12\" border=\"0\"></a>";
+        echo "<form method=\"post\" action=\"./whiteBoard.php\">";
+        echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"postpone_b\">";
         echo "<input type=\"hidden\" name=\"AddMessageTermination\" value=\"1\">";
         echo "<input type=\"hidden\" name=\"ReminderTitle\" value=\"" . $ReminderTitle . "\">";
         echo "<input type=\"hidden\" name=\"ReminderID\" value=\"" . $ReminderID . "\">";
@@ -1833,6 +2092,97 @@ function postpone() {
     $GET_['OptionCatch'] = "";
     include("logged_in_end_of_page.php");
 }
+function postpone_b() {
+    global $ReminderID;
+    global $ReminderTitle;
+
+    $ReminderID = $_POST['ReminderID'];
+    $ReminderTitle = $_POST['ReminderTitle'];
+    $reminderTimeHour = $_POST['reminderTimeHour'];
+    $reminderTimeMinute = $_POST['reminderTimeMinute'];
+    $ReminderSchedTimeInSecs = $_POST['ReminderSchedTimeInSecs'];
+
+//**********************************************************************************************
+//***************************************************************** DEBUG VARIABLES HERE - START
+    $turn_this_debug_on = 0;
+    if ($turn_this_debug_on == 1) {
+        $debug = $_POST['debug'];
+        $debugMsg .= "\$ReminderID = $ReminderID<BR>";
+        $debugMsg .= "\$reminderTimeDay = $reminderTimeDay<BR>";
+        $debugMsg .= "\$reminderTimeHour = $reminderTimeHour<BR>";
+        $debugMsg .= "\$reminderTimeMinute = $reminderTimeMinute<BR>";
+        $debugMsg .= "\$ReminderSchedTimeInSecs = $ReminderSchedTimeInSecs<BR>";
+        include("config/debug.php");
+    }
+//******************************************************************* DEBUG VARIABLES HERE - END
+//**********************************************************************************************
+
+    echo "<DIV align=\"center\">";
+    echo "Postpone $ReminderTitle by";
+
+    echo "
+	<form method=\"post\" action=\"$PHP_SELF\">
+	<TABLE>
+		<TR>
+			<TD></TD>
+			<TD>
+			<select name=\"reminderTimeDay\" tabindex=\"\">
+";
+    $timeDayOption = 0;
+    echo "<OPTION  value=\"$timeDayOption\">$timeDayOption";
+    while ($timeDayOption <= "30") {
+        $timeDayOption = $timeDayOption + 1;
+        echo "<OPTION  value=\"$timeDayOption\">$timeDayOption";
+    }
+
+    echo "
+			</SELECT>Day(s)
+
+			<select name=\"reminderTimeHour\" tabindex=\"3\"\">
+";
+    $timeHourOption = 0;
+    echo "<OPTION  value=\"$timeHourOption\">$timeHourOption";
+    while ($timeHourOption <= "22") {
+        $timeHourOption = $timeHourOption + 1;
+        echo "<OPTION  value=\"$timeHourOption\">$timeHourOption";
+    }
+
+    echo "
+			</SELECT>
+			
+			hour(s)
+			<select name=\"reminderTimeMinute\" tabindex=\"3\">
+";
+    echo "<OPTION  value=\"05\">05";
+    $timeMinuteOption = "00";
+    echo "<OPTION  value=\"$timeMinuteOption\">$timeMinuteOption";
+    while ($timeMinuteOption <= "40") {
+        $timeMinuteOption = $timeMinuteOption + 10;
+        echo "<OPTION  value=\"$timeMinuteOption\">$timeMinuteOption";
+    }
+
+    echo "
+			</SELECT>
+			minutes
+			</TD>
+		</TR>
+	</TABLE>
+";
+
+    echo "<input type=\"hidden\" name=\"AddMessageTermination\" value=\"1\">";
+    echo "<input type=\"hidden\" name=\"ReminderFkClientID\" value=\"$ClientID\">";
+    echo "<input type=\"hidden\" name=\"ReminderID\" value=\"$ReminderID\">";
+    echo "<input type=\"hidden\" name=\"StartTime\" value=\"$StartTime\">";
+    echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"postponeUpdate_b\">";
+    echo "<input type=\"hidden\" name=\"name\" value=\"$name\">";
+    echo "<input type=\"hidden\" name=\"JobStatus\" value=\"Active\">";
+    include("log_in_authentication_form_vars.php");
+    echo "<input type=\"submit\" tabindex=\"18\" name=\"Submit\" value=\"Postpone Reminder\">";
+    echo "</form>";
+    echo "</DIV>";
+    $GET_['OptionCatch'] = "";
+    include("logged_in_end_of_page.php");
+}
 function postponeUpdate() {
     global $ReminderID;
     global $reminderTimeDay;
@@ -1895,6 +2245,67 @@ function postponeUpdate() {
     echo "</DIV>";
 
 }
+function postponeUpdate_b() {
+    global $ReminderID;
+    global $reminderTimeDay;
+    global $reminderTimeHour;
+    global $reminderTimeMinute;
+    global $ReminderSchedTimeInSecs;
+
+    $ReminderID = $_POST['ReminderID'];
+    $reminderTimeDay = $_POST['reminderTimeDay'];
+    $reminderTimeHour = $_POST['reminderTimeHour'];
+    $reminderTimeMinute = $_POST['reminderTimeMinute'];
+    $ReminderSchedTimeInSecs = $_POST['ReminderSchedTimeInSecs'];
+
+//**********************************************************************************************
+//********************************************************************** DEBUG VARIABLES HERE - START
+    $turn_this_debug_on = 0;
+    if ($turn_this_debug_on == 1) {
+        $debug = $_POST['debug'];
+        $debugMsg .= "\$ReminderID = $ReminderID<BR>";
+        $debugMsg .= "\$reminderTimeDay = $reminderTimeDay<BR>";
+        $debugMsg .= "\$reminderTimeHour = $reminderTimeHour<BR>";
+        $debugMsg .= "\$reminderTimeMinute = $reminderTimeMinute<BR>";
+        $debugMsg .= "\$ReminderSchedTimeInSecs = $ReminderSchedTimeInSecs<BR>";
+        include("config/debug.php");
+    }
+//********************************************************************** DEBUG VARIABLES HERE - END
+//**********************************************************************************************
+
+
+    $currentTime = time();
+    //echo "\$currentTime = $currentTime<BR><BR>";
+    $reminderTotalTimeToPostponeBy = (($reminderTimeDay * 86400) + ($reminderTimeHour * 3600) + ($reminderTimeMinute * 60));
+    $newReminderSchedTimeInSecs = ($reminderTotalTimeToPostponeBy + $currentTime);
+    //echo "\$newReminderSchedTimeInSecs = $newReminderSchedTimeInSecs<BR><BR>";
+    echo "<DIV align=\"center\">";
+
+    $dbs = new dbSession();
+
+    $sql = "UPDATE reminder SET 
+      ReminderSchedTimeInSecs = '$newReminderSchedTimeInSecs', 
+      ReminderTimeDismissedInSecs = '0' 
+      WHERE ReminderID = '$ReminderID'";
+
+    // $sql = "UPDATE Reminder SET ReminderTimeDismissedInSecs = '$ReminderTimeDismissedInSecs' WHERE ReminderID = '$ReminderID'";
+
+
+    if ($dbs->getResult($sql)) {
+        $msg = "Reminder Postponed.";
+        echo "<BR><FONT FACE=\"arial\" SIZE=\"4\" COLOR=\"#339900\">$msg</FONT><BR><BR>";
+        loc_Show_all_Reminders();
+
+    } else {
+        $msg = $dbs->printError();
+        echo "<BR><FONT FACE=\"arial\" SIZE=\"4\" COLOR=\"#CC3300\">$msg</FONT>";
+        loc_Show_all_Reminders();
+
+    }
+    echo "<BR>";
+    echo "</DIV>";
+
+}
 function locUpdateReminder() {
     global $ReminderID;
     $ReminderID = $_POST['ReminderID'];
@@ -1921,6 +2332,35 @@ function locUpdateReminder() {
         Main();
         //Onsite();
         echo "<BR>";
+    }
+    echo "</DIV>";
+}
+function locUpdateReminder_b() {
+    global $ReminderID;
+    $ReminderID = $_POST['ReminderID'];
+
+    echo "<DIV align=\"center\">";
+
+    $ReminderTimeDismissedInSecs = time();
+
+    $dbs = new dbSession();
+
+    $sql = "UPDATE reminder SET 
+      ReminderTimeDismissedInSecs = '$ReminderTimeDismissedInSecs' 
+      WHERE ReminderID = '$ReminderID'";
+
+    if ($dbs->getResult($sql)) {
+        $msg = "<BR>Reminder Cleared.";
+        echo "<FONT SIZE=\"4\" COLOR=\"#339900\">$msg</FONT><BR><BR>";
+        loc_Show_all_Reminders();
+        echo "<BR>";
+        exit();
+    } else {
+        $msg = $dbs->printError();
+        echo "<FONT SIZE=\"4\" COLOR=\"#CC0000\">$msg</FONT>";
+        loc_Show_all_Reminders();
+        echo "<BR>";
+        exit();
     }
     echo "</DIV>";
 }

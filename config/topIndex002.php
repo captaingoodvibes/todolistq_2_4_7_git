@@ -162,6 +162,18 @@ $mybox_width = 280;
                             </a>
                         </li>
                         <li><a href="#">
+                                <!-- <a href="./whiteBoard.php" FACE="Arial" SIZE="" COLOR="white">Job Board <?PHP echo "$login_instance_token"; ?>doo dah</a> -->
+                                <!-- <a href="./whiteBoard.php" FACE="Arial" SIZE="" COLOR="white">  -->
+                                <?PHP
+                                echo "<form method=\"post\" action=\"./whiteBoard.php\">";
+                                echo "<input type=\"hidden\" name=\"OptionCatch\" value=\"reminders_all\">";
+                                include ("log_in_authentication_form_vars.php");
+                                echo "<input class=\"top_buttons\"  type=\"submit\" name=\"action\" value=\"Reminders\">";
+                                echo "</form>";
+                                ?>
+                            </a>
+                        </li>
+                        <li><a href="#">
                                 <!-- <a href="./history_01.php">History</a>
                                 <a href="./history_01.php" FACE="Arial" SIZE="" COLOR="white"> -->
                                 <?PHP
